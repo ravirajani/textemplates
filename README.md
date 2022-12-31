@@ -1,2 +1,2 @@
-# textemplates
-Latex templates
+# Templates/Snippets
+LaTex templates and VS Code snippets.
