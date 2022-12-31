@@ -5,7 +5,7 @@
             "\\usepackage{amsmath,amsthm}",
             "\\renewcommand\\dotsc{\\mathinner{\\ldotp\\kern-0.12em\\ldotp\\kern-0.12em\\ldotp}} % Tighter ellipsis between commas",
             "\\DeclareMathOperator{\\vol}{vol}",
-            "",
+            "\\usepackage{newtxtext,newtxmath} % Times font",
             "\\usepackage{mleftright} % \\mleft \\mright has no extra space around it",
             "",
             "\\usepackage{nicematrix}",
