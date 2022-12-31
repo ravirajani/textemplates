@@ -1,0 +1,14 @@
+{
+    "titlesec": {
+        "prefix": "tex-titlesec",
+        "body": [
+            "\\usepackage{titlesec}",
+            "\\titleformat*{\\section}{\\large\\bfseries}",
+            "\\titleformat{\\subsection}[runin]",
+            "{\\normalfont\\bfseries}",
+            "{\\S\\thesubsection.}{.5em}{}[.]",
+            "\\titlespacing*{\\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{.5em}"
+        ],
+        "description": "titlesec"
+    }
+}

@@ -15,7 +15,7 @@
             "",
             "\\usepackage{enumitem}",
             "\\newlist{parts}{enumerate}{2}",
-            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},align=left,leftmargin=*,widest=*,labelsep=5pt}",
+            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},align=left,leftmargin=*,widest=*,labelsep=.5em}",
             "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)}}"
         ],
         "description": "maths"
