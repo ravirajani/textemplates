@@ -1,0 +1,23 @@
+{
+    "maths": {
+        "prefix": "tex-maths",
+        "body": [
+            "\\usepackage{amsmath,amsthm}",
+            "\\renewcommand\\dotsc{\\mathinner{\\ldotp\\kern-0.12em\\ldotp\\kern-0.12em\\ldotp}} % Tighter ellipsis between commas",
+            "\\DeclareMathOperator{\\vol}{vol}",
+            "",
+            "\\usepackage{mleftright} % \\mleft \\mright has no extra space around it",
+            "",
+            "\\usepackage{nicematrix}",
+            "\\NiceMatrixOptions{renew-dots,renew-matrix,nullify-dots}",
+            "",
+            "\\usepackage{xfrac} % small fraction \\sfrac defined here",
+            "",
+            "\\usepackage{enumitem}",
+            "\\newlist{parts}{enumerate}{2}",
+            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},align=left,leftmargin=*,widest=*,labelsep=5pt}",
+            "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)}}"
+        ],
+        "description": "maths"
+    }
+}
