@@ -6,8 +6,8 @@
             "\\titleformat*{\\section}{\\large\\bfseries}",
             "\\titleformat{\\subsection}[runin]",
             "{\\normalfont\\bfseries}",
-            "{\\S\\thesubsection.}{.5em}{}[.]",
-            "\\titlespacing*{\\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{.5em}"
+            "{\\S\\thesubsection}{.33em}{}",
+            "\\titlespacing*{\\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{1.5ex}"
         ],
         "description": "titlesec"
     }
