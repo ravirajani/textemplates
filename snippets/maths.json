@@ -63,11 +63,15 @@
             "",
             "\\usepackage{enumitem}",
             "\\newlist{parts}{enumerate}{2}",
-            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},leftmargin=\\parindent}",
-            "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)},leftmargin=\\parindent}",
+            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},align=left,leftmargin=*,widest=*,labelsep=.5em}",
+            "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)},leftmargin=\\parindent,labelsep=.5em}",
             "\\newlist{steps}{enumerate}{2}",
-            "\\setlist[steps,1]{label=\\normalfont{(\\arabic*)},leftmargin=\\parindent}",
-            "\\setlist*[steps,2]{label=\\normalfont{(\\arabic{stepsi}\\alph{stepsii})},leftmargin=\\parindent}"
+            "\\setlist[steps,1]{label=\\normalfont{\\arabic*.},align=left,leftmargin=*,widest=*,labelsep=1ex,ref=\\arabic*}",
+            "\\setlist*[steps,2]{%",
+            "    label=\\normalfont{\\arabic{stepsi}\\alph{stepsii}.},%",
+            "    leftmargin=\\parindent,%",
+            "    labelsep=1ex,%",
+            "    ref=\\arabic{stepsi}\\alph{stepsii}}"
         ],
         "description": "Maths"
     }
