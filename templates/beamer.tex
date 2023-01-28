@@ -1,0 +1,151 @@
+\documentclass[handout]{beamer}
+\usefonttheme{professionalfonts}
+
+\usepackage{times}
+\usepackage[scaled=0.8]{FiraMono}
+\usepackage{sfmath}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{mathtools}
+\usepackage[absolute,overlay]{textpos}
+
+\usepackage{minted}
+\setminted{%
+  xleftmargin=\dimexpr \labelsep + 1em\relax,
+  linenos,
+  fontfamily=tt
+}
+\newminted[py]{python}{}
+\newmintinline[pyil]{python}{}
+
+\usepackage{xpatch}
+
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{1.5ex}% separation for first level
+     \setlength\topsep{1.5ex}
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{1.5ex}% separation for second level
+       \setlength\topsep{1.5ex}
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{1ex}% separation for third level
+         \setlength\topsep{1ex}
+   \fi\fi\fi\def\makelabel
+  }
+ {}
+ {}
+
+ \xpatchcmd{\beamer@enum@}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{1.5ex}% separation for first level
+     \setlength\topsep{1.5ex}
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{1.5ex}% separation for second level
+       \setlength\topsep{1.5ex}
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{1ex}% separation for third level
+         \setlength\topsep{1ex}
+   \fi\fi\fi\def\makelabel
+  }
+ {}
+ {}
+
+\definecolor{OUCoreBlue}{RGB}{6,6,69}
+\definecolor{OUMidBlue}{RGB}{28,70,192}
+\definecolor{OUDarkBlue}{RGB}{68,62,137}
+\definecolor{OULightBlue}{RGB}{102,238,250}
+\definecolor{OUGreen}{RGB}{125,255,211}
+\definecolor{OUYellow}{RGB}{255,244,136}
+\definecolor{OULightYellow}{RGB}{255,249,178}
+
+\setbeamercolor{palette primary}{fg=white,bg=OUCoreBlue}
+\setbeamercolor{palette secondary}{fg=white,bg=OUCoreBlue}
+\setbeamercolor{palette tertiary}{fg=white,bg=OUCoreBlue}
+\setbeamercolor{palette quaternary}{fg=white,bg=OUCoreBlue}
+\setbeamercolor{normal text}{fg=OUCoreBlue}
+\setbeamercolor{author}{fg=white}
+\setbeamercolor{institute}{fg=white}
+\setbeamercolor{date}{fg=white}
+\setbeamercolor{title}{fg=white}
+\setbeamercolor{subsection in head/foot}{fg=OUYellow}
+\setbeamercolor{page number in head/foot}{fg=OUDarkBlue}
+\setbeamercolor{titlelike}{fg=OUMidBlue}
+\setbeamercolor{structure}{fg=OUCoreBlue}
+\setbeamercolor{subsection in toc}{fg=OUMidBlue}
+\setbeamercolor{section in toc}{fg=OUCoreBlue}
+\setbeamercolor{exampled text}{fg=OUMidBlue}
+\setbeamercolor{block title}{fg=OUMidBlue}
+
+\setbeamertemplate{sections/subsections in toc}[sections numbered]
+\setbeamertemplate{itemize items}[default]
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{footline}[page number]
+
+\setbeamersize{text margin left=2em,text margin right=2em}
+
+\settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmargini}{\labelsep}
+
+\title
+{Presentation Title}
+
+\author
+{Ravi Rajani}
+
+\institute
+{The Open University}
+
+\date{\today}
+
+\subject{Subject of talk}
+
+\beamerdefaultoverlayspecification{<+->}
+
+\begin{document}
+\setbeamercolor{background canvas}{bg=OUCoreBlue}
+\begin{frame}
+  \titlepage
+\end{frame}
+\setbeamercolor{background canvas}{bg=white}
+
+% \begin{frame}{Outline}
+%   \tableofcontents[pausesections]
+% \end{frame}
+
+\section{First Section}
+
+\subsection{Subsection}
+
+\begin{frame}[fragile]{Frame title}
+  Remember:
+  \begin{itemize}
+    \item Use the \texttt{fragile} option for minted environments.
+    \item Use background templates and texpos as follows:
+          \begin{minted}{latex}
+\usebackgroundtemplate{\includegraphics{graphic.pdf}}
+\begin{frame}
+  % The textblock* environment does abolute positioning
+  % First param is width of box, and second is coordinates
+  % of left corner in ROUND brackets!
+  \begin{textblock*}{7cm}(7cm,1.5cm)
+    ...
+    
+  \end{textblock*}
+\end{frame}% Reset the background template after
+\usebackgroundtemplate{}
+
+\end{minted}
+  \end{itemize}
+\end{frame}
+
+\end{document}
+
+
