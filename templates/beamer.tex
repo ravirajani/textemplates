@@ -10,6 +10,7 @@
 \usepackage{array}
 \usepackage{mathtools}
 \usepackage[absolute,overlay]{textpos}
+\usepackage{import}
 
 \usepackage{minted}
 \setminted{%
@@ -130,7 +131,7 @@
     \item Use the \texttt{fragile} option for minted environments.
     \item Use background templates and texpos as follows:
           \begin{minted}{latex}
-\usebackgroundtemplate{\includegraphics{graphic.pdf}}
+\usebackgroundtemplate{\import{subfolder}{file.pdf}}
 \begin{frame}
   % The textblock* environment does abolute positioning
   % First param is width of box, and second is coordinates

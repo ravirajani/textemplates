@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg402"
+   width="483.78"
+   height="362.83466"
+   viewBox="0 0 483.78 362.83466"
+   sodipodi:docname="beamer.pdf"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs406" />
+  <sodipodi:namedview
+     id="namedview404"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     showguides="true"
+     inkscape:lockguides="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid606" />
+    <sodipodi:guide
+       position="11.338583,332.59844"
+       orientation="0,-1"
+       id="guide608"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="11.338583,11.338593"
+       orientation="1,0"
+       id="guide610"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="472.44095,11.338593"
+       orientation="0,-1"
+       id="guide666"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="472.44095,332.59844"
+       orientation="1,0"
+       id="guide668"
+       inkscape:locked="true" />
+  </sodipodi:namedview>
+  <g
+     id="g408"
+     inkscape:groupmode="layer"
+     inkscape:label="beamer2"
+     transform="matrix(1.3333333,0,0,-1.3333333,0,362.83467)" />
+  <inkscape:templateinfo>
+    <inkscape:name>beamer</inkscape:name>
+    <inkscape:author>Ravi Rajani</inkscape:author>
+    <inkscape:shortdesc>Template for LaTeX beamer.tex</inkscape:shortdesc>
+    <inkscape:date>2023-01-29</inkscape:date>
+  </inkscape:templateinfo>
+</svg>
