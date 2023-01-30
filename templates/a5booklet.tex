@@ -1,10 +1,10 @@
-\documentclass[12pt]{article}
+\documentclass[11pt,twoside]{article}
 
 \usepackage{geometry}
 \geometry{
     a5paper,
-    hmargin=1cm,
-    vmargin={1.4cm,1.2cm},
+    hmargin=1.3cm,
+    vmargin={1.65cm,1.3cm},
     headsep=\bigskipamount,
     footskip=0.7cm
 }
@@ -14,16 +14,17 @@
 \renewcommand{\headrulewidth}{0pt}
 \fancypagestyle{plain}{ % title page style
     \fancyhf{}
-    \fancyfoot[C]{\hdrfont\thepage}
 }
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[C]{\hdrfont\nouppercase{\leftmark}}
-\fancyfoot[C]{\hdrfont\thepage}
+\fancyhead[CE]{\hdrfont\nouppercase{\leftmark}}
+\fancyhead[CO]{\hdrfont\rightmark}
+\fancyhead[RO,LE]{\hdrfont\textbf{\thepage}}
 
 \usepackage{subfiles}
 
-\title{\vspace{-1.4cm}Title\\ \vspace{.5\baselineskip}\large{Subtitle}}
+\title{\vspace{-1.3cm}Title\\ \vspace{.5\baselineskip}\large{Subtitle}}
+
 \author{\normalsize{Ravi Rajani}}
 \date{}
 
