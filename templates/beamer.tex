@@ -4,7 +4,8 @@
 \usepackage{times}
 \usepackage[scaled=0.8]{FiraMono}
 \usepackage{sfmath}
-\usepackage[english]{babel}
+\usepackage[UKenglish]{babel}
+\usepackage[UKenglish]{isodate}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{array}
@@ -68,6 +69,27 @@
 \definecolor{OUYellow}{RGB}{255,244,136}
 \definecolor{OULightYellow}{RGB}{255,249,178}
 
+\defbeamertemplate*{title page}{OUTitlePage}[1][]
+{
+  \begin{textblock*}{\textwidth}(2em,2em)
+  \usebeamercolor[fg]{title}
+  \usebeamerfont{title}\inserttitle\par
+\end{textblock*}
+\begin{textblock*}{\textwidth}(2em,3cm)
+  \usebeamercolor[fg]{title}
+  \usebeamerfont{subtitle}\insertsubtitle\par
+\end{textblock*}
+  \begin{textblock*}{\textwidth}(2em,5cm)
+    \usebeamercolor[fg]{author}
+  \usebeamerfont{author}\insertauthor\par
+  \usebeamerfont{institute}\insertinstitute\par
+  \usebeamerfont{date}\insertdate\par
+\end{textblock*}
+  \begin{textblock*}{\textwidth}(2em,\dimexpr \pdfpageheight - 2em - 1cm\relax)
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic
+\end{textblock*}
+}
+
 \setbeamercolor{palette primary}{fg=white,bg=OUCoreBlue}
 \setbeamercolor{palette secondary}{fg=white,bg=OUCoreBlue}
 \setbeamercolor{palette tertiary}{fg=white,bg=OUCoreBlue}
@@ -86,10 +108,17 @@
 \setbeamercolor{exampled text}{fg=OUMidBlue}
 \setbeamercolor{block title}{fg=OUMidBlue}
 
+\setbeamerfont{title}{series=\bfseries,size=\fontsize{20pt}{23pt}}
+\setbeamerfont{subtitle}{series=\mdseries,size=\fontsize{14pt}{17pt}}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{14pt}}
+\setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{14pt}}
+\setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{14pt}}
+
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
 \setbeamertemplate{enumerate items}[default]
 \setbeamertemplate{footline}[page number]
+\setbeamertemplate{title page}[OUTitlePage]
 \setbeamertemplate{frametitle}[default][center]
 
 \setbeamersize{text margin left=2em,text margin right=2em}
@@ -100,13 +129,19 @@
 \addtolength{\leftmarginii}{\labelsep}
 
 \title
-{Presentation Title}
+{Presentation title}
+
+\subtitle
+{Secondary title}
 
 \author
 {Ravi Rajani}
 
 \institute
-{The Open University}
+{School of Computing and Communications}
+
+\titlegraphic
+{\includegraphics[height=1cm]{OU_Master_LOGO_WHITE_14mm.eps}}
 
 \date{\today}
 
