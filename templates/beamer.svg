@@ -3,10 +3,10 @@
 
 <svg
    version="1.1"
-   id="svg402"
-   width="483.78"
-   height="362.83466"
-   viewBox="0 0 483.78 362.83466"
+   id="svg1411"
+   width="604.724"
+   height="340.15732"
+   viewBox="0 0 604.724 340.15732"
    sodipodi:docname="beamer.pdf"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
@@ -14,9 +14,24 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs406" />
+     id="defs1415">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1439">
+      <path
+         d="M 0,0 H 42 V 52 H 0 Z"
+         id="path1437" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1449">
+      <path
+         d="M 0,0 H 416.262 V 513.184 H 0 Z"
+         id="path1447" />
+    </clipPath>
+  </defs>
   <sodipodi:namedview
-     id="namedview404"
+     id="namedview1413"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -25,41 +40,40 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      showgrid="false"
+     inkscape:document-units="cm"
      showguides="true"
      inkscape:lockguides="true">
+    <sodipodi:guide
+       position="576.37795,297.76943"
+       orientation="0,-1"
+       id="guide1649"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="28.50277,303.1454"
+       orientation="1,0"
+       id="guide1651"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="585.82677,9.4486578"
+       orientation="0,-1"
+       id="guide1653"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="576.37795,9.4486578"
+       orientation="1,0"
+       id="guide1655"
+       inkscape:locked="true" />
     <inkscape:grid
        type="xygrid"
-       id="grid606" />
-    <sodipodi:guide
-       position="11.338583,332.59844"
-       orientation="0,-1"
-       id="guide608"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="11.338583,11.338593"
-       orientation="1,0"
-       id="guide610"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="472.44095,11.338593"
-       orientation="0,-1"
-       id="guide666"
-       inkscape:locked="true" />
-    <sodipodi:guide
-       position="472.44095,332.59844"
-       orientation="1,0"
-       id="guide668"
-       inkscape:locked="true" />
+       id="grid1657"
+       spacingx="9.4488189"
+       spacingy="9.4488189"
+       empspacing="4" />
   </sodipodi:namedview>
-  <g
-     id="g408"
-     inkscape:groupmode="layer"
-     inkscape:label="beamer2"
-     transform="matrix(1.3333333,0,0,-1.3333333,0,362.83467)" />
   <inkscape:templateinfo>
     <inkscape:name>beamer</inkscape:name>
     <inkscape:author>Ravi Rajani</inkscape:author>
-    <inkscape:shortdesc>Template for LaTeX beamer.tex</inkscape:shortdesc>
-    <inkscape:date>2023-01-29</inkscape:date>
+    <inkscape:shortdesc>LaTeX beamer template 16:9 aspect ratio</inkscape:shortdesc>
+    <inkscape:date>2023-02-06</inkscape:date>
   </inkscape:templateinfo>
 </svg>
