@@ -14,9 +14,10 @@
 
 \usepackage{minted}
 \setminted{%
-  xleftmargin=\dimexpr \labelsep + 1em\relax,
+  xleftmargin=\dimexpr \labelsep + 1ex \relax,
   linenos,
-  fontfamily=tt
+  fontfamily=tt,
+  numbersep=1ex
 }
 \newminted[py]{python}{}
 \newmintinline[pyil]{python}{}
@@ -89,11 +90,14 @@
 \setbeamertemplate{itemize items}[default]
 \setbeamertemplate{enumerate items}[default]
 \setbeamertemplate{footline}[page number]
+\setbeamertemplate{frametitle}[default][center]
 
 \setbeamersize{text margin left=2em,text margin right=2em}
 
 \settowidth{\leftmargini}{\usebeamertemplate{itemize item}}
 \addtolength{\leftmargini}{\labelsep}
+\settowidth{\leftmarginii}{\usebeamertemplate{itemize item}}
+\addtolength{\leftmarginii}{\labelsep}
 
 \title
 {Presentation Title}
@@ -128,19 +132,19 @@
 \begin{frame}[fragile]{Frame title}
   Remember:
   \begin{itemize}
-    \item Use the \texttt{fragile} option for minted environments.
+    \item Use the \texttt{fragile} frame option for minted environments.
     \item Use background templates and texpos as follows:
           \begin{minted}{latex}
 \usebackgroundtemplate{\import{subfolder}{file.pdf}}
 \begin{frame}
   % The textblock* environment does abolute positioning
-  % First param is width of box, and second is coordinates
-  % of left corner in ROUND brackets!
+  % First param is width of box, and second is
+  % coordinates of left corner in ROUND brackets!
   \begin{textblock*}{7cm}(7cm,1.5cm)
     ...
     
   \end{textblock*}
-\end{frame}% Reset the background template after
+\end{frame}% Reset the background template after:
 \usebackgroundtemplate{}
 
 \end{minted}
