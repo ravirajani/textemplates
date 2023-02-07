@@ -71,37 +71,40 @@
 \definecolor{OULightYellow}{RGB}{255,249,178}
 
 \defbeamertemplate*{title page}{OUTitlePage}[1][]
-{
-  \vspace{2em}%
-  \begin{minipage}[c][\dimexpr .33\paperheight - 2em\relax][t]{\textwidth}
-  \usebeamercolor[fg]{title}
-  \usebeamerfont{title}\inserttitle\par%
+{%
+  \nointerlineskip%
+  \def\titleboxheight{\dimexpr\textheight - 4em\relax}%
+  \vspace{2em}
+  \begin{minipage}[c][\dimexpr .28\titleboxheight \relax][t]{\textwidth}\raggedright
+  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
-\begin{minipage}[c][.17\paperheight][t]{\textwidth}
-  \usebeamercolor[fg]{title}
-  \usebeamerfont{subtitle}\insertsubtitle\par%
+\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
+  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle%
 \end{minipage}
-\begin{minipage}[c][.25\paperheight][c]{\textwidth}
-    \usebeamercolor[fg]{author}
+\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\raggedright
+  \usebeamercolor[fg]{author}
   \usebeamerfont{author}\insertauthor\par%
   \usebeamerfont{institute}\insertinstitute\par%
-  \usebeamerfont{date}\insertdate\par%
+  \usebeamerfont{date}\insertdate%
 \end{minipage}
-\begin{minipage}[c][\dimexpr .25\paperheight -2em \relax][b]{\textwidth}
+\begin{minipage}[c][\dimexpr .24\titleboxheight \relax][b]{\textwidth}
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
-\end{minipage}
+\end{minipage}%
 }
 
-\defbeamertemplate*{frametitle}{OUFrameTitle}[1][left]
-{
-  \begin{minipage}[b][1cm][c]{\dimexpr \textwidth - 1cm \relax}
-    \usebeamercolor{frametitle}
-    \usebeamerfont{frametitle}\insertframetitle\par%
-  \end{minipage}%
-  \hfill
-  \begin{minipage}[b][1cm][c]{1cm}
-    \includegraphics[width=0.6cm,right]{OU_SHIELD_LOGO_BLUE_63mm.eps}%
-\end{minipage}%
+\defbeamertemplate*{frametitle}{OUTitlePage}[1][left]
+{%
+\vspace{0.1cm}
+\nointerlineskip%
+\begin{columns}[onlytextwidth]
+  \column{\dimexpr\textwidth - 1cm\relax}
+  \begin{beamercolorbox}[#1,dp=0.3cm,ht=0.7cm]{frametitle}
+    \usebeamerfont{frametitle}%
+    \insertframetitle\par%
+  \end{beamercolorbox}%
+  \column{1cm}
+  \includegraphics[width=0.6cm,right]{OU_SHIELD_LOGO_BLUE_63mm.eps}%
+\end{columns}
 }
 
 \def\innerframewidth{\dimexpr\paperwidth - 3cm\relax}
@@ -124,12 +127,12 @@
 \setbeamercolor{exampled text}{fg=OUMidBlue}
 \setbeamercolor{block title}{fg=OUMidBlue}
 
-\setbeamerfont{title}{series=\bfseries,size=\fontsize{21pt}{24pt}}
-\setbeamerfont{subtitle}{series=\mdseries,size=\fontsize{15pt}{18pt}}
+\setbeamerfont{title}{series=\bfseries,size=\huge}
+\setbeamerfont{subtitle}{series=\mdseries,size=\Large}
 \setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{14pt}}
 \setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{14pt}}
 \setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{14pt}}
-\setbeamerfont{frametitle}{series=\bfseries,size=\fontsize{15pt}{17pt}}
+\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
