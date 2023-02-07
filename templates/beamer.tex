@@ -73,8 +73,8 @@
 \defbeamertemplate*{title page}{OUTitlePage}[1][]
 {%
   \nointerlineskip%
-  \def\titleboxheight{\dimexpr\textheight - 4em\relax}%
-  \vspace{2em}
+  \def\titleboxheight{\dimexpr\paperheight - 4em\relax}%
+  \vspace{\dimexpr 2em + \textheight - \paperheight\relax}
   \begin{minipage}[c][\dimexpr .28\titleboxheight \relax][t]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
@@ -119,7 +119,7 @@
 \setbeamercolor{date}{fg=white}
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
-\setbeamercolor{page number in head/foot}{fg=OUDarkBlue}
+\setbeamercolor{page number in head/foot}{fg=OUCoreBlue}
 \setbeamercolor{titlelike}{fg=OUCoreBlue}
 \setbeamercolor{structure}{fg=OUCoreBlue}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
