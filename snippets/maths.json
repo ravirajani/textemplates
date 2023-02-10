@@ -10,6 +10,14 @@
             "",
             "\\def\\customcapspace{1.5ex} % Space after Theorem/Caption numbers",
             "",
+            "\\usepackage{xpatch}",
+            "\\makeatletter",
+            "\\xpatchcmd{\\proof}{\\@addpunct{.}}{}{}{}",
+            "\\makeatother",
+            "\\xpatchcmd{\\proof}{\\trivlist}{\\setlength{\\labelsep}{\\customcapspace}\\trivlist}{}{}",
+            "\\xpatchcmd{\\proof}{\\itshape}{\\itshape\\bfseries}{}{}",
+            "\\renewcommand{\\qedsymbol}{$\\blacksquare$}",
+            "",
             "\\newtheoremstyle{plainthm}% name",
             "{}%      Space above, empty = `usual value'",
             "{}%      Space below",
@@ -52,7 +60,7 @@
             "\\theoremstyle{customex}",
             "\\newtheorem{examplex}[theorem]{Example}",
             "\\newenvironment{example}%",
-            "    {\\pushQED{\\qed}\\renewcommand{\\qedsymbol}{$\\triangle$}\\examplex}%",
+            "    {\\pushQED{\\qed}\\renewcommand{\\qedsymbol}{$\\blacktriangle$}\\examplex}%",
             "    {\\popQED\\endexamplex}",
             "",
             "\\numberwithin{equation}{section}",
@@ -81,6 +89,6 @@
             "    labelsep=1ex,%",
             "    ref=\\arabic{stepsi}\\alph{stepsii}}"
         ],
-        "description": ""
+        "description": "Maths"
     }
 }
