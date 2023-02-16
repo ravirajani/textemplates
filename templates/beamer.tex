@@ -70,12 +70,14 @@
 \definecolor{OUYellow}{RGB}{255,244,136}
 \definecolor{OULightYellow}{RGB}{255,249,178}
 
+\def\titleboxheight{\dimexpr\paperheight - 4em\relax}
+\def\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}
+
 \defbeamertemplate*{title page}{OUTitlePage}[1][]
 {%
   \nointerlineskip%
-  \def\titleboxheight{\dimexpr\paperheight - 4em\relax}%
-  \vspace{\dimexpr 2em + .5\textheight - .5\paperheight\relax}
-  \begin{minipage}[c][\dimexpr .28\titleboxheight \relax][t]{\textwidth}\raggedright
+  \vspace{\titletopmargin}
+  \begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
@@ -87,7 +89,7 @@
   \usebeamerfont{institute}\insertinstitute\par%
   \usebeamerfont{date}\insertdate%
 \end{minipage}
-\begin{minipage}[c][\dimexpr .24\titleboxheight \relax][b]{\textwidth}
+\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}%
 }
@@ -161,7 +163,7 @@
 {School of Computing and Communications}
 
 \titlegraphic
-{\includegraphics[height=0.9cm]{OU_Master_LOGO_WHITE_63mm.eps}}
+{\includegraphics[height=0.8cm]{OU_Master_LOGO_WHITE_63mm.eps}}
 
 \date{\today}
 
@@ -203,10 +205,21 @@
   \end{textblock*}
 \end{frame}% Reset the background template after:
 \usebackgroundtemplate{}
-
 \end{minted}
     \end{itemize}
   \end{columns}
+\end{frame}
+
+\setbeamercolor{background canvas}{bg=OUCoreBlue}
+\begin{frame}
+  \nointerlineskip%
+  \vspace{\titletopmargin}
+  \begin{minipage}[c][.76\titleboxheight][c]{\textwidth}\raggedright
+    \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
+  \end{minipage}
+  \begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
+    \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
+  \end{minipage}
 \end{frame}
 
 \end{document}
