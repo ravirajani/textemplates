@@ -2,12 +2,11 @@
     "titlesec": {
         "prefix": "tex-titlesec",
         "body": [
-            "\\usepackage{titlesec}",
-            "\\titleformat*{\\section}{\\large\\bfseries}",
+            "\\usepackage[small,center]{titlesec}",
             "\\titleformat{\\subsection}[runin]",
             "{\\normalfont\\bfseries}",
-            "{\\S\\thesubsection}{.33em}{}",
-            "\\titlespacing*{\\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{1.5ex}"
+            "{\\thesubsection}{.33em}{}[.]",
+            "\\titlespacing{\\subsection}{0pt}{1.5ex plus .1ex minus .2ex}{.5em}"
         ],
         "description": "titlesec"
     }
