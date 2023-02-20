@@ -91,5 +91,72 @@
             "    ref=\\arabic{stepsi}\\alph{stepsii}}"
         ],
         "description": "Maths"
+    },
+    "titlesec": {
+        "prefix": "tex-titlesec",
+        "body": [
+            "\\usepackage[small,center]{titlesec}",
+            "\\titleformat*{\\subsection}{\\centering\\itshape\\bfseries}",
+            "\\titleformat{\\subsubsection}[runin]",
+            "{\\normalfont\\bfseries}",
+            "{\\thesubsection}{.33em}{}[.]",
+            "\\titlespacing{\\subsubsection}{0pt}{1.5ex plus .1ex minus .2ex}{.5em}"
+        ],
+        "description": "Custom titles"
+    },
+    "complexity": {
+        "prefix": "tex-complexity",
+        "body": [
+            "\\usepackage[classfont=sanserif,",
+            "            langfont=caps,",
+            "            funcfont=roman]{complexity}",
+            "\\newlang{\\SVP}{SVP}"
+        ],
+        "description": "Complexity classes"
+    },
+    "algorithm": {
+        "prefix": "tex-algorithm",
+        "body": [
+            "\\usepackage{algorithm,algpseudocode,varwidth}",
+            "\\algnewcommand{\\linegap}{\\vspace{.5\\baselineskip}}",
+            "\\algnewcommand{\\blocktitle}[1]{%",
+            "    \\item[\\underline{#1:}]\\ ",
+            "    \\linegap",
+            "}",
+            "\\newcounter{ALG@block}",
+            "\\def\\algblock{0}",
+            "\\algnewcommand{\\Statel}[1]{\\item[\\alglinenumber{#1}]}",
+            "\\algnewcommand{\\Block}{%",
+            "    \\def\\algblock{1}",
+            "}",
+            "\\makeatletter",
+            "\\algnewcommand{\\multiline}[1]{%",
+            "    \\begin{varwidth}[t]{\\dimexpr\\linewidth-\\ALG@thistlm}#1\\end{varwidth}",
+            "    \\linegap",
+            "}",
+            "\\algnewcommand{\\BlockedAlgorithm}{%",
+            "    \\setcounter{ALG@block}{0}",
+            "    \\def\\ALG@step{%",
+            "        \\ifthenelse{\\equal{\\algblock}{1}}{%",
+            "            \\addtocounter{ALG@block}{1}%",
+            "            \\setcounter{ALG@line}{\\value{ALG@block}}%",
+            "            \\alglinenumber{\\arabic{ALG@block}}%",
+            "            \\global\\def\\algblock{0}%",
+            "        }{}%",
+            "    }%",
+            "}",
+            "\\makeatother",
+            "\\algrenewcommand\\algorithmicrequire{\\textbf{Input:}}",
+            "\\algrenewcommand\\algorithmicensure{\\textbf{Output:}}",
+            "\\DeclareFloatStyle{algorithm}{",
+            "capposition=top,",
+            "midcode=rule,",
+            "postcode=lowrule,",
+            "heightadjust=all}",
+            "\\floatsetup[algorithm]{style=algorithm}",
+            "\\captionsetup[algorithm]{singlelinecheck=false,labelfont=bf,labelsep=period}",
+            ""
+        ],
+        "description": "Custom algorithm pseudocode"
     }
 }
