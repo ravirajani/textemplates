@@ -4,9 +4,9 @@
 \geometry{
     a5paper,
     hmargin=0.7cm,
-    vmargin={1.3cm,1.1cm},
+    vmargin=1.2cm,
     headsep=\bigskipamount,
-    footskip=0.7cm
+    footskip=0.8cm
 }
 
 \usepackage{fancyhdr}
@@ -21,13 +21,18 @@
 \fancyhead[C]{\hdrfont\nouppercase{\leftmark}}
 \fancyfoot[C]{\hdrfont\thepage}
 
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
 \usepackage{subfiles}
 
-\title{\vspace{-1.3cm}Title\\ \vspace{.5\baselineskip}\large{Subtitle}}
+\title{\vspace{-1.2cm}Title\\ \vspace{.5\baselineskip}\large{Subtitle}}
 \author{\normalsize{Ravi Rajani}}
 \date{}
 
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
 \begin{document}
+%\def\subbib{} % UNCOMMENT for natbib
+
 \maketitle
 
 \section{First section}
@@ -35,5 +40,5 @@
 
 \section{Second section}
 \subfile{subfiles/example.tex}
-
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}

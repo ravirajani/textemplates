@@ -1,0 +1,57 @@
+\documentclass[12pt]{report}
+
+\usepackage{geometry}
+\geometry{
+    a5paper,
+    hmargin=0.7cm,
+    vmargin=1.2cm,
+    headsep=\bigskipamount,
+    footskip=0.8cm
+}
+
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
+\usepackage{subfiles}
+
+\usepackage[small,pagestyles]{titlesec}
+\newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
+\newpagestyle{custom}{%
+\sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
+\setfoot{}{\hdrfont\thepage}{}
+}
+\renewpagestyle{plain}{
+    \sethead{}{}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+\pagestyle{custom}
+
+\titleformat{\chapter}[display]
+{\filcenter\bfseries\LARGE}
+{\filcenter\Huge\thechapter}
+{2ex}
+{}
+\titlespacing{\chapter}{0pt}{0pt}{50pt}
+
+\titleformat*{\subsection}{\itshape\bfseries}
+
+\title{Report Title}
+
+\author{Ravi Rajani}
+\date{}
+
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
+\begin{document}
+%\def\subbib{} % UNCOMMENT for natbib
+
+\maketitle
+\tableofcontents
+\chapter{First Chapter}
+\section{First Section}
+\subfile{subfiles/example.tex}
+\section{Second Section}
+\subfile{subfiles/example.tex}
+\chapter{Second Chapter}
+\section{First Section}
+\subfile{subfiles/example.tex}
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
+\end{document}
