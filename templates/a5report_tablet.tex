@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-
+\usepackage{bbding,xcolor}
 \usepackage{geometry}
 \geometry{
     a5paper,
@@ -14,6 +14,7 @@
 \usepackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
 \usepackage[small,pagestyles]{titlesec}
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
+\newcommand{\chnumfont}{\usefont{T1}{pnc}{b}{n}\fontsize{35}{35}\selectfont}
 \newpagestyle{custom}{%
 \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
 \setfoot{}{\hdrfont\thepage}{}
@@ -24,12 +25,12 @@
 }
 \pagestyle{custom}
 
-\titleformat{\chapter}[display]
-{\filcenter\bfseries\LARGE}
-{\Huge\thechapter}
-{1.5ex}
+\titleformat{\chapter}[hang]
+{\bfseries\LARGE}
+{\chnumfont\thechapter}
+{1ex}
 {}
-\titlespacing{\chapter}{0pt}{0pt}{40pt}
+\titlespacing{\chapter}{\parindent}{0pt}{40pt}
 
 \titleformat*{\subsubsection}{\itshape}
 
