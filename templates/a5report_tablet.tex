@@ -11,7 +11,7 @@
 
 %\usepackage[round]{natbib} % UNCOMMENT for natbib
 \usepackage{subfiles}
-
+\usepackage[colorlinks=true,allcolors=blue,bookmarks=true]{hyperref}
 \usepackage[small,pagestyles]{titlesec}
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
 \newpagestyle{custom}{%
@@ -26,10 +26,10 @@
 
 \titleformat{\chapter}[display]
 {\filcenter\bfseries\LARGE}
-{\filcenter\Huge\thechapter}
+{\Huge\thechapter}
 {1.5ex}
 {}
-\titlespacing{\chapter}{0pt}{0pt}{50pt}
+\titlespacing{\chapter}{0pt}{0pt}{40pt}
 
 \titleformat*{\subsubsection}{\itshape}
 
@@ -42,16 +42,10 @@
 % In subfiles, write \subbib before \end{document}
 \begin{document}
 %\def\subbib{} % UNCOMMENT for natbib
-
 \maketitle
 \tableofcontents
-\chapter{First Chapter}
-\section{First Section}
 \subfile{subfiles/example.tex}
-\section{Second Section}
 \subfile{subfiles/example.tex}
-\chapter{Second Chapter}
-\section{First Section}
 \subfile{subfiles/example.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}
