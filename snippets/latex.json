@@ -98,7 +98,7 @@
         "prefix": "tex-titlesec",
         "body": [
             "\\usepackage[small,center]{titlesec}",
-            "\\titleformat*{\\subsection}{\\centering\\itshape\\bfseries}",
+            "\\titleformat*{\\subsection}{\\filcenter\\itshape\\bfseries}",
             "\\titleformat{\\subsubsection}[runin]",
             "{\\normalfont\\bfseries}",
             "{\\thesubsection}{.33em}{}[.]",
@@ -160,5 +160,14 @@
             ""
         ],
         "description": "Custom algorithm pseudocode"
+    },
+    "summary": {
+        "prefix": "tex-summary",
+        "body": [
+            "\\newenvironment{summary}",
+            "{\\leftskip\\parindent\\relax\\rightskip\\parindent\\relax\\noindent\\ignorespaces}",
+            "{\\par}"
+        ],
+        "description": "Summary environment definition"
     }
 }
