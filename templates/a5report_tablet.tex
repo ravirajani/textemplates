@@ -14,7 +14,7 @@
 \usepackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
 \usepackage[small,pagestyles]{titlesec}
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
-\newcommand{\chnumfont}{\fontsize{37}{37}\selectfont}
+\newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
 \newpagestyle{custom}{%
 \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
 \setfoot{}{\hdrfont\thepage}{}
@@ -33,7 +33,7 @@
 {\chnumfont\thechapter}
 {0.5em}
 {}
-\titlespacing{\chapter}{\parindent}{0pt}{37pt}[\parindent]
+\titlespacing{\chapter}{\parindent}{0pt}{35pt}[\parindent]
 
 \titleformat*{\subsubsection}{\itshape}
 \makeatletter
@@ -42,7 +42,7 @@
     \vspace*{.25\textheight}
     \nointerlineskip
     \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\raggedright
-        {\noindent\ignorespaces\bfseries\fontsize{37}{46}\selectfont\@title\par}
+        {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}
         \vfill
         {\noindent\huge\@author\par}%
     \end{minipage}
