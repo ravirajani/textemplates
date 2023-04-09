@@ -1,5 +1,5 @@
 \documentclass[12pt]{report}
-
+\usepackage{newtxtext}
 \usepackage{geometry}
 \geometry{
     a5paper,
@@ -14,37 +14,52 @@
 \usepackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
 \usepackage[small,pagestyles]{titlesec}
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
-\newcommand{\chnumfont}{\usefont{T1}{pnc}{b}{n}\fontsize{35}{35}\selectfont}
+\newcommand{\chnumfont}{\fontsize{37}{37}\selectfont}
 \newpagestyle{custom}{%
 \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
 \setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{title}{%
+    \sethead{}{}{}
+    \setfoot{}{}{}
 }
 \renewpagestyle{plain}{
     \sethead{}{}{}
     \setfoot{}{\hdrfont\thepage}{}
 }
-\pagestyle{custom}
 
 \titleformat{\chapter}[hang]
 {\bfseries\LARGE}
 {\chnumfont\thechapter}
 {0.5em}
 {}
-\titlespacing{\chapter}{\parindent}{0pt}{40pt}[\parindent]
+\titlespacing{\chapter}{\parindent}{0pt}{37pt}[\parindent]
 
 \titleformat*{\subsubsection}{\itshape}
+\makeatletter
+\renewcommand{\maketitle}{
+    \pagestyle{title}
+    \vspace*{.25\textheight}
+    \nointerlineskip
+    \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\raggedright
+        {\noindent\ignorespaces\bfseries\fontsize{37}{46}\selectfont\@title\par}
+        \vfill
+        {\noindent\huge\@author\par}%
+    \end{minipage}
+}
+\makeatother
 
 \title{Report Title}
-
 \author{Ravi Rajani}
-\date{}
 
 %\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
 % In subfiles, write \subbib before \end{document}
 \begin{document}
-%\def\subbib{} % UNCOMMENT for natbib
+\def\subbib{}
 \maketitle
 \tableofcontents
+\setcounter{page}{1}
+\pagestyle{custom}
 \subfile{subfiles/example.tex}
 \subfile{subfiles/example.tex}
 \subfile{subfiles/example.tex}
