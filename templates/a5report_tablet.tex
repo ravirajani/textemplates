@@ -15,7 +15,6 @@
 \usepackage[small,pagestyles]{titlesec}
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
 \newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
-\newcommand{\chfont}{\fontsize{19}{24}\selectfont}
 \newpagestyle{custom}{%
 \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
 \setfoot{}{\hdrfont\thepage}{}
@@ -30,7 +29,7 @@
 }
 
 \titleformat{\chapter}[display]
-{\bfseries\chfont}
+{\bfseries\LARGE}
 {\chnumfont\thechapter}
 {35pt}
 {}
