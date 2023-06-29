@@ -168,5 +168,19 @@
             "{\\par}"
         ],
         "description": "Summary environment definition"
+    },
+    "framedbox": {
+        "prefix": "tex-framedbox",
+        "body": [
+            "\\usepackage{tcolorbox}",
+            "% Example:",
+            "% \\begin{tcolorbox}[label={mylabel},title=My Title]",
+            "%     Write boxed text here. Refer to it in the text with \\pageref{mylabel}",
+            "% \\end{tcolorbox}",
+            "\\tcbuselibrary{skins,breakable}",
+            "\\tcbset{standard jigsaw, opacityback=0, opacitybacktitle=0, coltitle=black, titlerule=0pt,",
+            "fonttitle=\\bfseries,center title, toptitle=5pt}"
+        ],
+        "description": "Framed boxes with tcolorbox"  
     }
 }
