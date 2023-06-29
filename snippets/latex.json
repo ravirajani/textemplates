@@ -82,15 +82,8 @@
             "",
             "\\usepackage{enumitem}",
             "\\newlist{parts}{enumerate}{2}",
-            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},align=left,leftmargin=*,widest=*,labelsep=.5em}",
-            "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)},leftmargin=\\parindent,labelsep=.5em}",
-            "\\newlist{steps}{enumerate}{2}",
-            "\\setlist[steps,1]{label=\\normalfont{\\arabic*.},align=left,leftmargin=*,widest=*,labelsep=1ex,ref=\\arabic*}",
-            "\\setlist*[steps,2]{%",
-            "    label=\\normalfont{\\arabic{stepsi}\\alph{stepsii}.},%",
-            "    leftmargin=\\parindent,%",
-            "    labelsep=1ex,%",
-            "    ref=\\arabic{stepsi}\\alph{stepsii}}"
+            "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},labelsep=.5em}",
+            "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)},labelsep=.5em}"
         ],
         "description": "Maths"
     },
@@ -119,12 +112,10 @@
     "algorithm": {
         "prefix": "tex-algorithm",
         "body": [
-            "\\usepackage{algorithm,algpseudocode,varwidth}",
+            "% Requires packages: floatrow,caption,enumitem",
+            "\\usepackage{algorithm,varwidth}",
+            "\\usepackage{algorithmicx}",
             "\\algnewcommand{\\linegap}{\\vspace{.5\\baselineskip}}",
-            "\\algnewcommand{\\blocktitle}[1]{%",
-            "    \\item[\\underline{#1:}]\\ ",
-            "    \\linegap",
-            "}",
             "\\newcounter{ALG@block}",
             "\\def\\algblock{0}",
             "\\algnewcommand{\\Statel}[1]{\\item[\\alglinenumber{#1}]}",
@@ -147,9 +138,12 @@
             "        }{}%",
             "    }%",
             "}",
+            "\\patchcmd{\\ALG@doentity}{\\item[]\\nointerlineskip}{}{}{}% fixes spacing bug in algorithmicx",
             "\\makeatother",
-            "\\algrenewcommand\\algorithmicrequire{\\textbf{Input:}}",
-            "\\algrenewcommand\\algorithmicensure{\\textbf{Output:}}",
+            "\\algdef{SN}[WHILE]{While}{EndWhile}[1]{\\textbf{while}\\ #1:}%",
+            "\\algdef{SN}[FOR]{For}{EndFor}[1]{\\textbf{for}\\ #1:}%",
+            "\\algdef{SN}[IF]{If}{EndIf}[1]{\\textbf{if}\\ #1:}%",
+            "\\algdef{SE}[DO]{Do}{EndDo}{\\textbf{do}:}[1]{\\textbf{while}\\ #1}%",
             "\\DeclareFloatStyle{algorithm}{",
             "capposition=top,",
             "midcode=rule,",
@@ -157,8 +151,13 @@
             "heightadjust=all}",
             "\\floatsetup[algorithm]{style=algorithm}",
             "\\captionsetup[algorithm]{singlelinecheck=false,labelfont=bf,labelsep=period}",
-            ""
-        ],
+            "\\newlist{steps}{enumerate}{2}",
+            "\\setlist[steps,1]{label=\\textbf{Step \\arabic*:},wide,labelindent=0pt,labelsep=1ex,ref=\\arabic*}",
+            "\\setlist*[steps,2]{%",
+            "    label=\\normalfont{\\textbf{\\alph{stepsii}.}},%",
+            "    labelsep=1.5ex,%",
+            "    ref=\\arabic{stepsi}\\alph{stepsii}}"
+        ],   
         "description": "Custom algorithm pseudocode"
     },
     "summary": {
