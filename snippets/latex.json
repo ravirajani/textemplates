@@ -152,7 +152,7 @@
             "\\floatsetup[algorithm]{style=algorithm}",
             "\\captionsetup[algorithm]{singlelinecheck=false,labelfont=bf,labelsep=period}",
             "\\newlist{steps}{enumerate}{2}",
-            "\\setlist[steps,1]{label=\\textbf{Step \\arabic*:},wide,labelindent=0pt,labelsep=1ex,ref=\\arabic*}",
+            "\\setlist[steps,1]{label=\\textbf{Step \\arabic*:},wide=0pt,labelsep=1ex,ref=\\arabic*}",
             "\\setlist*[steps,2]{%",
             "    label=\\normalfont{\\textbf{\\alph{stepsii}.}},%",
             "    labelsep=1.5ex,%",
