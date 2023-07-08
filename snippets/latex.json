@@ -112,7 +112,7 @@
     "algorithm": {
         "prefix": "tex-algorithm",
         "body": [
-            "% Requires packages: floatrow,caption,enumitem",
+            "% Requires packages: floatrow,caption",
             "\\usepackage{algorithm,varwidth}",
             "\\usepackage{algorithmicx}",
             "\\algnewcommand{\\linegap}{\\vspace{.5\\baselineskip}}",
@@ -150,13 +150,7 @@
             "postcode=lowrule,",
             "heightadjust=all}",
             "\\floatsetup[algorithm]{style=algorithm}",
-            "\\captionsetup[algorithm]{singlelinecheck=false,labelfont=bf,labelsep=period}",
-            "\\newlist{steps}{enumerate}{2}",
-            "\\setlist[steps,1]{label=\\textbf{Step \\arabic*:},wide=0pt,labelsep=1ex,ref=\\arabic*}",
-            "\\setlist*[steps,2]{%",
-            "    label=\\normalfont{\\textbf{\\alph{stepsii}.}},%",
-            "    labelsep=1.5ex,%",
-            "    ref=\\arabic{stepsi}\\alph{stepsii}}"
+            "\\captionsetup[algorithm]{singlelinecheck=false,labelfont=bf,labelsep=period}"
         ],   
         "description": "Custom algorithm pseudocode"
     },
@@ -182,5 +176,19 @@
             "fonttitle=\\bfseries,center title, toptitle=5pt}"
         ],
         "description": "Framed boxes with tcolorbox"  
-    }
+    },
+    "steps": {
+        "prefix": "tex-steps",
+        "body": [
+            "\\newcommand*\\circled[1]{\\tikz[baseline=(char.base)]{",
+            "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
+            "\\usepackage{enumitem}",
+            "\\newlist{steps}{enumerate}{1}",
+            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},labelsep=1.5ex}",
+            "\\newlist{inout}{itemize}{1}",
+            "\\setlist[inout,1]{widest=Output:,leftmargin=*,labelsep=1.5ex}",
+            "\\newcommand\\descitem[1]{\\item[\\textit{#1:}]}"
+        ],
+        "description": "Steps for algorithms"
+      }
 }
