@@ -112,8 +112,11 @@
     "algorithm": {
         "prefix": "tex-algorithm",
         "body": [
-            "\\usepackage{algorithmicx}",
+            "\\usepackage{algorithmicx,varwidth}",
             "\\makeatletter",
+            "\\algnewcommand{\\MultiState}[1]{%",
+            "    \\State\\begin{varwidth}[t]{\\dimexpr\\linewidth-\\ALG@thistlm}#1\\end{varwidth}%",
+            "}",
             "\\patchcmd{\\ALG@doentity}{\\item[]\\nointerlineskip}{}{}{} % patch spurious space",
             "\\makeatother",
             "\\algdef{SN}[WHILE]{While}{EndWhile}[1]{\\textbf{while}\\ #1:}%",
@@ -144,7 +147,7 @@
             "% \\end{tcolorbox}",
             "\\tcbuselibrary{skins,breakable}",
             "\\tcbset{standard jigsaw, opacityback=0, opacitybacktitle=0, coltitle=black, titlerule=0pt,",
-            "fonttitle=\\bfseries,center title, toptitle=5pt}"
+            "fonttitle=\\bfseries,center title, toptitle=5pt, middle=0pt}"
         ],
         "description": "Framed boxes with tcolorbox"  
     },
@@ -155,10 +158,11 @@
             "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
             "\\usepackage{enumitem}",
             "\\newlist{steps}{enumerate}{1}",
-            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},labelsep=1.5ex}",
+            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},labelsep=1.5ex,itemsep=0pt}",
             "\\newlist{inout}{itemize}{1}",
-            "\\setlist[inout,1]{widest=Output:,leftmargin=*,labelsep=1.5ex}",
-            "\\newcommand\\descitem[1]{\\item[\\textit{#1:}]}"
+            "\\setlist[inout,1]{widest=Output:,leftmargin=*,itemsep=0pt}",
+            "\\newcommand\\descitem[1]{\\item[\\textit{#1:}]}",
+            "\\newcommand\\parsepitem{\\item[]\\nointerlineskip}"
         ],
         "description": "Steps for algorithms"
       }
