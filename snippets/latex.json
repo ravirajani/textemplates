@@ -160,7 +160,7 @@
             "\\usepackage{enumitem}",
             "\\newlist{steps}{enumerate}{1}",
             "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},labelsep=1.5ex,itemsep=0pt,",
-            "    ref=\\hspace{1pt}\\protect\\circled{\\arabic*}\\hspace{1pt}}",
+            "    topsep=5pt,ref=\\hspace{1pt}\\protect\\circled{\\arabic*}\\hspace{1pt}}",
             "\\newlist{blocksteps}{itemize}{5}",
             "\\setlist[blocksteps]{wide=0pt,leftmargin=\\parindent,nosep,labelsep=.3em}",
             "\\newlist{inout}{itemize}{1}",
