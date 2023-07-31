@@ -154,19 +154,15 @@
     "steps": {
         "prefix": "tex-steps",
         "body": [
-            "\\usepackage{tikz}",
-            "\\newcommand*\\circled[1]{\\tikz[baseline=(char.base)]{",
-            "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
             "\\usepackage{enumitem}",
-            "\\newlist{steps}{enumerate}{1}",
-            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},labelsep=1.5ex,itemsep=0pt,",
-            "    topsep=5pt,ref=\\hspace{1pt}\\protect\\circled{\\small\\arabic*}\\hspace{1pt}}",
-            "\\newlist{blocksteps}{itemize}{5}",
-            "\\setlist[blocksteps]{wide=0pt,leftmargin=\\parindent,nosep,labelsep=.3em}",
+            "\\newlist{steps}{enumerate}{2}",
+            "\\setlist[steps,1]{label=\\arabic*.,itemsep=0pt,labelsep=1.5ex,",
+            "    topsep=5pt,ref=\\arabic*}",
+            "\\setlist[steps,2]{label=(\\alph*),ref=\\arabic{stepsi}(\\alph*),",
+            "    topsep=0pt,labelsep=.5em}",
             "\\newlist{inout}{itemize}{1}",
             "\\setlist[inout,1]{widest=Output:,leftmargin=*,itemsep=0pt}",
             "\\newcommand\\descitem[1]{\\item[\\textit{#1:}]}",
-            "\\newcommand\\blockitem[1]{\\item[\\textbf{#1}]}",
             "\\newcommand\\parsepitem{\\item[]\\nointerlineskip}"
         ],
         "description": "Steps for algorithms"
