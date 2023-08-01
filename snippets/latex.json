@@ -154,7 +154,7 @@
     "steps": {
         "prefix": "tex-steps",
         "body": [
-            "\\usepackage{tikz}",
+            "\\usepackage{tikz,enumitem}",
             "\\newcommand*\\circled[1]{\\tikz[baseline=(char.base)]{",
             "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
             "\\newlist{steps}{enumerate}{3}",
