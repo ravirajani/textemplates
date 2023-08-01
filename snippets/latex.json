@@ -154,10 +154,12 @@
     "steps": {
         "prefix": "tex-steps",
         "body": [
-            "\\usepackage{enumitem}",
+            "\\usepackage{tikz}",
+            "\\newcommand*\\circled[1]{\\tikz[baseline=(char.base)]{",
+            "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
             "\\newlist{steps}{enumerate}{3}",
             "\\def\\stepindent{15pt}",
-            "\\setlist[steps,1]{label=\\arabic*.,ref=\\arabic*,left=0pt..\\parindent,itemsep=0pt,topsep=5pt}",
+            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},ref=\\arabic*,leftmargin=*,labelsep=10pt,itemsep=0pt,topsep=5pt}",
             "\\setlist[steps,2]{label=\\arabic*.,ref=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\stepindent,",
             "    before=\\setcounter{stepsii}{\\value{stepsi}},after=\\setcounter{stepsi}{\\value{stepsii}}}",
             "\\setlist[steps,3]{label=\\arabic*.,ref=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\dimexpr\\stepindent*2\\relax,",
