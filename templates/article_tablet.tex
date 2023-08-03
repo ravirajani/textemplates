@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{geometry}
+\geometry{
+    papersize={15.4cm,20.5cm},
+    total={13.4cm,19.9cm},
+    marginratio={1:1,4:5},
+    includeheadfoot,
+    headsep=0.6cm,
+    footskip=0.9cm
+}
+\usepackage[export]{adjustbox}
+\usepackage{newtxtext} % Times font
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
+\usepackage{subfiles}
+\usepackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
+\usepackage[small,pagestyles]{titlesec}
+\newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
+\newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
+\newpagestyle{custom}{%
+\sethead{}{\hdrfont\thesection\enspace\MakeUppercase{\sectiontitle}}{}
+\setfoot{}{\hdrfont\thepage}{}
+}
+\renewpagestyle{plain}{
+    \sethead{}{}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+
+\titleformat*{\subsubsection}{\itshape}
+
+\title{Article Title}
+\author{Ravi Rajani}
+\makeatletter
+\renewcommand{\maketitle}{
+    \thispagestyle{plain}
+    \begin{figure}
+        \vspace{-.5cm}\includegraphics[width=2.4cm,right]{OU_Master_LOGO_BLACK_63mm.eps}
+    \end{figure}
+    \begin{center}
+    \huge\@title\par
+    \end{center}
+    \vspace{40pt}
+}
+\makeatother
+\date{}
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
+\begin{document}
+\def\subbib{}
+\maketitle
+\pagestyle{custom}
+\subfile{subfiles/example.tex}
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
+\end{document}
