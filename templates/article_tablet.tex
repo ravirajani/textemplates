@@ -26,22 +26,30 @@
 }
 
 \titleformat*{\subsubsection}{\itshape}
-
+\usepackage{enumitem,calc}
 \title{Article Title}
 \author{Ravi Rajani}
 \makeatletter
-\renewcommand{\maketitle}{
-    \thispagestyle{plain}
-    \begin{figure}
-        \vspace{-.5cm}\includegraphics[width=2.4cm,right]{OU_Master_LOGO_BLACK_63mm.eps}
-    \end{figure}
+\renewcommand{\maketitle}{%
+    \thispagestyle{plain}%
+    \nointerlineskip
+    \vspace*{-1cm}
+    \noindent\begin{minipage}[b]{.5\textwidth}\small
+        \begin{description}[font=\normalfont,nosep,labelwidth=\widthof{Tutor:},leftmargin=!]
+        \item[Tutor:] Ravi Rajani
+        \item[Date:] \@date
+        \end{description}
+    \end{minipage}%
+    \begin{minipage}[b]{.5\textwidth}
+        \includegraphics[width=2.7cm,right]{OU_Master_LOGO_BLACK_63mm.eps}
+    \end{minipage}
     \begin{center}
     \huge\@title\par
     \end{center}
     \vspace{40pt}
 }
 \makeatother
-\date{}
+\date{\today}
 %\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
 % In subfiles, write \subbib before \end{document}
 \begin{document}
