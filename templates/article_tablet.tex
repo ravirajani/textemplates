@@ -1,4 +1,6 @@
-\documentclass[12pt]{article}
+\documentclass[12pt,british]{article}
+\usepackage{babel}
+\usepackage[useregional]{datetime2}
 \usepackage{geometry}
 \geometry{
     papersize={15.4cm,20.5cm},
@@ -26,27 +28,24 @@
 }
 
 \titleformat*{\subsubsection}{\itshape}
-\usepackage{enumitem,calc}
 \title{Article Title}
 \author{Ravi Rajani}
 \makeatletter
 \renewcommand{\maketitle}{%
     \thispagestyle{plain}%
-    \nointerlineskip
-    \vspace*{-1cm}
-    \noindent\begin{minipage}[c]{.5\textwidth}\small
-        \begin{description}[font=\normalfont,nosep,labelwidth=\widthof{Tutor:},leftmargin=!]
-        \item[Tutor:] Ravi Rajani
-        \item[Date:] \@date
-        \end{description}
-    \end{minipage}%
-    \begin{minipage}[c]{.5\textwidth}
-        \includegraphics[width=2.7cm,right]{OU_Master_LOGO_BLACK_63mm.eps}
-    \end{minipage}
+    \nointerlineskip%
+    \vspace*{-1cm}%
+    \noindent\begin{minipage}[t]{.78\linewidth}\footnotesize
+        \@author\ (email@address.com) \\
+        School of Computing and Communications \\
+        \@date
+    \end{minipage}\hfill
+    \includegraphics[width=.22\linewidth,valign=t]{OU_Master_LOGO_BLACK_63mm.eps}
+    \vspace{1ex}
     \begin{center}
     \huge\@title\par
     \end{center}
-    \vspace{40pt}
+    \vspace{20pt}
 }
 \makeatother
 \date{\today}
