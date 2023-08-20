@@ -146,8 +146,9 @@
             "%     Write boxed text here. Refer to it in the text with \\pageref{mylabel}",
             "% \\end{tcolorbox}",
             "\\tcbuselibrary{skins,breakable}",
-            "\\tcbset{standard jigsaw, opacityback=0, opacitybacktitle=0, coltitle=black, titlerule=0pt,",
-            "fonttitle=\\bfseries,center title, toptitle=5pt, middle=0pt}"
+            "\\tcbset{enhanced jigsaw, opacityback=0, opacitybacktitle=0, coltitle=black, titlerule=0pt,",
+            "before skip=15pt plus 5pt minus 5pt, after skip=15pt plus 5pt minus 5pt,",
+            "fonttitle=\\bfseries,center title, toptitle=5pt, middle=0pt, breakable}"
         ],
         "description": "Framed boxes with tcolorbox"  
     },
@@ -155,18 +156,15 @@
         "prefix": "tex-steps",
         "body": [
             "\\usepackage{tikz,enumitem}",
-            "\\newcommand*\\circled[1]{\\tikz[baseline=(char.base)]{",
-            "    \\node[shape=circle,draw,inner sep=1pt] (char) {#1};}}",
             "\\newlist{steps}{enumerate}{3}",
             "\\def\\stepindent{15pt}",
-            "\\setlist[steps,1]{label=\\protect\\circled{\\arabic*},ref=\\arabic*,leftmargin=*,labelsep=10pt,itemsep=0pt,topsep=5pt}",
-            "\\setlist[steps,2]{label=\\arabic*.,ref=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\stepindent,",
+            "\\setlist[steps,1]{label=\\textbf{\\arabic*},ref=\\arabic*,widest=10,leftmargin=*,labelsep=\\stepindent,itemsep=0pt,topsep=5pt}",
+            "\\setlist[steps,2]{label=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\stepindent,",
             "    before=\\setcounter{stepsii}{\\value{stepsi}},after=\\setcounter{stepsi}{\\value{stepsii}}}",
-            "\\setlist[steps,3]{label=\\arabic*.,ref=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\dimexpr\\stepindent*2\\relax,",
+            "\\setlist[steps,3]{label=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\dimexpr\\stepindent*2\\relax,",
             "    before=\\setcounter{stepsiii}{\\value{stepsii}},after=\\setcounter{stepsii}{\\value{stepsiii}}}",
-            "\\newlist{inout}{itemize}{1}",
-            "\\setlist[inout,1]{widest=Output:,leftmargin=*,itemsep=0pt}",
-            "\\newcommand\\descitem[1]{\\item[\\textit{#1:}]}",
+            "\\newlist{inout}{description}{1}",
+            "\\setlist[inout,1]{leftmargin=!,labelwidth=45pt,labelsep=0pt,topsep=5pt,font={\\normalfont\\itshape}}",
             "\\newcommand\\parsepitem{\\item[]\\nointerlineskip}"
         ],
         "description": "Steps for algorithms"
