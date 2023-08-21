@@ -142,13 +142,20 @@
         "body": [
             "\\usepackage{tcolorbox}",
             "% Example:",
-            "% \\begin{tcolorbox}[label={mylabel},title=My Title]",
-            "%     Write boxed text here. Refer to it in the text with \\pageref{mylabel}",
-            "% \\end{tcolorbox}",
-            "\\tcbuselibrary{skins,breakable}",
-            "\\tcbset{enhanced jigsaw, opacityback=0, opacitybacktitle=0, coltitle=black, titlerule=0pt,",
+            "% \\\\begin{algorithm}{Title}{label}",
+            "%     Write boxed text here. Refer to it in the text with \\ref{alg:label}",
+            "%     \\tcblower",
+            "%     This is the lower part of the box.",
+            "% \\end{algorithm}",
+            "\\tcbuselibrary{skins,breakable,theorems}",
+            "\\newtcbtheorem[number within=section]{algorithm}{Algorithm}%",
+            "{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\\bfseries,",
+            "description font=\\normalfont, separator sign={\\hspace{.5em}},",
+            "boxrule=0mm, toprule=2pt, bottomrule=2pt,",
             "before skip=15pt plus 5pt minus 5pt, after skip=15pt plus 5pt minus 5pt,",
-            "fonttitle=\\bfseries,center title, toptitle=5pt, breakable}"
+            "top=5pt, toptitle=1mm, bottom=1mm, left=1mm, right=1mm, middle=1mm,",
+            "segmentation style={black,solid,opacity=0.2,line width=1pt},",
+            "coltitle=black, colback=black!5!white, colbacktitle=black!5!white, titlerule=0pt}{alg}"
         ],
         "description": "Framed boxes with tcolorbox"  
     },
