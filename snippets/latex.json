@@ -142,20 +142,21 @@
         "body": [
             "\\usepackage{tcolorbox}",
             "% Example:",
-            "% \\\\begin{algorithm}{Title}{label}",
+            "% \\begin{algorithm}{Title}{label}",
             "%     Write boxed text here. Refer to it in the text with \\ref{alg:label}",
             "%     \\tcblower",
             "%     This is the lower part of the box.",
             "% \\end{algorithm}",
             "\\tcbuselibrary{skins,breakable,theorems}",
-            "\\newtcbtheorem[number within=section]{algorithm}{Algorithm}%",
-            "{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\\bfseries,",
-            "description font=\\normalfont, separator sign={\\hspace{.5em}},",
-            "boxrule=0mm, toprule=2pt, bottomrule=2pt,",
+            "\\tcbset{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\\bfseries,",
             "before skip=15pt plus 5pt minus 5pt, after skip=15pt plus 5pt minus 5pt,",
             "top=5pt, toptitle=1mm, bottom=1mm, left=1mm, right=1mm, middle=1mm,",
+            "coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}",
+            "\\newtcbtheorem[number within=section]{algorithm}{Algorithm}%",
+            "{boxrule=0mm, toprule=1pt, bottomrule=1pt,",
+            "description font=\\normalfont, separator sign={\\hspace{.5em}},",
             "segmentation style={black,solid,opacity=0.2,line width=1pt},",
-            "coltitle=black, colback=black!5!white, colbacktitle=black!5!white, titlerule=0pt}{alg}"
+            "colback=black!5!white, colbacktitle=black!5!white}{alg}"
         ],
         "description": "Framed boxes with tcolorbox"  
     },
@@ -171,7 +172,8 @@
             "\\setlist[steps,3]{label=\\arabic*,leftmargin=\\stepindent,topsep=0pt,labelsep=\\dimexpr\\stepindent*2\\relax,",
             "    before=\\setcounter{stepsiii}{\\value{stepsii}},after=\\setcounter{stepsii}{\\value{stepsiii}}}",
             "\\newlist{inout}{description}{1}",
-            "\\setlist[inout,1]{leftmargin=*,widest=Output:,labelsep=.5em,topsep=5pt,font={\\normalfont\\itshape},itemsep=0pt,align=right}",
+            "\\setlist[inout,1]{labelindent=\\stepindent,widest=Output:,leftmargin=*,",
+            "labelsep=.5em,topsep=5pt,font={\\normalfont\\itshape},itemsep=0pt}",
             "\\newcommand\\parsepitem{\\item[]\\nointerlineskip}"
         ],
         "description": "Steps for algorithms"
