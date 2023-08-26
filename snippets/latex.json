@@ -154,6 +154,7 @@
             "coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}",
             "\\newtcbtheorem[number within=section]{algorithm}{Algorithm}%",
             "{boxrule=0mm, toprule=1pt, bottomrule=1pt,",
+            "theorem hanging indent=0pt,",
             "description font=\\normalfont, separator sign={\\hspace{.5em}},",
             "segmentation style={black,solid,opacity=0.2,line width=1pt},",
             "colback=black!5!white, colbacktitle=black!5!white}{alg}"
