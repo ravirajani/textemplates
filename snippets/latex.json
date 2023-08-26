@@ -5,14 +5,21 @@
             "\\usepackage{amsmath,amsthm}",
             "\\renewcommand\\dotsc{\\mathinner{\\ldotp\\kern-0.12em\\ldotp\\kern-0.12em\\ldotp}} % Tighter ellipsis between commas",
             "\\DeclareMathOperator{\\vol}{vol}",
-            "\\usepackage{newtxtext,newtxmath} % Times font",
+            "\\usepackage{newtxmath} % Times font",
             "\\usepackage{mleftright} % \\mleft \\mright has no extra space around it",
             "\\usepackage{bm}",
             "\\newcommand\\dotp{\\mathbin{\\bm{\\cdot}}}",
-            "",
+            "\\usepackage{nicematrix}",
+            "\\NiceMatrixOptions{renew-dots,renew-matrix,nullify-dots}",
+            "\\usepackage{xfrac} % small fraction \\sfrac defined here",
             "\\newlength{\\customheadsep}",
-            "\\setlength{\\customheadsep}{1.5ex plus 1.5ex minus .3ex}",
-            "",
+            "\\setlength{\\customheadsep}{1.5ex plus 1.5ex minus .3ex}"
+        ],
+        "description": "Maths"
+    },
+    "theorem": {
+        "prefix": "tex-theorem",
+        "body": [
             "\\usepackage{xpatch}",
             "\\makeatletter",
             "\\xpatchcmd{\\proof}{\\@addpunct{.}}{}{}{}",
@@ -67,25 +74,26 @@
             "    {\\popQED\\endexamplex}",
             "",
             "\\numberwithin{equation}{section}",
-            "\\numberwithin{figure}{section}",
-            "",
-            "\\usepackage{caption,floatrow}",
-            "\\DeclareCaptionLabelSeparator{capspace}{\\hspace{\\customheadsep}}",
-            "\\DeclareFloatStyle{figure}{capposition=bottom}",
-            "\\floatsetup[figure]{style=figure}",
-            "\\captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}",
-            "",
-            "\\usepackage{nicematrix}",
-            "\\NiceMatrixOptions{renew-dots,renew-matrix,nullify-dots}",
-            "",
-            "\\usepackage{xfrac} % small fraction \\sfrac defined here",
             "",
             "\\usepackage{enumitem}",
             "\\newlist{parts}{enumerate}{2}",
             "\\setlist[parts,1]{label=\\normalfont{(\\alph*)},labelsep=.5em}",
             "\\setlist*[parts,2]{label=\\normalfont{(\\roman*)},labelsep=.5em}"
         ],
-        "description": "Maths"
+        "description": "Theorems and Examples"
+    },
+    "figure": {
+        "prefix": "tex-figure",
+        "body": [
+            "\\numberwithin{figure}{section}",
+            "",
+            "\\usepackage{caption,floatrow}",
+            "\\DeclareCaptionLabelSeparator{capspace}{\\hspace{\\customheadsep}}",
+            "\\DeclareFloatStyle{figure}{capposition=bottom}",
+            "\\floatsetup[figure]{style=figure}",
+            "\\captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}"
+        ],
+        "description": "Figures"
     },
     "titlesec": {
         "prefix": "tex-titlesec",
@@ -155,7 +163,7 @@
             "\\newtcbtheorem[number within=section]{algorithm}{Algorithm}%",
             "{boxrule=0mm, toprule=1pt, bottomrule=1pt,",
             "theorem hanging indent=0pt,",
-            "description font=\\normalfont, separator sign={\\hspace{.5em}},",
+            "description font=\\normalfont, separator sign=\\hspace{\\customheadsep},",
             "segmentation style={black,solid,opacity=0.2,line width=1pt},",
             "colback=black!5!white, colbacktitle=black!5!white}{alg}"
         ],
