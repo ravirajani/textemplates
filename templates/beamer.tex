@@ -1,7 +1,5 @@
 \documentclass[handout,10pt]{beamer}
-\def\hmargin{1em}
-\def\titlepagewidth{\dimexpr\paperwidth - 4em\relax}
-\def\innerframewidth{\titlepagewidth}
+\def\hmargin{2em}
 
 \usefonttheme{professionalfonts}
 
@@ -81,7 +79,6 @@
 {%
   \nointerlineskip%
   \vspace{\titletopmargin}
-  \begin{columns}\column{\titlepagewidth}
   \begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
@@ -97,21 +94,18 @@
 \begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}%
-\end{columns}
 }
 
 \defbeamertemplate*{frametitle}{OUTitlePage}[1][left]
 {%
 \vspace{0.1cm}
 \nointerlineskip%
-\begin{columns}[onlytextwidth]
-  %\column{\dimexpr\textwidth - 1cm\relax}
+\begin{columns}
+  \column{\dimexpr\paperwidth - 0.7cm\relax}%
   \begin{beamercolorbox}[#1,dp=0.3cm,ht=0.7cm]{frametitle}
     \usebeamerfont{frametitle}%
     \insertframetitle\par%
   \end{beamercolorbox}%
-  %\column{1cm}
-  %\includegraphics[width=0.6cm,right]{OU_SHIELD_LOGO_BLUE_63mm.eps}%
 \end{columns}
 }
 
@@ -191,8 +185,6 @@
 \subsection{Subsection}
 
 \begin{frame}[fragile]{Frame title}
-  \begin{columns}
-    \column{\innerframewidth}
     Remember:
     \begin{itemize}
       \item Use the \texttt{fragile} frame option for minted environments.
@@ -211,21 +203,18 @@
 \usebackgroundtemplate{}
 \end{minted}
     \end{itemize}
-  \end{columns}
 \end{frame}
 
 \setbeamercolor{background canvas}{bg=OUCoreBlue}
 \begin{frame}
   \nointerlineskip%
   \vspace{\titletopmargin}
-  \begin{columns}\column{\titlepagewidth}
   \begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\raggedright
     \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
   \end{minipage}
   \begin{minipage}[c][.8cm][b]{\textwidth}
     \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
   \end{minipage}
-\end{columns}
 \end{frame}
 
 \end{document}
