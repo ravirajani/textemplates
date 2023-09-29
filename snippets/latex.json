@@ -173,7 +173,7 @@
         "prefix": "tex-steps",
         "body": [
             "\\usepackage{enumitem}",
-            "\\newlist{steps}{enumerate}{3}",
+            "\\newlist{steps}{enumerate}{4}",
             "\\def\\algindent{10pt}",
             "\\def\\stepindent{15pt}",
             "\\def\\stepspacing{3pt}",
@@ -185,6 +185,9 @@
             "\\setlist[steps,3]{label={\\small\\arabic*},ref=\\arabic*,leftmargin=\\stepindent,labelindent=-\\dimexpr\\stepindent + \\algindent\\relax,",
             "    labelsep=\\dimexpr\\stepindent*2 + \\algindent\\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\\stepspacing,",
             "    before=\\setcounter{stepsiii}{\\value{stepsii}},after=\\setcounter{stepsii}{\\value{stepsiii}}}",
+            "\\setlist[steps,4]{label={\\small\\arabic*},ref=\\arabic*,leftmargin=\\stepindent,labelindent=-\\dimexpr\\stepindent*2 + \\algindent\\relax,",
+            "    labelsep=\\dimexpr\\stepindent*3 + \\algindent\\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\\stepspacing,",
+            "    before=\\setcounter{stepsiv}{\\value{stepsiii}},after=\\setcounter{stepsiii}{\\value{stepsiv}}}",
             "\\newlist{inout}{description}{1}",
             "\\setlist[inout,1]{labelindent=\\stepindent,widest=Output:,leftmargin=*,",
             "labelsep=.5em,topsep=5pt,font={\\normalfont\\itshape},itemsep=0pt}",
