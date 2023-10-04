@@ -1,0 +1,41 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{algsteps}
+\RequirePackage{enumitem}
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+    family=STP,
+    prefix=STP@
+}
+
+\DeclareStringOption[3pt]{linespacing}
+\DeclareStringOption[10pt]{labelsep}
+\DeclareStringOption[15pt]{indent}
+
+\ProcessKeyvalOptions*
+
+\newlist{steps*}{itemize}{4}
+\setlist[steps*,1]{label=,leftmargin=\parindent,labelindent=0pt,labelwidth=\dimexpr\parindent - \STP@labelsep\relax,
+    labelsep=\STP@labelsep,itemsep=0pt,topsep=0pt,partopsep=8pt,parsep=\STP@linespacing}
+\setlist[steps*,2]{label=,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
+    labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps*,3]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
+    labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps*,4]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
+    labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\newlist{steps}{enumerate}{4}
+\setlist[steps,1]{label={\small\arabic*},ref=\arabic*,widest=10,leftmargin=*,
+    labelsep=\STP@labelsep,itemsep=0pt,topsep=0pt,partopsep=8pt,parsep=\STP@linespacing}
+\setlist[steps,2]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
+    labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+    before=\setcounter{stepsii}{\value{stepsi}},after=\setcounter{stepsi}{\value{stepsii}}}
+\setlist[steps,3]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
+    labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+    before=\setcounter{stepsiii}{\value{stepsii}},after=\setcounter{stepsii}{\value{stepsiii}}}
+\setlist[steps,4]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
+    labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+    before=\setcounter{stepsiv}{\value{stepsiii}},after=\setcounter{stepsiii}{\value{stepsiv}}}
+\newlist{inout}{description}{1}
+\setlist[inout,1]{labelindent=\STP@indent,widest=Output:,leftmargin=*,
+labelsep=.5em,topsep=5pt,font={\normalfont\itshape},itemsep=0pt}
+\newcommand\parsepitem{\item[]\nointerlineskip}
