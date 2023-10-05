@@ -1,52 +1,15 @@
 {
-    "titlesec": {
-        "prefix": "tex-titlesec",
+    "subfile": {
+        "prefix": "tex-subfile",
         "body": [
-            "\\usepackage[small,center]{titlesec}",
-            "\\titleformat*{\\subsection}{\\filcenter\\itshape\\bfseries}",
-            "\\titleformat{\\subsubsection}[runin]",
-            "{\\normalfont\\bfseries}",
-            "{\\thesubsection}{.33em}{}[.]",
-            "\\titlespacing{\\subsubsection}{0pt}{1.5ex plus .1ex minus .2ex}{.5em}"
+          "\\documentclass[../main.tex]{subfiles}",
+          "\\begin{document}",
+          "\\pagestyle{custom}",
+          "",
+          "% \\subbib",
+          "\\end{document}"
         ],
-        "description": "Custom titles"
-    },
-    "complexity": {
-        "prefix": "tex-complexity",
-        "body": [
-            "\\usepackage[classfont=sanserif,",
-            "            langfont=caps,",
-            "            funcfont=roman]{complexity}",
-            "\\newlang{\\SVP}{SVP}"
-        ],
-        "description": "Complexity classes"
-    },
-    "algorithm": {
-        "prefix": "tex-algorithm",
-        "body": [
-            "\\usepackage{algorithmicx,varwidth}",
-            "\\makeatletter",
-            "\\algnewcommand{\\MultiState}[1]{%",
-            "    \\State\\begin{varwidth}[t]{\\dimexpr\\linewidth-\\ALG@thistlm}#1\\end{varwidth}%",
-            "}",
-            "\\patchcmd{\\ALG@doentity}{\\item[]\\nointerlineskip}{}{}{} % patch spurious space",
-            "\\makeatother",
-            "\\algdef{SN}[WHILE]{While}{EndWhile}[1]{\\textbf{while}\\ #1:}%",
-            "\\algdef{SN}[FOR]{For}{EndFor}[1]{\\textbf{for}\\ #1:}%",
-            "\\algdef{SN}[IF]{If}{EndIf}[1]{\\textbf{if}\\ #1:}%",
-            "\\algdef{C}[IF]{IF}{ElseIf}[1]{\\textbf{else if}\\ #1:}%",
-            "\\algdef{CN}[ELSE]{IF}{Else}{EndIf}{\\textbf{else}:}%",
-            "\\algdef{SE}[REPEAT]{Repeat}{Until}{\\textbf{repeat}:}[1]{\\textbf{until}\\ #1}%"
-        ],
-        "description": "Custom algorithm pseudocode"
-    },
-    "summary": {
-        "prefix": "tex-summary",
-        "body": [
-            "\\newenvironment{summary}",
-            "{\\leftskip\\parindent\\relax\\rightskip\\parindent\\relax\\noindent\\ignorespaces}",
-            "{\\par}"
-        ],
-        "description": "Summary environment definition"
-    }
+        "description": "Generate subfile template"
+      }
+    
 }
