@@ -1,0 +1,32 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{framedbox}
+\RequirePackage{tcolorbox}
+
+\tcbuselibrary{skins,breakable,theorems}
+\tcbset{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\bfseries,
+before skip=15pt plus 5pt minus 5pt, after skip=15pt plus 5pt minus 5pt,
+top=0pt, toptitle=1mm, bottomtitle=1mm, bottom=1mm, left=1mm, right=1mm, middle=1mm,
+coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
+
+% Example:
+% \begin{framedbox}{Title}{label}
+%     Write boxed text here. Refer to it in the text with \pageref{label}
+%     \tcblower
+%     This is the lower part of the box.
+% \end{framedbox}
+\newtcolorbox{framedbox}[2]{title={#1},label={#2}}
+
+% Example:
+% \begin{algorithm}{Title}{label}
+%     Write boxed text here. Refer to it in the text with \ref{alg:label}
+%     \tcblower
+%     This is the lower part of the box.
+% \end{algorithm}
+%
+% To use this counter e.g. in amsmath, use counter=\tcbcounter option
+\newtcbtheorem[number within=section]{algorithm}{Algorithm}%
+{boxrule=0mm, toprule=1pt, bottomrule=1pt,
+theorem hanging indent=0pt,
+description font=\normalfont,separator sign=\hspace{1ex},
+segmentation style={black,solid,opacity=0.2,line width=1pt},
+colback=black!5!white, colbacktitle=black!5!white}{alg}
