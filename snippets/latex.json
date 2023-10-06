@@ -2,7 +2,7 @@
     "subfile": {
         "prefix": "tex-subfile",
         "body": [
-          "\\documentclass[../main.tex]{subfiles}",
+          "\\documentclass[main.tex]{subfiles}",
           "\\begin{document}",
           "\\pagestyle{custom}",
           "",
@@ -11,5 +11,4 @@
         ],
         "description": "Generate subfile template"
       }
-    
 }
