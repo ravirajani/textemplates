@@ -1,0 +1,54 @@
+\documentclass[style=report]{tablet}
+
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
+
+\newpagestyle{custom}{%
+\sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
+\setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{title}{%
+    \sethead{}{}{}
+    \setfoot{}{}{}
+}
+\renewpagestyle{plain}{
+    \sethead{}{}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+
+\titleformat{\chapter}[hang]
+{\filright\bfseries\LARGE}
+{\chnumfont\thechapter}
+{0.5em}
+{}
+\titlespacing*{\chapter}{0pt}{0pt}{44pt}[1em]
+
+\titleformat*{\subsubsection}{\itshape}
+\makeatletter
+\renewcommand{\maketitle}{
+    \pagestyle{title}
+    \vspace*{.25\textheight}
+    \nointerlineskip
+    \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
+        {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}
+        \vfill
+        {\noindent\LARGE\@author\par}%
+    \end{minipage}
+}
+\makeatother
+
+\title{Report Title}
+\author{Ravi Rajani}
+
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
+\begin{document}
+\def\subbib{}
+\maketitle
+\tableofcontents
+\setcounter{page}{1}
+\pagestyle{custom}
+\subfile{subfile.tex}
+\subfile{subfile.tex}
+\subfile{subfile.tex}
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
+\end{document}

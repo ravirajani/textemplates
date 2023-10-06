@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1411"
+   width="604.724"
+   height="340.15732"
+   viewBox="0 0 604.724 340.15732"
+   sodipodi:docname="beamer.pdf"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1415">
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1439">
+      <path
+         d="M 0,0 H 42 V 52 H 0 Z"
+         id="path1437" />
+    </clipPath>
+    <clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath1449">
+      <path
+         d="M 0,0 H 416.262 V 513.184 H 0 Z"
+         id="path1447" />
+    </clipPath>
+  </defs>
+  <sodipodi:namedview
+     id="namedview1413"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:document-units="cm"
+     showguides="true"
+     inkscape:lockguides="true">
+    <sodipodi:guide
+       position="576.37795,297.76943"
+       orientation="0,-1"
+       id="guide1649"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="28.50277,303.1454"
+       orientation="1,0"
+       id="guide1651"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="585.82677,9.4486578"
+       orientation="0,-1"
+       id="guide1653"
+       inkscape:locked="true" />
+    <sodipodi:guide
+       position="576.37795,9.4486578"
+       orientation="1,0"
+       id="guide1655"
+       inkscape:locked="true" />
+    <inkscape:grid
+       type="xygrid"
+       id="grid1657"
+       spacingx="9.4488189"
+       spacingy="9.4488189"
+       empspacing="4" />
+  </sodipodi:namedview>
+  <inkscape:templateinfo>
+    <inkscape:name>beamer</inkscape:name>
+    <inkscape:author>Ravi Rajani</inkscape:author>
+    <inkscape:shortdesc>LaTeX beamer template 16:9 aspect ratio</inkscape:shortdesc>
+    <inkscape:date>2023-02-06</inkscape:date>
+  </inkscape:templateinfo>
+</svg>

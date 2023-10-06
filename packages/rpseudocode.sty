@@ -1,0 +1,11 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rpseudocode}
+
+\RequirePackage{algorithmicx}
+
+\algdef{SN}[WHILE]{While}{EndWhile}[1]{\textbf{while}\ #1:}%
+\algdef{SN}[FOR]{For}{EndFor}[1]{\textbf{for}\ #1:}%
+\algdef{SN}[IF]{If}{EndIf}[1]{\textbf{if}\ #1:}%
+\algdef{C}[IF]{IF}{ElseIf}[1]{\textbf{else if}\ #1:}%
+\algdef{CN}[ELSE]{IF}{Else}{EndIf}{\textbf{else}:}%
+\algdef{SE}[REPEAT]{Repeat}{Until}{\textbf{repeat}:}[1]{\textbf{until}\ #1}%

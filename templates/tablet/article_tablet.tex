@@ -1,0 +1,43 @@
+\documentclass[style=article]{tablet}
+
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
+
+\newpagestyle{custom}{%
+\sethead{}{\hdrfont\thesection\enspace\MakeUppercase{\sectiontitle}}{}
+\setfoot{}{\hdrfont\thepage}{}
+}
+\renewpagestyle{plain}{
+    \sethead{}{}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+
+\titleformat*{\subsubsection}{\itshape}
+\title{Article Title}
+\author{Ravi Rajani}
+\makeatletter
+\renewcommand{\maketitle}{%
+    \thispagestyle{plain}%
+    \nointerlineskip%
+    \vspace*{-1cm}%
+    \noindent\begin{minipage}[t]{.8\linewidth}\footnotesize
+        \@author\ (email@address.com) \\
+        \@date
+    \end{minipage}\hfill
+    \includegraphics[width=.2\linewidth,valign=t]{OU_Master_LOGO_BLACK_63mm.eps}
+    \vspace{1ex}
+    \begin{center}
+    \huge\@title\par
+    \end{center}
+    \vspace{20pt}
+}
+\makeatother
+\date{\today}
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
+\begin{document}
+\def\subbib{}
+\maketitle
+\pagestyle{custom}
+\subfile{subfile.tex}
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
+\end{document}
