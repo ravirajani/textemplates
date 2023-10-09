@@ -1,2 +1,6 @@
 # Templates/Snippets
-LaTex templates and VS Code snippets.
+LaTex templates, packages, and VS Code snippets.
+
+```shell
+python new_from_template.py -h
+```
