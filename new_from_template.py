@@ -38,6 +38,7 @@ else:
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
+shutil.copy('.gitignore', str(args.projectfolder / '.gitignore'))
 for file in files:
     src = file['src']
     dst = file.get('dst', src)
