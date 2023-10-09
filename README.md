@@ -1,4 +1,4 @@
-# Templates/Snippets
+# Templates/Packages/Snippets
 LaTex templates, packages, and VS Code snippets.
 
 ```shell
