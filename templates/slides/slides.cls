@@ -1,7 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{slides}
-
-\LoadClass[handout,10pt]{beamer}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
+\ProcessOptions\relax
+\LoadClass[10pt]{beamer}
 \usefonttheme{professionalfonts}
 
 \def\hmargin{2em}

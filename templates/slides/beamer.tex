@@ -1,4 +1,4 @@
-\documentclass{slides}
+\documentclass{slides} % Use option 'handout' for handouts
 
 \usepackage[outputdir=out]{minted}
 \setminted{%
@@ -29,8 +29,6 @@
 
 \subject{Subject of talk}
 
-\beamerdefaultoverlayspecification{<+->}
-
 \begin{document}
 \setbeamercolor{background canvas}{bg=OUCoreBlue}
 \begin{frame}
@@ -48,7 +46,7 @@
 
 \begin{frame}[fragile]{Frame title}
     Remember:
-    \begin{itemize}
+    \begin{itemize}[<+->]
       \item Use the \texttt{fragile} frame option for minted environments.
       \item Use background templates and texpos as follows:
             \begin{minted}{latex}
