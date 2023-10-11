@@ -142,3 +142,5 @@
 \addtolength{\leftmargini}{\labelsep}
 \settowidth{\leftmarginii}{\usebeamertemplate{itemize item}}
 \addtolength{\leftmarginii}{\labelsep}
+
+\beamertemplatenavigationsymbolsempty
