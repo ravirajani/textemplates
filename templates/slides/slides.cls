@@ -131,7 +131,8 @@
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
-\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{enumerate item}[default]
+\setbeamertemplate{enumerate subitem}{\alph{enumii})}
 \setbeamertemplate{footline}[page number]
 \setbeamertemplate{title page}[OUTitlePage]
 \setbeamertemplate{frametitle}[OUFrameTitle]
