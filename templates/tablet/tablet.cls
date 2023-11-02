@@ -18,6 +18,8 @@
 \LoadClass[12pt]{\TBT@style}
 
 \RequirePackage{newtxtext} % Times font
+% \RequirePackage{newtxsf} % Serif font
+% \renewcommand{\familydefault}{\sfdefault}
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage{geometry}
 \RequirePackage[export]{adjustbox}
