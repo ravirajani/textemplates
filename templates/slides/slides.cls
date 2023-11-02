@@ -118,8 +118,9 @@
 \setbeamercolor{structure}{fg=OUCoreBlue}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=OUCoreBlue}
-\setbeamercolor{exampled text}{fg=OUMidBlue}
+\setbeamercolor{example text}{fg=OUMidBlue}
 \setbeamercolor{block title}{fg=OUMidBlue}
+\setbeamercolor{description item}{fg=OUMidBlue}
 
 \setbeamerfont{title}{series=\bfseries,size=\huge}
 \setbeamerfont{subtitle}{series=\mdseries,size=\Large}
