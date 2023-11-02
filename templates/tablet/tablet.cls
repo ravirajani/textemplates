@@ -18,7 +18,7 @@
 \LoadClass[12pt]{\TBT@style}
 
 \RequirePackage{newtxtext} % Times font
-% \RequirePackage{newtxsf} % Serif font
+% \RequirePackage{newtxsf} % Sans font
 % \renewcommand{\familydefault}{\sfdefault}
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage{geometry}
