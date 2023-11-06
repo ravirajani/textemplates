@@ -12,14 +12,19 @@
 }
 
 \DeclareStringOption[article]{style}
+\DeclareBoolOption{sansfont}
 
 \ProcessKeyvalOptions*
 
 \LoadClass[12pt]{\TBT@style}
 
-\RequirePackage{newtxtext} % Times font
-% \RequirePackage{newtxsf} % Sans font
-% \renewcommand{\familydefault}{\sfdefault}
+\ifTBT@sansfont
+    \RequirePackage{newtxsf} % Sans font
+    \renewcommand{\familydefault}{\sfdefault}
+\else
+    \RequirePackage{newtxtext} % Times font
+\fi
+
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage{geometry}
 \RequirePackage[export]{adjustbox}
@@ -35,4 +40,3 @@
     headsep=0.6cm,
     footskip=0.9cm
 }
-
