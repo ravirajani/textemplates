@@ -1,0 +1,13 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rpython}
+\RequirePackage{minted}
+
+\usepackage[outputdir=out]{minted}
+\setminted{%
+  xleftmargin=\dimexpr \labelsep + 1ex \relax,
+  linenos,
+  fontfamily=tt,
+  numbersep=1ex
+}
+\newminted[py]{python}{}
+\newmintinline[pyil]{python}{}

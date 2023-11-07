@@ -1,15 +1,5 @@
 \documentclass{slides} % Use option 'handout' for handouts
 
-\usepackage[outputdir=out]{minted}
-\setminted{%
-  xleftmargin=\dimexpr \labelsep + 1ex \relax,
-  linenos,
-  fontfamily=tt,
-  numbersep=1ex
-}
-\newminted[py]{python}{}
-\newmintinline[pyil]{python}{}
-
 \title
 {Presentation title}
 
@@ -47,9 +37,9 @@
 \begin{frame}[fragile]{Frame title}
     Remember:
     \begin{itemize}[<+->]
-      \item Use the \texttt{fragile} frame option for minted environments.
+      \item Use the \texttt{fragile} frame option for verbatim environments.
       \item Use background templates and texpos as follows:
-            \begin{minted}{latex}
+            \begin{verbatim}
 \usebackgroundtemplate{\import{subfolder}{file.pdf}}
 \begin{frame}
   % The textblock* environment does absolute positioning
@@ -61,7 +51,7 @@
   \end{textblock*}
 \end{frame}% Reset the background template after:
 \usebackgroundtemplate{}
-\end{minted}
+\end{verbatim}
     \end{itemize}
 \end{frame}
 
