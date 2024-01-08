@@ -12,15 +12,15 @@ coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
 % \begin{ruledbox}
 %   Write boxed text here.
 % \end{ruledbox}
-\newtcolorbox{ruledbox}{boxrule=0mm, toprule=1pt, bottomrule=1pt}
+\newtcolorbox{ruledbox}[1][]{boxrule=0mm, toprule=1pt, bottomrule=1pt, #1}
 
 % Example:
-% \begin{framedbox}{Title}{label}
-%     Write boxed text here. Refer to it in the text with \pageref{label}
+% \begin{framedbox}[title=My Title, label=mylabel]
+%     Write boxed text here. Refer to it in the text with \pageref{mylabel}
 %     \tcblower
 %     This is the lower part of the box.
 % \end{framedbox}
-\newtcolorbox{framedbox}[2]{title={#1},label={#2}}
+\newtcolorbox{framedbox}[1][]{#1}
 
 % Example:
 % \begin{algorithm}{Title}{label}
