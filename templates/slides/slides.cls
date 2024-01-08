@@ -66,6 +66,7 @@
   {\ifnum\@itemdepth=1\relax
      \setlength\itemsep{.5ex}% separation for first level
      \setlength\topsep{.5ex}
+     \setlength\leftmargin{0pt}
    \else
      \ifnum\@itemdepth=2\relax
        \setlength\itemsep{.5ex}% separation for second level
