@@ -61,6 +61,7 @@
 \newenvironment{pseudocode}{%
 \setbeamertemplate{itemize/enumerate body begin}{\normalsize}%
 \setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}%
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}%
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
