@@ -58,6 +58,28 @@
  {}
  {}
 
+\newenvironment{pseudocode}{%
+\setbeamertemplate{itemize/enumerate body begin}{\normalsize}%
+\setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}%
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\ifnum\@itemdepth=1\relax
+     \setlength\itemsep{.5ex}% separation for first level
+     \setlength\topsep{.5ex}
+   \else
+     \ifnum\@itemdepth=2\relax
+       \setlength\itemsep{.5ex}% separation for second level
+       \setlength\topsep{.5ex}
+     \else
+       \ifnum\@itemdepth=3\relax
+         \setlength\itemsep{.5ex}% separation for third level
+         \setlength\topsep{.5ex}
+   \fi\fi\fi\def\makelabel
+  }
+ {}
+ {}
+ }{}
+
 \definecolor{OUCoreBlue}{RGB}{6,6,69}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
