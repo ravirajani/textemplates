@@ -42,7 +42,7 @@
       \item Use the \texttt{fragile} frame option for verbatim environments.
       \item Use background templates and texpos as follows:
             \begin{verbatim}
-\usebackgroundtemplate{\import{subfolder}{file.pdf}}
+\setbeamertemplate{background}{\import{subfolder}{file.pdf}}
 \begin{frame}
   % The textblock* environment does absolute positioning
   % First param is width of box, and second is
@@ -52,7 +52,7 @@
     
   \end{textblock*}
 \end{frame}% Reset the background template after:
-\usebackgroundtemplate{}
+\setbeamertemplate{background}{}
 \end{verbatim}
     \end{itemize}
 \end{frame}
