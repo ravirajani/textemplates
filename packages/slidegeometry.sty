@@ -1,0 +1,21 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{slidegeometry}
+\RequirePackage{geometry}
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+    family=SG,
+    prefix=SG@
+}
+
+\DeclareStringOption[85]{aspectratio}
+
+\ProcessKeyvalOptions*
+
+\ifnum\pdf@strcmp{\SG@aspectratio}{85}=0
+\geometry{papersize={15.36cm,9.6cm}} % 8:5
+\setbeamersize{text margin right=3.24cm} % retain 4:3 layout aligned left 
+\else\ifnum\pdf@strcmp{\SG@aspectratio}{169}=0
+\geometry{papersize={17.12cm,9.63cm}} % 16:9
+\setbeamersize{text margin right=5cm} % retain 4:3 layout aligned left
+\fi\fi
