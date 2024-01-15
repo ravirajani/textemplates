@@ -26,6 +26,7 @@ files = [ { 'src': template[1]+'.tex', 'dst': args.filename+'.tex' } ]
 if template[0] == 'slides':
     files.extend([
         { 'src': 'beamer43.svg' },
+        { 'src': 'beamer85.svg' },
         { 'src': 'beamer169.svg' },
         { 'src': 'OU_Master_LOGO_WHITE_63mm.eps' },
         { 'src': 'slides.cls' }
