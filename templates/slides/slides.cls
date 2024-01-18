@@ -148,9 +148,9 @@
 
 \setbeamerfont{title}{series=\bfseries,size=\huge}
 \setbeamerfont{subtitle}{series=\mdseries,size=\Large}
-\setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{14pt}}
-\setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{14pt}}
-\setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{14pt}}
+\setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{13pt}}
+\setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{13pt}}
+\setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{frametitle}{series=\bfseries,size=\Large}
 \setbeamerfont{caption}{size=\normalsize}
 
