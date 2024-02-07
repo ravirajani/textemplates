@@ -6,6 +6,8 @@
 \usefonttheme{professionalfonts}
 
 \def\hmargin{2em}
+\def\vgap{1.5ex}
+\def\vgapsm{.5ex}
 
 \RequirePackage{times}
 \RequirePackage[scaled=0.8]{FiraMono}
@@ -25,12 +27,12 @@
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
-     \setlength\itemsep{1.5ex}% separation for first level
-     \setlength\topsep{1.5ex}
+     \setlength\itemsep{\vgap}% separation for first level
+     \setlength\topsep{\vgap}
    \else
      \ifnum\@itemdepth=2\relax
-       \setlength\itemsep{1.5ex}% separation for second level
-       \setlength\topsep{1.5ex}
+       \setlength\itemsep{\vgap}% separation for second level
+       \setlength\topsep{\vgap}
      \else
        \ifnum\@itemdepth=3\relax
          \setlength\itemsep{1ex}% separation for third level
@@ -43,12 +45,12 @@
  \xpatchcmd{\beamer@enum@}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
-     \setlength\itemsep{1.5ex}% separation for first level
-     \setlength\topsep{1.5ex}
+     \setlength\itemsep{\vgap}% separation for first level
+     \setlength\topsep{\vgap}
    \else
      \ifnum\@itemdepth=2\relax
-       \setlength\itemsep{1.5ex}% separation for second level
-       \setlength\topsep{1.5ex}
+       \setlength\itemsep{\vgap}% separation for second level
+       \setlength\topsep{\vgap}
      \else
        \ifnum\@itemdepth=3\relax
          \setlength\itemsep{1ex}% separation for third level
@@ -65,17 +67,17 @@
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
-     \setlength\itemsep{.5ex}% separation for first level
-     \setlength\topsep{.5ex}
+     \setlength\itemsep{\vgapsm}% separation for first level
+     \setlength\topsep{\vgapsm}
      \setlength\leftmargin{0pt}
    \else
      \ifnum\@itemdepth=2\relax
-       \setlength\itemsep{.5ex}% separation for second level
-       \setlength\topsep{.5ex}
+       \setlength\itemsep{\vgapsm}% separation for second level
+       \setlength\topsep{\vgapsm}
      \else
        \ifnum\@itemdepth=3\relax
-         \setlength\itemsep{.5ex}% separation for third level
-         \setlength\topsep{.5ex}
+         \setlength\itemsep{\vgapsm}% separation for third level
+         \setlength\topsep{\vgapsm}
    \fi\fi\fi\def\makelabel
   }
  {}
