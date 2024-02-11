@@ -1,8 +1,14 @@
-from argparse import ArgumentParser
+from argparse import ArgumentParser, RawTextHelpFormatter, ArgumentDefaultsHelpFormatter
 from pathlib import Path
 import shutil
 
-parser = ArgumentParser(description='Create a new LaTeX project from a template')
+class HelpFormatter(RawTextHelpFormatter, ArgumentDefaultsHelpFormatter):
+    pass
+
+scriptdir = Path(__file__).parent.resolve()
+package_help = '\n    '.join(map(lambda p: p.stem, Path(scriptdir / 'packages/').glob("*.sty")))
+parser = ArgumentParser(description='Create a new LaTeX project from a template',
+                        formatter_class=HelpFormatter, allow_abbrev=True)
 
 ############## DEFAULTS ##############
 DEFAULT_TEMPLATE = 'tablet/article'
@@ -11,11 +17,13 @@ DEFAULT_PACKAGES = ''
 ######################################
 
 parser.add_argument('projectfolder', type=Path)
-parser.add_argument('-t', '--template', default=DEFAULT_TEMPLATE,
+parser.add_argument('-t', default=DEFAULT_TEMPLATE, dest='template',
+                    help='Template',
                     choices=['tablet/article','tablet/report','slides/beamer'])
-parser.add_argument('-f', '--filename', default=DEFAULT_FILENAME)
-parser.add_argument('-p', '--packages', default=DEFAULT_PACKAGES,
-                    help='Comma-separated list')
+parser.add_argument('-f', dest='filename', metavar='FILENAME', default=DEFAULT_FILENAME,
+                    help='Main file will be FILENAME.tex')
+parser.add_argument('-p', dest='packages', metavar='PACKAGES', default=DEFAULT_PACKAGES,
+                    help='Comma-separated list of packages from:\n    '+package_help+'\n')
 
 args = parser.parse_args()
 
