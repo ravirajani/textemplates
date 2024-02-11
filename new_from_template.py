@@ -8,7 +8,7 @@ class HelpFormatter(RawTextHelpFormatter, ArgumentDefaultsHelpFormatter):
 scriptdir = Path(__file__).parent.resolve()
 package_help = '\n    '.join(map(lambda p: p.stem, Path(scriptdir / 'packages/').glob("*.sty")))
 parser = ArgumentParser(description='Create a new LaTeX project from a template',
-                        formatter_class=HelpFormatter, allow_abbrev=True)
+                        formatter_class=HelpFormatter)
 
 ############## DEFAULTS ##############
 DEFAULT_TEMPLATE = 'tablet/article'
