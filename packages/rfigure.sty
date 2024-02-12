@@ -18,7 +18,11 @@
 \setlength{\RF@customheadsep}{\RF@labelsep}
 
 \DeclareCaptionLabelSeparator{capspace}{\hspace{\RF@customheadsep}}
-\DeclareFloatStyle{figure}{capposition=bottom}
-\floatsetup[figure]{style=figure}
+\floatsetup[figure]{capposition=bottom}
 \captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}
 \numberwithin{figure}{section}
+
+\DeclareNewFloatType{algorithm}{name=Algorithm}
+\floatsetup[algorithm]{capposition=top,style=ruled}
+\captionsetup[algorithm]{labelfont=bf,labelsep=capspace}
+\numberwithin{algorithm}{section}
