@@ -1,0 +1,46 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rsteps}
+\RequirePackage{enumitem}
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+    family=STP,
+    prefix=STP@
+}
+
+\DeclareStringOption[1ex]{linespacing}
+\DeclareStringOption[.5em]{labelsep}
+
+\ProcessKeyvalOptions*
+
+\newlist{steps}{enumerate}{4}
+\setlist[steps,1]{label=\arabic*.,ref=\arabic*,
+    left=0pt,labelsep=\STP@labelsep,widest=10,
+    itemsep=0pt,topsep=0pt,partopsep=\STP@linespacing,parsep=\STP@linespacing}
+\setlist[steps,2]{label=(\alph*),ref=\thestepsi(\alph*),
+    left=0pt,labelsep=\STP@labelsep,widest=a,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps,3]{label=\roman*.,ref=\thestepsii\roman*,
+    left=0pt,labelsep=\STP@labelsep,widest=iii,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps,4]{label=(\alph*),ref=\thestepsiii(\alph*),
+    left=0pt,labelsep=\STP@labelsep,widest=a,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+
+\newlist{steps*}{itemize}{4}
+\setlist[steps*,1]{label=\textbullet,
+    left=\STP@labelsep,labelsep=\STP@labelsep,
+    itemsep=0pt,topsep=0pt,partopsep=\STP@linespacing,parsep=\STP@linespacing}
+\setlist[steps*,2]{label=\textendash,
+    left=0pt,labelsep=\STP@labelsep,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps*,3]{label=\textasteriskcentered,
+    left=\STP@labelsep,labelsep=\STP@labelsep,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[steps*,4]{label=$\circ$,
+    left=\STP@labelsep,labelsep=\STP@labelsep,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+
+\newlist{steps0}{description}{1}
+\setlist[steps0,1]{leftmargin=0pt,labelsep=0pt,
+    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
