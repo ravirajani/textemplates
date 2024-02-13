@@ -4,7 +4,7 @@
 
 \tcbuselibrary{skins,breakable,theorems}
 \tcbset{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\bfseries,
-before skip=15pt plus 5pt minus 5pt, after skip=15pt plus 5pt minus 5pt,
+before skip=12pt plus 5pt minus 5pt, after skip=12pt plus 5pt minus 5pt,
 top=1mm, toptitle=1mm, bottomtitle=0pt, bottom=1mm, left=1mm, right=1mm, middle=2mm,
 coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
 
@@ -12,7 +12,7 @@ coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
 % \begin{ruledbox}
 %   Write boxed text here.
 % \end{ruledbox}
-\newtcolorbox{ruledbox}[1][]{boxrule=0mm, toprule=1pt, bottomrule=1pt, #1}
+\newtcolorbox{ruledbox}[1][]{boxrule=0pt, toprule=1pt, bottomrule=1pt, #1}
 
 % Example:
 % \begin{framedbox}[title=My Title, label=mylabel]
@@ -30,9 +30,10 @@ coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
 % \end{algorithm}
 %
 % To use this counter with rmath: \usepackage[counter=\tcbcounter]{rmath}
-\newtcbtheorem[number within=section]{algorithm}{Algorithm}%
-{boxrule=0mm, toprule=1pt, bottomrule=1pt,
-theorem hanging indent=0pt,
-description font=\normalfont,separator sign=\hspace{1ex},
-segmentation style={black,solid,opacity=0.2,line width=1pt},
-colback=black!5!white, colbacktitle=black!5!white}{alg}
+
+% \newtcbtheorem[number within=section]{algorithm}{Algorithm}%
+% {boxrule=0mm, toprule=1pt, bottomrule=1pt,
+% theorem hanging indent=0pt,
+% description font=\normalfont,separator sign=\hspace{1ex},
+% segmentation style={black,solid,opacity=0.2,line width=1pt},
+% colback=black!5!white, colbacktitle=black!5!white}{alg}
