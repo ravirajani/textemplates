@@ -10,37 +10,39 @@
 
 \DeclareStringOption[1ex]{linespacing}
 \DeclareStringOption[.5em]{labelsep}
+\DeclareStringOption[2em]{textindent}
+\DeclareStringOption[1em]{partopsep}
 
 \ProcessKeyvalOptions*
 
 \newlist{steps}{enumerate}{4}
 \setlist[steps,1]{label=\arabic*.,ref=\arabic*,
-    left=0pt,labelsep=\STP@labelsep,widest=10,
-    itemsep=0pt,topsep=0pt,partopsep=\STP@linespacing,parsep=\STP@linespacing}
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
+    itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
 \setlist[steps,2]{label=(\alph*),ref=\thestepsi(\alph*),
-    left=0pt,labelsep=\STP@labelsep,widest=m,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 \setlist[steps,3]{label=\roman*.,ref=\thestepsii\roman*,
-    left=0pt,labelsep=\STP@labelsep,widest=iii,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 \setlist[steps,4]{label=(\alph*),ref=\thestepsiii(\alph*),
-    left=0pt,labelsep=\STP@labelsep,widest=m,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 
 \newlist{steps*}{itemize}{4}
 \setlist[steps*,1]{label=\textbullet,
-    left=\STP@labelsep,labelsep=\STP@labelsep,
-    itemsep=0pt,topsep=0pt,partopsep=\STP@linespacing,parsep=\STP@linespacing}
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
+    itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
 \setlist[steps*,2]{label=\textendash,
-    left=\STP@labelsep,labelsep=\STP@labelsep,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 \setlist[steps*,3]{label=\textasteriskcentered,
-    left=\STP@labelsep,labelsep=\STP@labelsep,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 \setlist[steps*,4]{label=$\circ$,
-    left=\STP@labelsep,labelsep=\STP@labelsep,
+    labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 
 \newlist{steps0}{description}{1}
 \setlist[steps0,1]{leftmargin=0pt,labelsep=0pt,
-    itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+    itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
