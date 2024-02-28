@@ -8,31 +8,31 @@
     prefix=STP@
 }
 
-\DeclareStringOption[1ex]{linespacing}
+\DeclareStringOption[.5ex]{linespacing}
 \DeclareStringOption[10pt]{labelsep}
 \DeclareStringOption[22pt]{indent}
-\DeclareStringOption[1.5ex]{partopsep}
+\DeclareStringOption[1ex]{partopsep}
 
 \ProcessKeyvalOptions*
 
-\newlist{steps*}{itemize}{4}
-\setlist[steps*,1]{label=,leftmargin=\STP@indent,labelindent=0pt,labelwidth=\dimexpr\STP@indent - \STP@labelsep\relax,
+\newlist{pcode*}{itemize}{4}
+\setlist[pcode*,1]{label=,leftmargin=\STP@indent,labelindent=0pt,labelwidth=\dimexpr\STP@indent - \STP@labelsep\relax,
     labelsep=\STP@labelsep,itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[steps*,2]{label=,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
+\setlist[pcode*,2]{label=,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
     labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps*,3]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
+\setlist[pcode*,3]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps*,4]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
+\setlist[pcode*,4]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\newlist{steps}{enumerate}{4}
-\setlist[steps,1]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,
+\newlist{pcode}{enumerate}{4}
+\setlist[pcode,1]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,
     labelsep=\STP@labelsep,labelwidth=!,itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[steps,2]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
+\setlist[pcode,2]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
     labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
-    before=\setcounter{stepsii}{\value{stepsi}},after=\setcounter{stepsi}{\value{stepsii}}}
-\setlist[steps,3]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
+    before=\setcounter{pcodeii}{\value{pcodei}},after=\setcounter{pcodei}{\value{pcodeii}}}
+\setlist[pcode,3]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
-    before=\setcounter{stepsiii}{\value{stepsii}},after=\setcounter{stepsii}{\value{stepsiii}}}
-\setlist[steps,4]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
+    before=\setcounter{pcodeiii}{\value{pcodeii}},after=\setcounter{pcodeii}{\value{pcodeiii}}}
+\setlist[pcode,4]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
-    before=\setcounter{stepsiv}{\value{stepsiii}},after=\setcounter{stepsiii}{\value{stepsiv}}}
+    before=\setcounter{pcodeiv}{\value{pcodeiii}},after=\setcounter{pcodeiii}{\value{pcodeiv}}}
