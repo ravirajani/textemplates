@@ -1,0 +1,11 @@
+## import matplotlib.pyplot as plt
+## from matplotlib.backends.backend_pgf import FigureCanvasPgf
+## from matplotlib.backend_bases import register_backend
+## register_backend('pgf', FigureCanvasPgf)
+## plt.style.use('tex.mplstyle')
+
+figure.figsize: 5.25, 4.2
+font.family: serif
+#text.usetex: True
+pgf.texsystem: pdflatex
+pgf.rcfonts: False
