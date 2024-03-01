@@ -6,6 +6,10 @@
 \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
 \setfoot{}{\hdrfont\thepage}{}
 }
+\newpagestyle{custom*}{%
+\sethead{}{\hdrfont\MakeUppercase{\chaptertitle}}{}
+\setfoot{}{\hdrfont\thepage}{}
+}
 \newpagestyle{title}{%
     \sethead{}{}{}
     \setfoot{}{}{}
@@ -25,14 +29,14 @@
 \titleformat*{\subsubsection}{\itshape}
 \makeatletter
 \renewcommand{\maketitle}{
-    \pagestyle{title}
+    \thispagestyle{title}
     \vspace*{.25\textheight}
     \nointerlineskip
     \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
         {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}
         \vfill
         {\noindent\LARGE\@author\par}%
-    \end{minipage}
+    \end{minipage}\newpage
 }
 \makeatother
 
@@ -44,8 +48,9 @@
 \begin{document}
 \def\subbib{}
 \maketitle
-\tableofcontents
 \setcounter{page}{1}
+\pagestyle{custom*}
+\tableofcontents
 \pagestyle{custom}
 %\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
