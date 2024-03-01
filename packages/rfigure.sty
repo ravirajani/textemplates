@@ -20,9 +20,17 @@
 \DeclareCaptionLabelSeparator{capspace}{\hspace{\RF@customheadsep}}
 \floatsetup[figure]{capposition=bottom}
 \captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}
+\DeclareCaptionSubType[alph]{figure}
+\captionsetup[subfigure]{labelformat=parens,labelfont=normalfont,labelsep=space}
 \numberwithin{figure}{section}
 
 \DeclareNewFloatType{algorithm}{name=Algorithm}
 \floatsetup[algorithm]{capposition=top,style=ruled}
 \captionsetup[algorithm]{labelfont=bf,labelsep=capspace}
 \numberwithin{algorithm}{section}
+
+\floatsetup[table]{capposition=top}
+\captionsetup[table]{labelfont=bf,labelsep=capspace}
+\DeclareCaptionSubType[alph]{table}
+\captionsetup[subtable]{labelformat=parens,font=small,labelfont=normalfont,labelsep=space}
+\numberwithin{table}{section}

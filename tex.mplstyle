@@ -9,3 +9,4 @@ font.family: serif
 #text.usetex: True
 pgf.texsystem: pdflatex
 pgf.rcfonts: False
+axes.unicode_minus: False
