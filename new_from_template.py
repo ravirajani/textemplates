@@ -37,18 +37,19 @@ if template[0] == 'slides':
         { 'src': 'beamer85.svg' },
         { 'src': 'beamer169.svg' },
         { 'src': 'OU_Master_LOGO_WHITE_63mm.eps' },
-        { 'src': 'slides.cls' }
+        { 'src': 'slides.cls' },
+        { 'src': 'tex.mplstyle' }
     ])
 else:
     files.extend([
         { 'src': 'tablet_154x205.svg' },
         { 'src': 'OU_Master_LOGO_BLACK_63mm.eps' },
         { 'src': 'tablet.cls' },
+        { 'src': 'tex.mplstyle' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
 shutil.copy('.gitignore', str(args.projectfolder / '.gitignore'))
-shutil.copy('tex.mplstyle', str(args.projectfolder / 'tex.mplstyle'))
 shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
 for file in files:
     src = file['src']

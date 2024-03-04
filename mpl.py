@@ -7,3 +7,11 @@ from matplotlib.backend_bases import register_backend
 register_backend('pdf', FigureCanvasPgf)
 plt.style.use('tex.mplstyle')
 plt.tight_layout()
+# %%
+# Plot Figure
+#==============================================================
+fig, ax = plt.subplots()
+# %%
+# Save Figure
+#==============================================================
+fig.savefig('fig.pdf', bbox_inches='tight')

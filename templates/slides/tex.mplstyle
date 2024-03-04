@@ -1,0 +1,7 @@
+figure.figsize: 5.25, 4.2
+font.family: sans-serif
+#text.usetex: True
+pgf.texsystem: pdflatex
+pgf.preamble: \usepackage{amsmath}\usepackage{sansmathfonts}\renewcommand{\familydefault}{\sfdefault}
+pgf.rcfonts: False
+axes.unicode_minus: False
