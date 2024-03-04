@@ -48,6 +48,8 @@ else:
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
 shutil.copy('.gitignore', str(args.projectfolder / '.gitignore'))
+shutil.copy('tex.mplstyle', str(args.projectfolder / 'tex.mplstyle'))
+shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
 for file in files:
     src = file['src']
     dst = file.get('dst', src)

@@ -25,7 +25,8 @@
 \numberwithin{figure}{section}
 
 \DeclareNewFloatType{algorithm}{name=Algorithm}
-\floatsetup[algorithm]{capposition=top,style=ruled}
+\DeclareFloatVCode{algmidcode}{\vskip2pt\hrule\par}
+\floatsetup[algorithm]{capposition=top,style=ruled,midcode=algmidcode}
 \captionsetup[algorithm]{labelfont=bf,labelsep=capspace}
 \numberwithin{algorithm}{section}
 
