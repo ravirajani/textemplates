@@ -8,6 +8,7 @@
 \def\hmargin{2em}
 \def\vgap{1.5ex}
 \def\vgapsm{.5ex}
+\setlength\belowcaptionskip{0pt}
 
 \RequirePackage{times}
 \RequirePackage[scaled=0.8]{FiraMono}
@@ -21,7 +22,7 @@
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{import}
-\RequirePackage[labelformat=empty]{caption}
+\RequirePackage{caption}
 \RequirePackage{xpatch}
 
 \xpatchcmd{\itemize}
@@ -91,6 +92,9 @@
 \definecolor{OUGreen}{RGB}{125,255,211}
 \definecolor{OUYellow}{RGB}{255,244,136}
 \definecolor{OULightYellow}{RGB}{255,249,178}
+
+\DeclareCaptionFont{blue}{\color{OUMidBlue}}
+\captionsetup{labelformat=empty,textfont=blue}
 
 \def\titleboxheight{\dimexpr\paperheight - 4em\relax}
 \def\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}
