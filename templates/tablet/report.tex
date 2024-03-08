@@ -36,7 +36,7 @@
         {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}
         \vfill
         {\noindent\LARGE\@author\par}%
-    \end{minipage}\newpage
+    \end{minipage}\setcounter{page}{0}
 }
 \makeatother
 
@@ -48,7 +48,6 @@
 \begin{document}
 \def\subbib{}
 \maketitle
-\setcounter{page}{1}
 \pagestyle{custom*}
 \tableofcontents
 \thispagestyle{custom*}
