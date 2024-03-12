@@ -10,10 +10,10 @@
     prefix=STP@
 }
 
-\DeclareStringOption[.5ex]{linespacing}
-\DeclareStringOption[10pt]{labelsep}
+\DeclareStringOption[3pt]{linespacing}
+\DeclareStringOption[9pt]{labelsep}
 \DeclareStringOption[24pt]{indent}
-\DeclareStringOption[1ex]{partopsep}
+\DeclareStringOption[10pt]{partopsep}
 
 \ProcessKeyvalOptions*
 
@@ -41,7 +41,23 @@
     before=\setcounter{pcodeiv}{\value{pcodeiii}},after=\setcounter{pcodeiii}{\value{pcodeiv}}}
 
 \newlist{pcode0}{description}{1}
-\setlist[pcode0,1]{leftmargin=\dimexpr\STP@indent*2\relax,labelsep=0pt,style=nextline,
+\setlist[pcode0,1]{leftmargin=\STP@indent,labelsep=0pt,style=nextline,font=\small\bfseries,
     itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
 
 \newcommand{\comment}[2][.5\textwidth]{{\fontfamily{\sfdefault}\selectfont\tabto{#1}// #2}}
+
+\newcommand{\algtitle}[1]{\textsc{#1}}
+
+% Usage:
+% \begin{pcodeblock}[params]{title}{label}
+%    \begin{pcode}
+%       ...
+%    \end{pcode}
+% \end{pcodeblock}
+\newenvironment{pcodeblock}[3][]{%
+\@bsphack
+\csname phantomsection\endcsname
+\def\@currentlabel{\algtitle{#2}}{\label{alg:#3}}% refer to this algorithm as alg:label
+\@esphack
+\vskip\STP@partopsep\noindent{\large\algtitle{#2}}$(#1)${\large:}%
+\vspace{\STP@linespacing}}{\vspace{\STP@partopsep}}
