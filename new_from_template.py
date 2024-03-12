@@ -38,14 +38,14 @@ if template[0] == 'slides':
         { 'src': 'beamer169.svg' },
         { 'src': 'OU_Master_LOGO_WHITE_63mm.eps' },
         { 'src': 'slides.cls' },
-        { 'src': 'tex.mplstyle' }
+        { 'src': 'pgfss.mplstyle' }
     ])
 else:
     files.extend([
         { 'src': 'tablet_154x205.svg' },
         { 'src': 'OU_Master_LOGO_BLACK_63mm.eps' },
         { 'src': 'tablet.cls' },
-        { 'src': 'tex.mplstyle' }
+        { 'src': 'pgf.mplstyle' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
