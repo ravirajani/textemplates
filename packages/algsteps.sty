@@ -1,6 +1,8 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{algsteps}
 \RequirePackage{enumitem}
+\RequirePackage{tabto}
+\RequirePackage[scaled=.86]{helvet}
 \RequirePackage{kvoptions}
 
 \SetupKeyvalOptions{
@@ -10,7 +12,7 @@
 
 \DeclareStringOption[.5ex]{linespacing}
 \DeclareStringOption[10pt]{labelsep}
-\DeclareStringOption[22pt]{indent}
+\DeclareStringOption[24pt]{indent}
 \DeclareStringOption[1ex]{partopsep}
 
 \ProcessKeyvalOptions*
@@ -24,15 +26,22 @@
     labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 \setlist[pcode*,4]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+
 \newlist{pcode}{enumerate}{4}
-\setlist[pcode,1]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,
+\setlist[pcode,1]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,
     labelsep=\STP@labelsep,labelwidth=!,itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[pcode,2]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
+\setlist[pcode,2]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
     labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
     before=\setcounter{pcodeii}{\value{pcodei}},after=\setcounter{pcodei}{\value{pcodeii}}}
-\setlist[pcode,3]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
+\setlist[pcode,3]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
     before=\setcounter{pcodeiii}{\value{pcodeii}},after=\setcounter{pcodeii}{\value{pcodeiii}}}
-\setlist[pcode,4]{label={\small\arabic*},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
+\setlist[pcode,4]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
     labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
     before=\setcounter{pcodeiv}{\value{pcodeiii}},after=\setcounter{pcodeiii}{\value{pcodeiv}}}
+
+\newlist{pcode0}{description}{1}
+\setlist[pcode0,1]{leftmargin=\dimexpr\STP@indent*2\relax,labelsep=0pt,style=nextline,
+    itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
+
+\newcommand{\comment}[2][.5\textwidth]{{\fontfamily{\sfdefault}\selectfont\tabto{#1}// #2}}
