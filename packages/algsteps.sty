@@ -6,8 +6,8 @@
 \RequirePackage{kvoptions}
 
 \SetupKeyvalOptions{
-    family=STP,
-    prefix=STP@
+    family=ALGSTP,
+    prefix=ALGSTP@
 }
 
 \DeclareStringOption[3pt]{linespacing}
@@ -18,31 +18,31 @@
 \ProcessKeyvalOptions*
 
 \newlist{pcode*}{itemize}{4}
-\setlist[pcode*,1]{label=,leftmargin=\STP@indent,labelindent=0pt,labelwidth=\dimexpr\STP@indent - \STP@labelsep\relax,
-    labelsep=\STP@labelsep,itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[pcode*,2]{label=,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
-    labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[pcode*,3]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
-    labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[pcode*,4]{label=,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
-    labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
+\setlist[pcode*,1]{label=,leftmargin=\ALGSTP@indent,labelindent=0pt,labelwidth=\dimexpr\ALGSTP@indent - \ALGSTP@labelsep\relax,
+    labelsep=\ALGSTP@labelsep,itemsep=0pt,topsep=0pt,partopsep=\ALGSTP@partopsep,parsep=\ALGSTP@linespacing}
+\setlist[pcode*,2]{label=,leftmargin=\ALGSTP@indent,labelindent=-\ALGSTP@labelsep,
+    labelsep=\dimexpr\ALGSTP@indent + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing}
+\setlist[pcode*,3]{label=,leftmargin=\ALGSTP@indent,labelindent=-\dimexpr\ALGSTP@indent + \ALGSTP@labelsep\relax,
+    labelsep=\dimexpr\ALGSTP@indent*2 + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing}
+\setlist[pcode*,4]{label=,leftmargin=\ALGSTP@indent,labelindent=-\dimexpr\ALGSTP@indent*2 + \ALGSTP@labelsep\relax,
+    labelsep=\dimexpr\ALGSTP@indent*3 + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing}
 
 \newlist{pcode}{enumerate}{4}
-\setlist[pcode,1]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,
-    labelsep=\STP@labelsep,labelwidth=!,itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[pcode,2]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\STP@labelsep,
-    labelsep=\dimexpr\STP@indent + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+\setlist[pcode,1]{label={\small\arabic*.},ref=\arabic*,leftmargin=\ALGSTP@indent,
+    labelsep=\ALGSTP@labelsep,labelwidth=!,itemsep=0pt,topsep=0pt,partopsep=\ALGSTP@partopsep,parsep=\ALGSTP@linespacing}
+\setlist[pcode,2]{label={\small\arabic*.},ref=\arabic*,leftmargin=\ALGSTP@indent,labelindent=-\ALGSTP@labelsep,
+    labelsep=\dimexpr\ALGSTP@indent + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing,
     before=\setcounter{pcodeii}{\value{pcodei}},after=\setcounter{pcodei}{\value{pcodeii}}}
-\setlist[pcode,3]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent + \STP@labelsep\relax,
-    labelsep=\dimexpr\STP@indent*2 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+\setlist[pcode,3]{label={\small\arabic*.},ref=\arabic*,leftmargin=\ALGSTP@indent,labelindent=-\dimexpr\ALGSTP@indent + \ALGSTP@labelsep\relax,
+    labelsep=\dimexpr\ALGSTP@indent*2 + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing,
     before=\setcounter{pcodeiii}{\value{pcodeii}},after=\setcounter{pcodeii}{\value{pcodeiii}}}
-\setlist[pcode,4]{label={\small\arabic*.},ref=\arabic*,leftmargin=\STP@indent,labelindent=-\dimexpr\STP@indent*2 + \STP@labelsep\relax,
-    labelsep=\dimexpr\STP@indent*3 + \STP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\STP@linespacing,
+\setlist[pcode,4]{label={\small\arabic*.},ref=\arabic*,leftmargin=\ALGSTP@indent,labelindent=-\dimexpr\ALGSTP@indent*2 + \ALGSTP@labelsep\relax,
+    labelsep=\dimexpr\ALGSTP@indent*3 + \ALGSTP@labelsep\relax,labelwidth=!,itemsep=0pt,topsep=0pt,parsep=\ALGSTP@linespacing,
     before=\setcounter{pcodeiv}{\value{pcodeiii}},after=\setcounter{pcodeiii}{\value{pcodeiv}}}
 
 \newlist{pcode0}{description}{1}
-\setlist[pcode0,1]{leftmargin=\STP@indent,labelsep=0pt,style=nextline,font=\small\bfseries,
-    itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
+\setlist[pcode0,1]{leftmargin=\ALGSTP@indent,labelsep=0pt,style=nextline,font=\small\bfseries,
+    itemsep=0pt,topsep=0pt,partopsep=\ALGSTP@partopsep,parsep=\ALGSTP@linespacing}
 
 \newcommand{\comment}[2][.5\textwidth]{{\fontfamily{\sfdefault}\selectfont\tabto{#1}// #2}}
 
@@ -59,5 +59,5 @@
 \csname phantomsection\endcsname
 \def\@currentlabel{\algtitle{#2}}{\label{alg:#3}}% refer to this algorithm as alg:label
 \@esphack
-\vskip\STP@partopsep\noindent{\large\algtitle{#2}}$(#1)${\large:}%
-\vspace{\STP@linespacing}}{\vspace{\STP@partopsep}}
+\vskip\ALGSTP@partopsep\noindent{\large\algtitle{#2}}$(#1)${\large:}%
+\vspace{\ALGSTP@linespacing}}{\vspace{\ALGSTP@partopsep}}
