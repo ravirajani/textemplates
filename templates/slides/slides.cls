@@ -6,6 +6,7 @@
 \usefonttheme{professionalfonts}
 
 \def\hmargin{2em}
+\def\htab{2.5ex}
 \def\vgap{1.5ex}
 \def\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
@@ -75,10 +76,12 @@
      \ifnum\@itemdepth=2\relax
        \setlength\itemsep{\vgapsm}% separation for second level
        \setlength\topsep{\vgapsm}
+       \setlength\leftmargin{\htab}
      \else
        \ifnum\@itemdepth=3\relax
          \setlength\itemsep{\vgapsm}% separation for third level
          \setlength\topsep{\vgapsm}
+         \setlength\leftmargin{\htab}
    \fi\fi\fi\def\makelabel
   }
  {}
