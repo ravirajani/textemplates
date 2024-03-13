@@ -46,7 +46,7 @@
 
 \newcommand{\comment}[2][.5\textwidth]{{\fontfamily{\sfdefault}\selectfont\tabto{#1}// #2}}
 
-\newcommand{\algtitle}[1]{\textsc{#1}}
+\newcommand{\algname}[1]{\textsc{#1}}
 
 % Usage:
 % \begin{pcodeblock}[params]{title}{label}
@@ -57,7 +57,7 @@
 \newenvironment{pcodeblock}[3][]{%
 \@bsphack
 \csname phantomsection\endcsname
-\def\@currentlabel{\algtitle{#2}}{\label{alg:#3}}% refer to this algorithm as alg:label
+\def\@currentlabel{\algname{#2}}{\label{alg:#3}}% refer to this algorithm as alg:label
 \@esphack
-\vskip\ALGSTP@partopsep\noindent{\large\algtitle{#2}}#1{\large:}%
-\vspace{\ALGSTP@linespacing}}{\vspace{\ALGSTP@partopsep}}
+\vskip\ALGSTP@linespacing\par\raggedright\noindent\algname{{\large#2}}#1{\large:}%
+\vspace{\ALGSTP@linespacing}}{\vskip\ALGSTP@partopsep}

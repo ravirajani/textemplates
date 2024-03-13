@@ -25,9 +25,11 @@
 \numberwithin{figure}{section}
 
 \DeclareNewFloatType{algorithm}{name=Algorithm}
-\DeclareFloatVCode{algmidcode}{\vskip2pt\hrule\par}
-\floatsetup[algorithm]{capposition=top,style=ruled,midcode=algmidcode}
-\captionsetup[algorithm]{labelfont=bf,labelsep=capspace}
+\DeclareFloatVCode{algprecode}{\par\hrule\vskip3pt\par}
+\DeclareFloatVCode{algpostcode}{\par\hrule}
+\floatsetup[algorithm]{capposition=top,precode=algprecode,postcode=algpostcode,midcode=captionskip,
+captionskip=5pt,heightadjust=all}
+\captionsetup[algorithm]{labelfont=bf,labelsep=capspace,justification=raggedright,singlelinecheck=false}
 \numberwithin{algorithm}{section}
 
 \floatsetup[table]{capposition=top}
