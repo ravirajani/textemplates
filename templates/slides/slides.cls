@@ -61,7 +61,7 @@
  {}
  {}
 
-\newenvironment{pseudocode}{%
+\newenvironment{pseudocode}[1][0pt]{%
 \setbeamertemplate{itemize/enumerate body begin}{\normalsize}%
 \setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}%
 \setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}%
@@ -70,7 +70,7 @@
   {\ifnum\@itemdepth=1\relax
      \setlength\itemsep{\vgapsm}% separation for first level
      \setlength\topsep{\vgapsm}
-     \setlength\leftmargin{0pt}
+     \setlength\leftmargin{#1}
    \else
      \ifnum\@itemdepth=2\relax
        \setlength\itemsep{\vgapsm}% separation for second level
