@@ -5,10 +5,14 @@
 \LoadClass[10pt]{beamer}
 \usefonttheme{professionalfonts}
 
-\def\hmargin{2em}
-\def\htab{2.5ex}
-\def\vgap{1.5ex}
-\def\vgapsm{.5ex}
+\newlength{\hmargin}
+\newlength{\htab}
+\newlength{\vgap}
+\newlength{\vgapsm}
+\setlength\hmargin{2em}
+\setlength\htab{2.5ex}
+\setlength\vgap{1.5ex}
+\setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
 
 \RequirePackage{times}
