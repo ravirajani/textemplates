@@ -10,7 +10,7 @@
 \newlength{\vgap}
 \newlength{\vgapsm}
 \setlength\hmargin{2em}
-\setlength\htab{2.5ex}
+\setlength\htab{3ex}
 \setlength\vgap{1.5ex}
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
