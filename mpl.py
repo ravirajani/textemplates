@@ -14,4 +14,4 @@ fig, ax = plt.subplots()
 # %%
 # Save Figure
 #==============================================================
-fig.savefig('fig.pdf', bbox_inches='tight')
+fig.savefig('fig.pdf', bbox_inches='tight', pad_inches=0.0)
