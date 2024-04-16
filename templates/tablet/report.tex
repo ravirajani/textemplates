@@ -19,12 +19,12 @@
     \setfoot{}{\hdrfont\thepage}{}
 }
 
-\titleformat{\chapter}[hang]
-{\filright\bfseries\LARGE}
+\titleformat{\chapter}[display]
+{\filcenter\bfseries\LARGE}
 {\chnumfont\thechapter}
 {0.5em}
 {}
-\titlespacing*{\chapter}{0pt}{0pt}{44pt}[1em]
+\titlespacing*{\chapter}{2em}{0pt}{44pt}[2em]
 
 \titleformat*{\subsubsection}{\itshape}
 \makeatletter
@@ -48,9 +48,9 @@
 \begin{document}
 \def\subbib{}
 \maketitle
-\pagestyle{custom*}
+%\pagestyle{custom*}
 \tableofcontents
-\thispagestyle{custom*}
+%\thispagestyle{custom*}
 \pagestyle{custom}
 %\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
