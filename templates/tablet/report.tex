@@ -22,9 +22,9 @@
 \titleformat{\chapter}[display]
 {\filcenter\bfseries\LARGE}
 {\chnumfont\thechapter}
-{0.5em}
+{.5ex}
 {}
-\titlespacing*{\chapter}{2em}{0pt}{44pt}[2em]
+\titlespacing*{\chapter}{2em}{-.5cm}{44pt}[2em]
 
 \titleformat*{\subsubsection}{\itshape}
 \makeatletter
@@ -52,6 +52,6 @@
 \tableofcontents
 %\thispagestyle{custom*}
 \pagestyle{custom}
-%\subfile{subfile.tex}
+\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}
