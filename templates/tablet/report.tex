@@ -2,34 +2,9 @@
 
 %\usepackage[round]{natbib} % UNCOMMENT for natbib
 
-\newpagestyle{custom}{%
-\sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
-\setfoot{}{\hdrfont\thepage}{}
-}
-\newpagestyle{custom*}{%
-\sethead{}{\hdrfont\MakeUppercase{\chaptertitle}}{}
-\setfoot{}{\hdrfont\thepage}{}
-}
-\newpagestyle{title}{%
-    \sethead{}{}{}
-    \setfoot{}{}{}
-}
-\renewpagestyle{plain}{
-    \sethead{}{}{}
-    \setfoot{}{\hdrfont\thepage}{}
-}
-
-\titleformat{\chapter}[display]
-{\filcenter\bfseries\LARGE}
-{\chnumfont\thechapter}
-{.5ex}
-{}
-\titlespacing*{\chapter}{2em}{-10pt}{44pt}[2em]
-
-\titleformat*{\subsubsection}{\itshape}
 \makeatletter
 \renewcommand{\maketitle}{
-    \thispagestyle{title}
+    %\thispagestyle{title}
     \vspace*{.25\textheight}
     \nointerlineskip
     \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
@@ -48,10 +23,8 @@
 \begin{document}
 \def\subbib{}
 \maketitle
-%\pagestyle{custom*}
 \tableofcontents
-%\thispagestyle{custom*}
-\pagestyle{custom}
-\subfile{subfile.tex}
+%\pagestyle{report}
+%\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}

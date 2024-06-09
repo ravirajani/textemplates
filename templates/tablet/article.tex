@@ -2,33 +2,19 @@
 
 %\usepackage[round]{natbib} % UNCOMMENT for natbib
 
-\newpagestyle{custom}{%
-\sethead{}{\hdrfont\thesection\enspace\MakeUppercase{\sectiontitle}}{}
-\setfoot{}{\hdrfont\thepage}{}
-}
-\renewpagestyle{plain}{
-    \sethead{}{}{}
-    \setfoot{}{\hdrfont\thepage}{}
-}
-
-\titleformat*{\subsubsection}{\itshape}
-\title{Article Title}
+\title{Title}
 \author{Ravi Rajani}
 \makeatletter
 \renewcommand{\maketitle}{%
-    \thispagestyle{plain}%
+    %\thispagestyle{plain}
     \nointerlineskip%
-    \vspace*{-1cm}%
-    \noindent\begin{minipage}[t]{.8\linewidth}\footnotesize
-        \@author\ (email@address.com) \\
-        \@date
-    \end{minipage}\hfill
-    \includegraphics[width=.2\linewidth,valign=t]{OU_Master_LOGO_BLACK_63mm.eps}
-    \vspace{1ex}
     \begin{center}
-    \huge\@title\par
+    {\huge\@title\vskip1ex}
+    {\small\@author\ (email@address)
+    \vskip.5ex
+    \@date}
     \end{center}
-    \vspace{20pt}
+    \vspace{10pt}
 }
 \makeatother
 \date{\today}
@@ -37,7 +23,7 @@
 \begin{document}
 \def\subbib{}
 \maketitle
-\pagestyle{custom}
+%\pagestyle{article}
 %\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}

@@ -3,10 +3,10 @@
       "prefix": "tex-subfile",
       "body": [
         "\\documentclass[${1:main}.tex]{subfiles}",
-        "\\begin{document}\\pagestyle{custom}",
+        "\\begin{document}",
         "$0",
         "% \\subbib",
-        "\\thispagestyle{custom}\\end{document}"
+        "\\end{document}"
       ],
       "description": "Generate subfile template"
     }

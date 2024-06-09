@@ -3,9 +3,6 @@
 
 \RequirePackage{kvoptions}
 
-\newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
-\newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
-
 \SetupKeyvalOptions{
     family=TBT,
     prefix=TBT@
@@ -30,7 +27,6 @@
 \RequirePackage[export]{adjustbox}
 \RequirePackage{subfiles}
 \RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
-\RequirePackage[small,pagestyles]{titlesec}
 
 \geometry{
     papersize={15.4cm,20.5cm},

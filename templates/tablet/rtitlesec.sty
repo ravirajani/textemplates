@@ -1,0 +1,57 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rtitlesec}
+\RequirePackage[pagestyles]{titlesec}
+
+\newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
+\newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
+
+\titleformat{\chapter}[display]
+{\filcenter\bfseries\LARGE}
+{\chnumfont\thechapter}
+{.5ex}
+{}
+\titlespacing*{\chapter}{2em}{-10pt}{44pt}[2em]
+
+\titleformat{\section}
+{\normalfont\large\bfseries\filcenter}{\thesection}{1.5ex}{}
+
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries\filcenter}{\thesubsection}{1.5ex}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\itshape\filcenter}{\thesubsubsection}{1.5ex}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries}{\theparagraph}{1.5ex}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1.5ex}{}
+
+\renewpagestyle{plain}{
+    \sethead{}{}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{report}{%
+    \sethead{\hdrfont\itshape\MakeUppercase{R.\ Rajani}}
+        {}
+        {\hdrfont\itshape\thechapter\hspace{1.5ex}\MakeUppercase{\chaptertitle}}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{report*}{%
+    \sethead{\hdrfont\itshape\MakeUppercase{R.\ Rajani}}
+    {}
+    {\hdrfont\itshape\MakeUppercase{\chaptertitle}}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{title}{%
+    \sethead{}{}{}
+    \setfoot{}{}{}
+}
+\newpagestyle{article}{%
+    \sethead{\hdrfont\itshape\MakeUppercase{R.\ Rajani}}
+        {}
+        {\hdrfont\itshape\thesection\hspace{1.5ex}\MakeUppercase{\sectiontitle}}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+
+\assignpagestyle{\chapter}{plain}
+
+% Use commands \pagestyle{<pagestyle>} to change all pagestyles from here on in document,
+% and \thispagestyle{<pagestyle>} to change the current pagestyle
