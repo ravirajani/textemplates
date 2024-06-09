@@ -3,26 +3,27 @@
 \RequirePackage[pagestyles]{titlesec}
 
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
-\newcommand{\chnumfont}{\fontsize{35}{35}\selectfont}
+\newcommand{\chnumfont}{\fontsize{23}{23}\selectfont}
 
 \titleformat{\chapter}[display]
-{\filcenter\bfseries\LARGE}
-{\chnumfont\thechapter}
-{.5ex}
-{}
-\titlespacing*{\chapter}{2em}{-10pt}{44pt}[2em]
-
+{\filcenter\bfseries\LARGE}{\chnumfont\thechapter}{.5ex}{}
 \titleformat{\section}
-{\normalfont\large\bfseries\filcenter}{\thesection}{1.5ex}{}
-
+{\normalfont\normalsize\bfseries\filcenter}{\thesection}{1.5ex}{}
 \titleformat{\subsection}
-{\normalfont\normalsize\bfseries\filcenter}{\thesubsection}{1.5ex}{}
+{\normalfont\normalsize\itshape\bfseries\filcenter}{\thesubsection}{1.5ex}{}
 \titleformat{\subsubsection}
 {\normalfont\normalsize\itshape\filcenter}{\thesubsubsection}{1.5ex}{}
 \titleformat{\paragraph}[runin]
 {\normalfont\normalsize\bfseries}{\theparagraph}{1.5ex}{}
 \titleformat{\subparagraph}[runin]
 {\normalfont\normalsize\bfseries}{\thesubparagraph}{1.5ex}{}
+
+\titlespacing*{\chapter}{2em}{-10pt}{44pt}[2em]
+\titlespacing*{\section} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1.5ex}
 
 \renewpagestyle{plain}{
     \sethead{}{}{}
