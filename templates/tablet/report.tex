@@ -4,7 +4,6 @@
 
 \makeatletter
 \renewcommand{\maketitle}{
-    %\thispagestyle{title}
     \vspace*{.25\textheight}
     \nointerlineskip
     \begin{minipage}[c][.5\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
@@ -22,7 +21,9 @@
 % In subfiles, write \subbib before \end{document}
 \begin{document}
 \def\subbib{}
-\maketitle
+\clearpage\maketitle
+\thispagestyle{empty}
+%\pagestyle{report*}
 \tableofcontents
 %\pagestyle{report}
 %\subfile{subfile.tex}

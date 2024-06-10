@@ -3,10 +3,9 @@
 \RequirePackage[pagestyles]{titlesec}
 
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
-\newcommand{\chnumfont}{\fontsize{23}{23}\selectfont}
 
 \titleformat{\chapter}[display]
-{\filcenter\bfseries\LARGE}{\chnumfont\thechapter}{.5ex}{}
+{\filcenter\bfseries\Large}{\LARGE\thechapter}{.5ex}{}
 \titleformat{\section}
 {\normalfont\normalsize\bfseries\filcenter}{\thesection}{1.5ex}{}
 \titleformat{\subsection}
@@ -22,8 +21,8 @@
 \titlespacing*{\section} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex}
-\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1.5ex}
+\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
+\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
 
 \renewpagestyle{plain}{
     \sethead{}{}{}
@@ -40,10 +39,6 @@
     {}
     {\hdrfont\itshape\MakeUppercase{\chaptertitle}}
     \setfoot{}{\hdrfont\thepage}{}
-}
-\newpagestyle{title}{%
-    \sethead{}{}{}
-    \setfoot{}{}{}
 }
 \newpagestyle{article}{%
     \sethead{\hdrfont\itshape\MakeUppercase{R.\ Rajani}}

@@ -6,7 +6,6 @@
 \author{Ravi Rajani}
 \makeatletter
 \renewcommand{\maketitle}{%
-    %\thispagestyle{plain}
     \nointerlineskip%
     \begin{center}
     {\huge\@title\vskip1ex}
@@ -22,7 +21,8 @@
 % In subfiles, write \subbib before \end{document}
 \begin{document}
 \def\subbib{}
-\maketitle
+\clearpage\maketitle
+\thispagestyle{plain}
 %\pagestyle{article}
 %\subfile{subfile.tex}
 %\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib

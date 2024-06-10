@@ -43,7 +43,6 @@ if template[0] == 'slides':
 else:
     files.extend([
         { 'src': 'tablet_154x205.svg' },
-        { 'src': 'OU_Master_LOGO_BLACK_63mm.eps' },
         { 'src': 'tablet.cls' },
         { 'src': 'pgf.mplstyle' }
     ])
