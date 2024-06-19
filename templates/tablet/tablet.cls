@@ -41,8 +41,7 @@
 \renewcommand{\maketitle}{%
     \vspace*{-10pt}
     \begin{center}
-    {\huge\@title\vskip1ex\normalsize\@author}
-    \vskip.5ex\@date
+    \huge\@title\vskip1ex\normalsize\@author\vskip1ex\@date
     \end{center}
     \vspace{10pt}
 }
