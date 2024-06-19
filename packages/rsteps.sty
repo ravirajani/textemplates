@@ -8,6 +8,8 @@
     prefix=STP@
 }
 
+\DeclareBoolOption{redefinelists}
+
 \DeclareStringOption[1ex]{linespacing}
 \DeclareStringOption[.5em]{labelsep}
 \DeclareStringOption[2em]{textindent}
@@ -15,34 +17,52 @@
 
 \ProcessKeyvalOptions*
 
+\newcommand{\setenumlist}{}
+\newcommand{\setitemlist}{}
+\newcommand{\setdesclist}{}
+\ifSTP@redefinelists
+    \renewcommand{\setenumlist}{,enumerate}
+    \renewcommand{\setitemlist}{,itemize}
+    \renewcommand{\setdesclist}{,description}
+\fi
+
 \newlist{steps}{enumerate}{4}
-\setlist[steps,1]{label=\arabic*.,ref=\arabic*,
+\setlist[steps\setenumlist,1]{label=\arabic*.,ref=\arabic*,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[steps,2]{label=(\alph*),ref=\thestepsi(\alph*),
+\setlist[steps\setenumlist,2]{label=(\alph*),ref=\thestepsi(\alph*),
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps,3]{label=\roman*.,ref=\thestepsii\roman*,
+\setlist[steps\setenumlist,3]{label=\roman*.,ref=\thestepsii\roman*,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps,4]{label=(\alph*),ref=\thestepsiii(\alph*),
+\setlist[steps\setenumlist,4]{label=(\alph*),ref=\thestepsiii(\alph*),
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 
 \newlist{steps*}{itemize}{4}
-\setlist[steps*,1]{label=\textbullet,
+\setlist[steps*\setitemlist,1]{label=\textbullet,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
-\setlist[steps*,2]{label=\textendash,
+\setlist[steps*\setitemlist,2]{label=\textendash,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps*,3]{label=\textasteriskcentered,
+\setlist[steps*\setitemlist,3]{label=\textasteriskcentered,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
-\setlist[steps*,4]{label=$\circ$,
+\setlist[steps*\setitemlist,4]{label=$\circ$,
     labelindent=0pt,labelsep=\STP@labelsep,leftmargin=\STP@textindent,labelwidth=!,
     itemsep=0pt,topsep=0pt,parsep=\STP@linespacing}
 
 \newlist{steps0}{description}{1}
-\setlist[steps0,1]{leftmargin=0pt,labelsep=0pt,
+\setlist[steps0\setdesclist,1]{leftmargin=0pt,labelsep=0pt,
     itemsep=0pt,topsep=0pt,partopsep=\STP@partopsep,parsep=\STP@linespacing}
+
+\ifSTP@redefinelists
+    \setlist*[enumerate,1]{topsep=\STP@linespacing}
+    \setlist*[enumerate,2]{ref=\theenumi(\alph*)}
+    \setlist*[enumerate,3]{ref=\theenumii\roman*}
+    \setlist*[enumerate,4]{ref=\theenumiii(\alph*)}
+    \setlist*[itemize,1]{topsep=\STP@linespacing}
+    \setlist*[description,1]{topsep=\STP@linespacing, leftmargin=\STP@textindent}
+\fi

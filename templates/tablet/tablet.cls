@@ -36,3 +36,23 @@
     headsep=0.6cm,
     footskip=0.9cm
 }
+
+\ifnum\pdf@strcmp{\TBT@style}{article}=0
+\renewcommand{\maketitle}{%
+    \vspace*{-10pt}
+    \begin{center}
+    {\huge\@title\vskip1ex\normalsize\@author}
+    \vskip.5ex\@date
+    \end{center}
+    \vspace{10pt}
+}
+\else\ifnum\pdf@strcmp{\TBT@style}{report}=0
+\renewcommand{\maketitle}{
+    \vspace*{.19\textheight}
+    \begin{minipage}[c][.62\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
+        {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}%
+        \vfill
+        {\noindent\Large\@author\vskip1ex\normalsize\@date\par}%
+    \end{minipage}\setcounter{page}{0}
+}
+\fi\fi
