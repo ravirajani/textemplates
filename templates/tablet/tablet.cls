@@ -27,6 +27,7 @@
 \RequirePackage[export]{adjustbox}
 \RequirePackage{subfiles}
 \RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
+\RequirePackage{titling}
 
 \geometry{
     papersize={15.4cm,20.5cm},
@@ -38,20 +39,12 @@
 }
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0
-\renewcommand{\maketitle}{%
-    \vspace*{-10pt}
-    \begin{center}
-    \huge\@title\vskip1ex\normalsize\@author\vskip1ex\@date
-    \end{center}
-    \vspace{10pt}
-}
+\setlength{\droptitle}{-30pt}
 \else\ifnum\pdf@strcmp{\TBT@style}{report}=0
 \renewcommand{\maketitle}{
     \vspace*{.19\textheight}
     \begin{minipage}[c][.62\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
-        {\noindent\ignorespaces\bfseries\fontsize{35}{44}\selectfont\@title\par}%
-        \vfill
-        {\noindent\Large\@author\vskip1ex\normalsize\@date\par}%
-    \end{minipage}\setcounter{page}{0}
+        \Huge\@title\vfill\Large\@author\vskip1em\large\@date\par%
+    \end{minipage}\setcounter{page}{0}\thispagestyle{empty}
 }
 \fi\fi
