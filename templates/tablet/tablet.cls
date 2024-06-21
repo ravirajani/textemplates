@@ -42,9 +42,9 @@
 \setlength{\droptitle}{-30pt}
 \else\ifnum\pdf@strcmp{\TBT@style}{report}=0
 \renewcommand{\maketitle}{
-    \vspace*{.19\textheight}
+    \nointerlineskip\vspace*{.19\textheight}%
     \begin{minipage}[c][.62\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
-        \Huge\@title\vfill\Large\@author\vskip1em\large\@date\par%
+        \Huge\bfseries\@title\vfill\Large\normalfont\@author\vskip1.5ex\large\@date\par%
     \end{minipage}\setcounter{page}{0}\thispagestyle{empty}
 }
 \fi\fi
