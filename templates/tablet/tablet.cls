@@ -10,6 +10,7 @@
 
 \DeclareStringOption[article]{style}
 \DeclareBoolOption{sansfont}
+\DeclareBoolOption{nohead}
 
 \ProcessKeyvalOptions*
 
@@ -29,6 +30,15 @@
 \RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
 \RequirePackage{titling}
 
+\ifTBT@nohead
+\geometry{
+    papersize={15.4cm,20.5cm},
+    total={13.4cm,19.2cm},
+    marginratio={1:1,3:1},
+    includefoot,
+    footskip=0.9cm
+}
+\else
 \geometry{
     papersize={15.4cm,20.5cm},
     total={13.4cm,19.9cm},
@@ -37,6 +47,7 @@
     headsep=0.6cm,
     footskip=0.9cm
 }
+\fi
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0
 \setlength{\droptitle}{-30pt}
