@@ -5,7 +5,7 @@
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
 
 \titleformat{\chapter}[display]
-{\filcenter\bfseries\Large}{\LARGE\thechapter}{.5ex}{}
+{\normalfont\Large\bfseries\filcenter}{\LARGE\thechapter}{.5ex}{}
 \titleformat{\section}
 {\normalfont\normalsize\bfseries\filcenter}{\thesection}{1ex}{}
 \titleformat{\subsection}
@@ -15,14 +15,14 @@
 \titleformat{\paragraph}[runin]
 {\normalfont\normalsize\bfseries}{\theparagraph}{1ex}{}
 \titleformat{\subparagraph}[runin]
-{\normalfont\normalsize\bfseries}{\thesubparagraph}{1ex}{}
+{\normalfont\normalsize\itshape\bfseries}{\thesubparagraph}{1ex}{}
 
 \titlespacing*{\chapter}{2em}{-10pt}{44pt}[2em]
 \titlespacing*{\section} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
-\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
+\titlespacing*{\subparagraph} {\parindent}{1.5ex plus .5ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
 
 \renewpagestyle{plain}{
     \sethead{}{}{}
@@ -38,6 +38,10 @@
 }
 \newpagestyle{article}{%
     \sethead{}{\hdrfont\thesection\enspace\MakeUppercase{\sectiontitle}}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
+\newpagestyle{article*}{%
+    \sethead{}{\hdrfont\MakeUppercase{\sectiontitle}}{}
     \setfoot{}{\hdrfont\thepage}{}
 }
 
