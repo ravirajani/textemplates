@@ -34,7 +34,7 @@
 \geometry{
     papersize={15.4cm,20.5cm},
     total={13.4cm,19.3cm},
-    marginratio={1:1,10:3},
+    marginratio={1:1,7:2},
     includefoot,
     footskip=0.9cm
 }
