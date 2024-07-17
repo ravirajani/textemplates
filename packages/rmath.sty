@@ -10,6 +10,15 @@
 \RequirePackage{xpatch}
 \RequirePackage{enumitem}
 \RequirePackage{kvoptions}
+\RequirePackage[DIF =
+{
+op-symbol = d,
+op-order-nudge = 1 mu,
+outer-Ldelim = \left . ,
+outer-Rdelim = \right |,
+sub-nudge = 0 mu
+}
+]{diffcoeff}
 
 \SetupKeyvalOptions{
     family=RM,
