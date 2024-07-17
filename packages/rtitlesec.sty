@@ -3,6 +3,8 @@
 \RequirePackage[pagestyles]{titlesec}
 
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
+\newlength{\parlabelsep}
+\setlength{\parlabelsep}{1.5ex plus 1.5ex minus .3ex}
 
 \titleformat{\chapter}[display]
 {\normalfont\Large\bfseries\filcenter}{\LARGE\thechapter}{.5ex}{}
@@ -21,8 +23,8 @@
 \titlespacing*{\section} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 \titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
-\titlespacing*{\subparagraph} {\parindent}{1.5ex plus .5ex minus .2ex}{1.5ex plus 1.5ex minus .3ex}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{\parlabelsep}
+\titlespacing*{\subparagraph}{\parindent}{1.5ex plus .5ex minus .2ex}{\parlabelsep}
 
 \renewpagestyle{plain}{
     \sethead{}{}{}
