@@ -92,7 +92,7 @@
  {}
  }{}
 
-\definecolor{OUCoreBlue}{RGB}{6,6,69}
+\definecolor{Core}{RGB}{0,0,0}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{102,238,250}
@@ -140,21 +140,21 @@
 \end{columns}
 }
 
-\setbeamercolor{palette primary}{fg=white,bg=OUCoreBlue}
-\setbeamercolor{palette secondary}{fg=white,bg=OUCoreBlue}
-\setbeamercolor{palette tertiary}{fg=white,bg=OUCoreBlue}
-\setbeamercolor{palette quaternary}{fg=white,bg=OUCoreBlue}
-\setbeamercolor{normal text}{fg=OUCoreBlue}
+\setbeamercolor{palette primary}{fg=white,bg=Core}
+\setbeamercolor{palette secondary}{fg=white,bg=Core}
+\setbeamercolor{palette tertiary}{fg=white,bg=Core}
+\setbeamercolor{palette quaternary}{fg=white,bg=Core}
+\setbeamercolor{normal text}{fg=Core}
 \setbeamercolor{author}{fg=white}
 \setbeamercolor{institute}{fg=white}
 \setbeamercolor{date}{fg=white}
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
-\setbeamercolor{page number in head/foot}{fg=OUCoreBlue}
-\setbeamercolor{titlelike}{fg=OUCoreBlue}
-\setbeamercolor{structure}{fg=OUCoreBlue}
+\setbeamercolor{page number in head/foot}{fg=Core}
+\setbeamercolor{titlelike}{fg=Core}
+\setbeamercolor{structure}{fg=Core}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
-\setbeamercolor{section in toc}{fg=OUCoreBlue}
+\setbeamercolor{section in toc}{fg=Core}
 \setbeamercolor{example text}{fg=OUMidBlue}
 \setbeamercolor{block title}{fg=OUMidBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
