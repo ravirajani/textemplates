@@ -14,12 +14,15 @@ parser = ArgumentParser(description='Create a new LaTeX project from a template'
 DEFAULT_TEMPLATE = 'tablet/article'
 DEFAULT_FILENAME = 'main'
 DEFAULT_PACKAGES = ''
+DEFAULT_LOGO = 'UvA'
 ######################################
 
 parser.add_argument('projectfolder', type=Path)
 parser.add_argument('-t', default=DEFAULT_TEMPLATE, dest='template',
                     help='Template',
                     choices=['tablet/article','tablet/report','slides/beamer'])
+parser.add_argument('-l', default=DEFAULT_LOGO, dest='logo', help='Logo',
+                    choices=['UvA','OU'])
 parser.add_argument('-f', dest='filename', metavar='FILENAME', default=DEFAULT_FILENAME,
                     help='Main file will be FILENAME.tex')
 parser.add_argument('-p', dest='packages', metavar='PACKAGES', default=DEFAULT_PACKAGES,
@@ -30,13 +33,14 @@ args = parser.parse_args()
 template = args.template.split('/')
 packages = map(lambda x: x + '.sty', args.packages.split(',')) if len(args.packages) > 0 else []
 files = [ { 'src': template[1]+'.tex', 'dst': args.filename+'.tex' } ]
+logo = 'uvalogo_regular_d_nl.pdf' if args.logo == 'UvA' else 'OU_Master_LOGO_WHITE_63mm.pdf'
 
 if template[0] == 'slides':
     files.extend([
         { 'src': 'beamer43.svg' },
         { 'src': 'beamer85.svg' },
         { 'src': 'beamer169.svg' },
-        { 'src': 'OU_Master_LOGO_WHITE_63mm.eps' },
+        { 'src': logo },
         { 'src': 'slides.cls' },
         { 'src': 'pgfss.mplstyle' }
     ])
