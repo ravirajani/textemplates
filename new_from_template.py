@@ -33,7 +33,7 @@ args = parser.parse_args()
 template = args.template.split('/')
 packages = map(lambda x: x + '.sty', args.packages.split(',')) if len(args.packages) > 0 else []
 files = [ { 'src': template[1]+'.tex', 'dst': args.filename+'.tex' } ]
-logo = 'uvalogo_regular_d_nl.pdf' if args.logo == 'UvA' else 'OU_Master_LOGO_WHITE_63mm.pdf'
+logo = 'aselogo_en.pdf' if args.logo == 'UvA' else 'OU_Master_LOGO_WHITE_63mm.pdf'
 
 if template[0] == 'slides':
     files.extend([
