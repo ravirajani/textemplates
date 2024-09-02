@@ -92,7 +92,7 @@
  {}
  }{}
 
-\definecolor{Core}{RGB}{0,0,0}
+\definecolor{Core}{RGB}{27, 27, 25}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{102,238,250}
