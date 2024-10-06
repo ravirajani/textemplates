@@ -19,10 +19,11 @@
 \setlength{\RF@customheadsep}{\RF@labelsep}
 
 \DeclareCaptionLabelSeparator{capspace}{\hspace{\RF@customheadsep}}
+\DeclareCaptionLabelSeparator{subcapspace}{\enspace}
 \floatsetup[figure]{capposition=bottom}
 \captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}
 \DeclareCaptionSubType[alph]{figure}
-\captionsetup[subfigure]{labelformat=parens,labelfont=normalfont,labelsep=space}
+\captionsetup[subfigure]{labelformat=parens,labelfont=normalfont,labelsep=subcapspace}
 \numberwithin{figure}{section}
 
 \DeclareNewFloatType{algorithm}{name=Algorithm}
@@ -35,5 +36,5 @@
 \floatsetup[table]{capposition=top}
 \captionsetup[table]{labelfont=bf,labelsep=capspace}
 \DeclareCaptionSubType[alph]{table}
-\captionsetup[subtable]{labelformat=parens,font=small,labelfont=normalfont,labelsep=space}
+\captionsetup[subtable]{labelformat=parens,font=small,labelfont=normalfont,labelsep=subcapspace}
 \numberwithin{table}{section}
