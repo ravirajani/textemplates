@@ -46,7 +46,10 @@
     \sethead{}{\hdrfont\MakeUppercase{\sectiontitle}}{}
     \setfoot{}{\hdrfont\thepage}{}
 }
-
+\newpagestyle{exercises}{%
+    \sethead{}{\hdrfont\MakeUppercase{\@title}}{}
+    \setfoot{}{\hdrfont\thepage}{}
+}
 \assignpagestyle{\chapter}{plain}
 
 % Use commands \pagestyle{<pagestyle>} to change all pagestyles from here on in document,

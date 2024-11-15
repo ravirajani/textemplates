@@ -1,6 +1,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{tablet}
 
+\RequirePackage{ifthen}
 \RequirePackage{kvoptions}
 
 \SetupKeyvalOptions{
@@ -14,7 +15,9 @@
 
 \ProcessKeyvalOptions*
 
-\LoadClass[12pt]{\TBT@style}
+\ifthenelse{\equal{\TBT@style}{exercises}}{\def\docstyle{article}}{\def\docstyle{\TBT@style}}
+
+\LoadClass[12pt]{\docstyle}
 
 \ifTBT@sansfont
     \RequirePackage{newtxsf} % Sans font
@@ -59,3 +62,12 @@
     \end{minipage}\setcounter{page}{0}\thispagestyle{empty}
 }
 \fi\fi
+
+\ifnum\pdf@strcmp{\TBT@style}{exercises}=0
+\renewcommand{\maketitle}{\begin{center}
+    \Large\@title\\[1ex]
+    \normalsize \@author\\[1.5ex]
+    \textbf{\small Due \@date}  
+    \thispagestyle{plain}
+\end{center}}
+\fi

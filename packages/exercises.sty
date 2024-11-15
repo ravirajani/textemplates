@@ -1,0 +1,35 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{exercises}
+\RequirePackage{enumitem}
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+    family=EXC,
+    prefix=EXC@
+}
+
+\DeclareBoolOption{redefinelists}
+
+
+\DeclareStringOption[4ex]{textindent}
+\DeclareStringOption[22pt]{topsep}
+
+\ProcessKeyvalOptions*
+
+\newcommand{\setenumlist}{}
+\ifEXC@redefinelists
+    \renewcommand{\setenumlist}{,enumerate}
+\fi
+
+\newlist{exercises}{enumerate}{3}
+\setlist[exercises\setenumlist,1]{align=left,leftmargin=\EXC@textindent,labelwidth=!,label=\textbf{\thesection.\arabic*},
+    topsep=\EXC@topsep,ref=\thesection.\arabic*}
+\setlist[exercises\setenumlist,2]{leftmargin=\EXC@textindent,align=left,labelwidth=!,label=\textbf{(\alph*)},
+    ref=\theexercisesi(\alph*)}
+\setlist[exercises\setenumlist,3]{leftmargin=\EXC@textindent,labelwidth=!,label=\textbf{\roman*.},
+    ref=\theexercisesii\roman*}
+
+\ifEXC@redefinelists
+    \setlist*[enumerate,2]{ref=\theenumi(\alph*)}
+    \setlist*[enumerate,3]{ref=\theenumii\roman*}
+\fi
