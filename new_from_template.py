@@ -20,7 +20,7 @@ DEFAULT_LOGO = 'UvA'
 parser.add_argument('projectfolder', type=Path)
 parser.add_argument('-t', default=DEFAULT_TEMPLATE, dest='template',
                     help='Template',
-                    choices=['tablet/article','tablet/report','tablet/exercises','slides/beamer'])
+                    choices=['a4paper/exam','tablet/article','tablet/report','tablet/exercises','slides/beamer'])
 parser.add_argument('-l', default=DEFAULT_LOGO, dest='logo', help='Logo',
                     choices=['UvA','OU'])
 parser.add_argument('-f', dest='filename', metavar='FILENAME', default=DEFAULT_FILENAME,
@@ -43,6 +43,12 @@ if template[0] == 'slides':
         { 'src': logo },
         { 'src': 'slides.cls' },
         { 'src': 'pgfss.mplstyle' }
+    ])
+elif template[0] == 'a4paper':
+    files.extend([
+        { 'src': logo },
+        { 'src': 'exam.cls' },
+        { 'src': 'pgf.mplstyle' }
     ])
 else:
     files.extend([

@@ -1,0 +1,7 @@
+figure.figsize: 6, 5
+font.family: serif
+#text.usetex: True
+pgf.texsystem: pdflatex
+pgf.preamble: \usepackage{amsmath}\usepackage{newtxtext}\usepackage{newtxmath}
+pgf.rcfonts: False
+axes.unicode_minus: False
