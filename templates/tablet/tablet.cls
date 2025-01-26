@@ -12,6 +12,7 @@
 \DeclareStringOption[article]{style}
 \DeclareBoolOption{sansfont}
 \DeclareBoolOption{nohead}
+\DeclareBoolOption{afive}
 
 \ProcessKeyvalOptions*
 
@@ -50,6 +51,10 @@
     headsep=0.6cm,
     footskip=0.9cm
 }
+\fi
+
+\ifTBT@afive
+\geometry{papersize={16.1cm,23cm},mag=915}
 \fi
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0
