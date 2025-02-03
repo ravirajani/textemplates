@@ -37,19 +37,18 @@
 
 \geometry{
     footskip=0.9cm,
-    includefoot,
-    hmarginratio=1:1
+    includefoot
 }
 
 \ifTBT@nohead
 \geometry{
     total={13.4cm,19.2cm},
-    vmarginratio=7:2
+    marginratio={1:1,7:2}
 }
 \else
 \geometry{
     total={13.4cm,19.9cm},
-    vmarginratio=4:5,
+    marginratio={1:1,4:5},
     includehead,
     headsep=0.6cm
 }
@@ -58,10 +57,8 @@
 \ifTBT@handout
 \geometry{
     paper=a4paper,
-    twoside,
     total={13.4cm,22.1cm},
-    vmarginratio=1:1,
-    hmarginratio=3:2
+    marginratio=1:1
 }
 \else
 \geometry{papersize={15.4cm,20.5cm}}
@@ -76,9 +73,7 @@
         \Huge\bfseries\@title\vfill\Large\normalfont\@author\vskip1.5ex\large\@date\par%
     \end{minipage}\setcounter{page}{0}\thispagestyle{empty}
 }
-\ifTBT@handout
-\geometry{hmarginratio=2:3}
-\fi\fi\fi
+\fi\fi
 
 \ifnum\pdf@strcmp{\TBT@style}{exercises}=0
 \renewcommand{\maketitle}{\begin{center}
