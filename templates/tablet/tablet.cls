@@ -12,7 +12,7 @@
 \DeclareStringOption[article]{style}
 \DeclareBoolOption{sansfont}
 \DeclareBoolOption{nohead}
-\DeclareBoolOption{afive}
+\DeclareBoolOption{handout}
 
 \ProcessKeyvalOptions*
 
@@ -34,27 +34,34 @@
 \RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
 \RequirePackage{titling}
 
+
+\geometry{
+    footskip=0.9cm,
+    includefoot
+}
+
 \ifTBT@nohead
 \geometry{
-    papersize={15.4cm,20.5cm},
     total={13.4cm,19.2cm},
-    marginratio={1:1,7:2},
-    includefoot,
-    footskip=0.9cm
+    marginratio={1:1,7:2}
 }
 \else
 \geometry{
-    papersize={15.4cm,20.5cm},
     total={13.4cm,19.9cm},
     marginratio={1:1,4:5},
-    includeheadfoot,
-    headsep=0.6cm,
-    footskip=0.9cm
+    includehead,
+    headsep=0.6cm
 }
 \fi
 
-\ifTBT@afive
-\geometry{papersize={16.1cm,23cm},mag=915}
+\ifTBT@handout
+\geometry{
+    paper=a4paper,
+    total={13.4cm,22.1cm},
+    marginratio=1:1
+}
+\else
+\geometry{papersize={15.4cm,20.5cm}}
 \fi
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0

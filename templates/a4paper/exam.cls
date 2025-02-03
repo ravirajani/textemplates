@@ -18,7 +18,7 @@
 \vspace*{-1.5cm}%
 \begin{center}
     \nointerlineskip%
-    \includegraphics[width=6cm]{aselogo_en.pdf}\vskip.5cm%
+    \includegraphics[width=6cm]{aselogo_en.pdf}\vskip.3cm%
     \hrule\vskip.5ex\@title\hfill\@date\vskip.5ex\hrule\par%
 \end{center}}
 
