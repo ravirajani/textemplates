@@ -48,6 +48,7 @@ elif template[0] == 'a4paper':
     files.extend([
         { 'src': logo },
         { 'src': 'exam.cls' },
+        { 'src': args.filename+'-solutions.tex'},
         { 'src': 'pgf.mplstyle' }
     ])
 else:
@@ -58,8 +59,9 @@ else:
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
-shutil.copy('.gitignore', str(args.projectfolder / '.gitignore'))
 shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
+for filename in ['.gitignore','version.txt']:
+    shutil.copy(filename, str(args.projectfolder / filename))
 for file in files:
     src = file['src']
     dst = file.get('dst', src)
