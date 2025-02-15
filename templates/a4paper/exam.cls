@@ -1,6 +1,12 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{exam}
-
+\RequirePackage{kvoptions}
+\SetupKeyvalOptions{
+    family=EXM,
+    prefix=EXM@
+}
+\DeclareBoolOption{solutions}
+\ProcessKeyvalOptions*
 \LoadClass[11pt]{article}
 \RequirePackage{newtxtext} % Times font
 \RequirePackage{amsmath}
@@ -9,6 +15,7 @@
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage[export]{adjustbox}
 \RequirePackage[a4paper]{geometry}
+\RequirePackage{comment}
 \RequirePackage{enumitem}
 \newcommand{\npts}[1]{\item\textbf{(#1 points)}\enspace}
 
@@ -22,8 +29,6 @@
     \hrule\vskip.5ex\@title\hfill\@date\vskip.5ex\hrule\par%
 \end{center}}
 
-\newlist{instructions}{itemize}{1}
-\setlist[instructions,1]{label=\textbullet,noitemsep,leftmargin=\parindent}
 \newlist{parts}{enumerate}{2}
 \setlist[parts,1]{label=\bfseries\alph*.,labelsep=.5em}
 \setlist*[parts,2]{label=\bfseries\roman*.,labelsep=.5em}
@@ -41,3 +46,12 @@
 
 \theoremstyle{question}
 \newtheorem{question}{Question}
+
+\xpatchcmd{\proof}{\itshape}{\itshape\bfseries}{}{}
+\renewcommand{\qedsymbol}{$\blacksquare$}
+\renewcommand{\proofname}{Solution}
+\newenvironment{soltn}{\proof}{\endproof}
+\specialcomment{instructions}
+{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent]}
+{\end{itemize}\hrule}
+\ifEXM@solutions\excludecomment{instructions}\else\excludecomment{soltn}\fi
