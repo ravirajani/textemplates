@@ -20,14 +20,17 @@
 \newcommand{\npts}[1]{\item\textbf{(#1 points)}\enspace}
 
 \geometry{margin=1.5cm}
+\newlength{\wlogo}
+\setlength\wlogo{6.5cm}
 
-\renewcommand{\maketitle}{%
-\vspace*{-1.5cm}%
-\begin{center}
-    \nointerlineskip%
-    \includegraphics[width=6cm]{aselogo_en.pdf}\vskip.3cm%
-    \hrule\vskip.5ex\@title\hfill\@date\vskip.5ex\hrule\par%
-\end{center}}
+\renewcommand{\maketitle}{\vspace*{-1.5cm}%
+\noindent%
+\begin{minipage}[t]{\wlogo}\vspace{0pt}
+    \includegraphics[width=\wlogo]{aselogo_en.pdf}
+\end{minipage}\begin{minipage}[t]{\dimexpr\textwidth - \wlogo\relax}\vspace{0pt}
+    \raggedleft\Large\@title\vskip.3ex\normalsize\@date\par%
+\end{minipage}
+\vskip.5ex\hrule}
 
 \newlist{parts}{enumerate}{2}
 \setlist[parts,1]{label=\bfseries\alph*.,labelsep=.5em}
