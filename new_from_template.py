@@ -48,7 +48,8 @@ elif template[0] == 'a4paper':
     files.extend([
         { 'src': logo },
         { 'src': 'exam.cls' },
-        { 'src': 'solutions.tex'},
+        { 'src': 'solutions.tex', 'dst': args.filename + '-solutions.tex' },
+        { 'src': 'main.tex' },
         { 'src': 'pgf.mplstyle' }
     ])
 else:
