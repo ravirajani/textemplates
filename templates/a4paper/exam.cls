@@ -21,9 +21,15 @@
 
 \geometry{margin=1.5cm}
 
-\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1cm}%
-\includegraphics[width=6cm]{aselogo_en.pdf}\vskip.5cm
-\LARGE\@title\hfill\normalsize\@date\vskip.5ex\hrule}}
+\newlength{\wlogo}
+\setlength\wlogo{6cm}
+
+\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
+\begin{minipage}[t]{\wlogo}%
+    \vspace{0pt}\includegraphics[width=\wlogo]{aselogo_en.pdf}\end{minipage}%
+\begin{minipage}[t]{\dimexpr\textwidth - \wlogo\relax}%
+    \vspace{0pt}\raggedleft\@date\end{minipage}\vskip.5cm
+\centering\LARGE\@title\vskip.2ex\hrule}}
 
 \newlist{parts}{enumerate}{2}
 \setlist[parts,1]{label=\bfseries\alph*.,labelsep=.5em}
@@ -48,6 +54,6 @@
 \renewcommand{\proofname}{Solution}
 \specialcomment{soltn}{\proof}{\endproof}
 \specialcomment{instructions}
-{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1ex]}
+{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1.5ex]}
 {\end{itemize}\hrule}
 \ifEXM@solutions\excludecomment{instructions}\else\excludecomment{soltn}\fi
