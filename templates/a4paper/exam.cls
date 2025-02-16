@@ -29,7 +29,7 @@
     \vspace{0pt}\includegraphics[width=\wlogo]{aselogo_en.pdf}\end{minipage}%
 \begin{minipage}[t]{\dimexpr\textwidth - \wlogo\relax}%
     \vspace{0pt}\raggedleft\@date\end{minipage}\vskip.5cm
-\centering\LARGE\@title\vskip.2ex\hrule}}
+\centering\LARGE\@title\vskip.2ex}}
 
 \newlist{parts}{enumerate}{2}
 \setlist[parts,1]{label=\bfseries\alph*.,labelsep=.5em}
@@ -54,6 +54,6 @@
 \renewcommand{\proofname}{Solution}
 \specialcomment{soltn}{\proof}{\endproof}
 \specialcomment{instructions}
-{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1.5ex]}
+{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1.5ex]\hrule}
 {\end{itemize}\hrule}
 \ifEXM@solutions\excludecomment{instructions}\else\excludecomment{soltn}\fi
