@@ -46,8 +46,8 @@
 \xpatchcmd{\proof}{\itshape}{\itshape\bfseries}{}{}
 \renewcommand{\qedsymbol}{$\blacksquare$}
 \renewcommand{\proofname}{Solution}
-\newenvironment{soltn}{\proof}{\endproof}
+\specialcomment{soltn}{\proof}{\endproof}
 \specialcomment{instructions}
-{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent]}
+{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1ex]}
 {\end{itemize}\hrule}
 \ifEXM@solutions\excludecomment{instructions}\else\excludecomment{soltn}\fi
