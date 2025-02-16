@@ -6,10 +6,10 @@ VERSION_FILE = 'version.txt'
 
 scriptdir = Path(__file__).parent.resolve()
 
-parser = ArgumentParser(description='Build latex project and update version if needed')
-parser.add_argument('files', nargs='+', type=Path)
-parser.add_argument('--major', default=False, action=BooleanOptionalAction)
-parser.add_argument('--minor', default=False, action=BooleanOptionalAction)
+parser = ArgumentParser(description='Build LaTeX project and update version if needed')
+parser.add_argument('files', nargs='+', type=Path, help='Space-separated list of LaTeX files to build')
+parser.add_argument('--major', default=False, action=BooleanOptionalAction, help='Bump major version number')
+parser.add_argument('--minor', default=False, action=BooleanOptionalAction, help='Bump minor version number')
 args = parser.parse_args()
 
 with open(VERSION_FILE, 'r+') as f:
