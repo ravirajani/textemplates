@@ -12,6 +12,7 @@
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
 \RequirePackage{newtxmath}
+\RequirePackage{mleftright}
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage[export]{adjustbox}
 \RequirePackage[a4paper]{geometry}
@@ -19,12 +20,12 @@
 \RequirePackage{enumitem}
 \newcommand{\npts}[1]{\item\textbf{(#1 points)}\enspace}
 
-\geometry{margin=1.5cm}
+\geometry{margin={3cm,2cm}}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
 
-\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
+\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-2cm}%
 \begin{minipage}[t]{\wlogo}%
     \vspace{0pt}\includegraphics[width=\wlogo]{aselogo_en.pdf}\end{minipage}%
 \begin{minipage}[t]{\dimexpr\textwidth - \wlogo\relax}%
