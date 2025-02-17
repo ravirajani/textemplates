@@ -20,12 +20,12 @@
 \RequirePackage{enumitem}
 \newcommand{\npts}[1]{\item\textbf{(#1 points)}\enspace}
 
-\geometry{margin={3cm,2cm}}
+\geometry{margin={3cm,1.5cm}}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
 
-\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-2cm}%
+\renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
 \begin{minipage}[t]{\wlogo}%
     \vspace{0pt}\includegraphics[width=\wlogo]{aselogo_en.pdf}\end{minipage}%
 \begin{minipage}[t]{\dimexpr\textwidth - \wlogo\relax}%
