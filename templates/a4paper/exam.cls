@@ -20,7 +20,7 @@
 \RequirePackage{enumitem}
 \newcommand{\npts}[1]{\item\textbf{(#1 points)}\enspace}
 
-\geometry{margin={3cm,1.5cm}}
+\geometry{margin={3cm,2cm}}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
