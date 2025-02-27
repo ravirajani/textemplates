@@ -57,7 +57,7 @@
 \ifTBT@handout
 \geometry{
     paper=a4paper,
-    total={13.4cm,22.1cm},
+    total={13.4cm,24.7cm},
     marginratio=1:1
 }
 \else
