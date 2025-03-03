@@ -95,10 +95,10 @@
 \definecolor{Core}{RGB}{27, 27, 25}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
-\definecolor{OULightBlue}{RGB}{102,238,250}
-\definecolor{OUGreen}{RGB}{125,255,211}
-\definecolor{OUYellow}{RGB}{255,244,136}
-\definecolor{OULightYellow}{RGB}{255,249,178}
+\definecolor{OULightBlue}{RGB}{6,174,213}
+\definecolor{OUGreen}{RGB}{14,173,105}
+\definecolor{OURed}{RGB}{221,28,26}
+\definecolor{OUYellow}{RGB}{255,210,63}
 
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
 \captionsetup{labelformat=empty,textfont=blue}
@@ -155,7 +155,8 @@
 \setbeamercolor{structure}{fg=Core}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=Core}
-\setbeamercolor{example text}{fg=OUMidBlue}
+\setbeamercolor{example text}{fg=OUGreen}
+\setbeamercolor{alerted text}{fg=OURed}
 \setbeamercolor{block title}{fg=OUMidBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
 
