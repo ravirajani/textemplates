@@ -176,6 +176,7 @@
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
 \setbeamerfont{block title alerted}{size=\normalsize}
+\setbeamerfont{proof title}{size=\normalsize,shape=\itshape}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
@@ -193,3 +194,15 @@
 \addtolength{\leftmarginii}{\labelsep}
 
 \beamertemplatenavigationsymbolsempty
+
+\setbeamertemplate{proof begin}{\vspace{0.5ex}%
+{\usebeamercolor[fg]{description item}\usebeamerfont*{proof title}%
+\insertproofname\ }%
+}
+\setbeamertemplate{proof end}{\vskip.5ex}
+\renewenvironment<>{proof}[1][\proofname]{%
+    \par
+    \def\insertproofname{#1}%
+    \pushQED{\qed}
+    \usebeamertemplate{proof begin}#2}
+  {\popQED\usebeamertemplate{proof end}}
