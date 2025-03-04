@@ -97,9 +97,9 @@
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{189,212,231}
 \definecolor{OUGreen}{RGB}{8,160,69}
-\definecolor{OULightGreen}{RGB}{216, 249, 218}
+\definecolor{OULightGreen}{RGB}{216,249,218}
 \definecolor{OURed}{RGB}{221,28,26}
-\definecolor{OULightRed}{RGB}{255,226,209}
+\definecolor{OULightRed}{RGB}{255,229,218}
 \definecolor{OUYellow}{RGB}{255,253,152}
 
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
