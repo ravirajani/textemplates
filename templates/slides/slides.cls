@@ -146,7 +146,7 @@
 \setbeamercolor{palette secondary}{fg=white,bg=Core}
 \setbeamercolor{palette tertiary}{fg=white,bg=Core}
 \setbeamercolor{palette quaternary}{fg=white,bg=Core}
-\setbeamercolor{normal text}{fg=Core}
+\setbeamercolor{normal text}{fg=black}
 \setbeamercolor{author}{fg=white}
 \setbeamercolor{institute}{fg=white}
 \setbeamercolor{date}{fg=white}
@@ -154,16 +154,16 @@
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
 \setbeamercolor{page number in head/foot}{fg=Core}
 \setbeamercolor{titlelike}{fg=Core}
-\setbeamercolor{structure}{fg=Core}
+\setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
-\setbeamercolor{section in toc}{fg=Core}
+\setbeamercolor{section in toc}{fg=black}
 \setbeamercolor{block title example}{fg=white,bg=OUGreen}
-\setbeamercolor{block body example}{fg=Core,bg=OULightGreen}
+\setbeamercolor{block body example}{fg=black,bg=OULightGreen}
 \setbeamercolor{block title alerted}{fg=white,bg=OURed}
-\setbeamercolor{block body alerted}{fg=Core,bg=OULightRed}
+\setbeamercolor{block body alerted}{fg=black,bg=OULightRed}
 \setbeamercolor{alerted text}{fg=OURed}
 \setbeamercolor{block title}{fg=white,bg=OUMidBlue}
-\setbeamercolor{block body}{fg=Core,bg=OULightBlue}
+\setbeamercolor{block body}{fg=black,bg=OULightBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
 \setbeamercolor{proof title}{fg=OUMidBlue}
 
@@ -214,7 +214,7 @@
       \par%
       \only<presentation>{\setbeamerfont{block title}{size=\large}%
         \setbeamercolor{block title}{fg=OUMidBlue,bg=}%
-        \setbeamercolor{block body}{fg=Core,bg=}}
+        \setbeamercolor{block body}{fg=black,bg=}}
       \usebeamertemplate{block begin}}
     {\par%
       \usebeamertemplate{block end}%
