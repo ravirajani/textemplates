@@ -97,6 +97,7 @@
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{189,212,231}
 \definecolor{OUGreen}{RGB}{8,160,69}
+\definecolor{OULightGreen}{RGB}{216, 249, 218}
 \definecolor{OURed}{RGB}{221,28,26}
 \definecolor{OULightRed}{RGB}{255,226,209}
 \definecolor{OUYellow}{RGB}{255,253,152}
@@ -157,7 +158,7 @@
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=Core}
 \setbeamercolor{block title example}{fg=white,bg=OUGreen}
-\setbeamercolor{block body example}{fg=Core,bg=OUYellow}
+\setbeamercolor{block body example}{fg=Core,bg=OULightGreen}
 \setbeamercolor{block title alerted}{fg=white,bg=OURed}
 \setbeamercolor{block body alerted}{fg=Core,bg=OULightRed}
 \setbeamercolor{alerted text}{fg=OURed}
