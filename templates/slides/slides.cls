@@ -165,6 +165,7 @@
 \setbeamercolor{block title}{fg=white,bg=OUMidBlue}
 \setbeamercolor{block body}{fg=Core,bg=OULightBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
+\setbeamercolor{proof title}{fg=OUMidBlue}
 
 \setbeamerfont{title}{series=\bfseries,size=\huge}
 \setbeamerfont{subtitle}{series=\mdseries,size=\Large}
@@ -196,13 +197,25 @@
 \beamertemplatenavigationsymbolsempty
 
 \setbeamertemplate{proof begin}{\vspace{0.5ex}%
-{\usebeamercolor[fg]{description item}\usebeamerfont*{proof title}%
+{\usebeamercolor[fg]{proof title}\usebeamerfont*{proof title}%
 \insertproofname\ }%
 }
 \setbeamertemplate{proof end}{\vskip.5ex}
 \renewenvironment<>{proof}[1][\proofname]{%
     \par
-    \def\insertproofname{#1}%
+    \def\insertproofname{#1\enspace}%
     \pushQED{\qed}
     \usebeamertemplate{proof begin}#2}
   {\popQED\usebeamertemplate{proof end}}
+
+  \newenvironment<>{plainblock}[1]{%
+    \begin{actionenv}#2%
+      \def\insertblocktitle{#1}%
+      \par%
+      \only<presentation>{\setbeamerfont{block title}{size=\large}%
+        \setbeamercolor{block title}{fg=OUMidBlue,bg=}%
+        \setbeamercolor{block body}{fg=Core,bg=}}
+      \usebeamertemplate{block begin}}
+    {\par%
+      \usebeamertemplate{block end}%
+    \end{actionenv}}
