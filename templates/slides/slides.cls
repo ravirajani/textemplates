@@ -98,6 +98,7 @@
 \definecolor{OULightBlue}{RGB}{6,174,213}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OURed}{RGB}{221,28,26}
+\definecolor{OULightRed}{RGB}{239,208,202}
 \definecolor{OUYellow}{RGB}{255,253,152}
 
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
@@ -155,7 +156,10 @@
 \setbeamercolor{structure}{fg=Core}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=Core}
-\setbeamercolor{example text}{fg=OUGreen}
+\setbeamercolor{block title example}{fg=white,bg=OUGreen}
+\setbeamercolor{block body example}{fg=Core,bg=OUYellow}
+\setbeamercolor{block title alerted}{fg=white,bg=OURed}
+\setbeamercolor{block body alerted}{fg=Core,bg=OULightRed}
 \setbeamercolor{alerted text}{fg=OURed}
 \setbeamercolor{block title}{fg=OUMidBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
@@ -167,6 +171,7 @@
 \setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{frametitle}{series=\bfseries,size=\Large}
 \setbeamerfont{caption}{size=\normalsize}
+\setbeamerfont{block title example}{size=\normalsize}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]

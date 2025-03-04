@@ -1,4 +1,4 @@
-\documentclass{slides} % Use option 'handout' for handouts
+\documentclass[notes=onslide]{slides} % Use option 'handout' for handouts
 
 \title
 {Presentation title}
@@ -34,10 +34,27 @@
 
 \subsection{Subsection}
 
+\begin{frame}{Colours}
+\begin{theorem}[Central Limit Theorem]
+You know it. \note{explain if not}
+\end{theorem}
+\begin{example}
+Example environment
+\end{example}
+\begin{minipage}{.5\textwidth}
+  \begin{exampleblock}{Custom Example}
+    Example body.
+    \end{exampleblock}
+\end{minipage}
+\begin{alertblock}{Careful}
+  body text.
+\end{alertblock}
+\end{frame}
+
 \begin{frame}[fragile]{Frame title}
     Remember:
     \begin{itemize}[<+->]
-      \item Use the \texttt{fragile} frame option for \textcolor{OULightBlue}{verbatim} environments.
+      \item Use the \texttt{fragile} frame option for \textcolor<2->{OULightBlue}{verbatim} environments.
       \item Use background templates and \alert{texpos} as follows:
             \begin{verbatim}
 \setbeamertemplate{background}{\import{subfolder}{file.pdf}}
