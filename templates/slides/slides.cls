@@ -172,6 +172,7 @@
 \setbeamerfont{frametitle}{series=\bfseries,size=\Large}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
+\setbeamerfont{block title alerted}{size=\normalsize}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
