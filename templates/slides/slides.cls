@@ -95,7 +95,7 @@
 \definecolor{Core}{RGB}{27, 27, 25}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
-\definecolor{OULightBlue}{RGB}{6,174,213}
+\definecolor{OULightBlue}{RGB}{189,212,231}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OURed}{RGB}{221,28,26}
 \definecolor{OULightRed}{RGB}{255,226,209}
@@ -161,7 +161,8 @@
 \setbeamercolor{block title alerted}{fg=white,bg=OURed}
 \setbeamercolor{block body alerted}{fg=Core,bg=OULightRed}
 \setbeamercolor{alerted text}{fg=OURed}
-\setbeamercolor{block title}{fg=OUMidBlue}
+\setbeamercolor{block title}{fg=white,bg=OUMidBlue}
+\setbeamercolor{block body}{fg=Core,bg=OULightBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
 
 \setbeamerfont{title}{series=\bfseries,size=\huge}
@@ -171,6 +172,7 @@
 \setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{frametitle}{series=\bfseries,size=\Large}
 \setbeamerfont{caption}{size=\normalsize}
+\setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
 \setbeamerfont{block title alerted}{size=\normalsize}
 
