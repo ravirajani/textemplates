@@ -16,8 +16,6 @@
 \setlength\vgap{1.5ex}
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
-\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}
-\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight + 0.2cm\relax}
 
 \RequirePackage{times}
 \RequirePackage[scaled=0.8]{FiraMono}
@@ -153,6 +151,8 @@
 \setbeamertemplate{footline}[frame number]
 
 \setbeamertemplate{title page}{\nointerlineskip%
+\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}%
+\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}%
 \vspace{\titletopmargin}
 \begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
@@ -168,7 +168,17 @@
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
-  \vspace{-0.2cm}%
+\end{minipage}}
+
+\setbeamertemplate{end page}{\nointerlineskip%
+\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}%
+\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}%
+\vspace{\titletopmargin}
+\begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\raggedright
+  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
+\end{minipage}
+\begin{minipage}[c][.8cm][b]{\textwidth}
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
@@ -188,7 +198,7 @@
 
 \setbeamertemplate{proof begin}{\vspace{0.5ex}%
 {\usebeamercolor[fg]{proof title}\usebeamerfont*{proof title}%
-\insertproofname\ }%
+\insertproofname}%
 }
 \setbeamertemplate{proof end}{\vskip.5ex}
 \renewenvironment<>{proof}[1][\proofname]{%
