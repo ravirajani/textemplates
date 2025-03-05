@@ -9,11 +9,15 @@
 \newlength{\htab}
 \newlength{\vgap}
 \newlength{\vgapsm}
+\newlength{\titleboxheight}
+\newlength{\titletopmargin}
 \setlength\hmargin{2em}
 \setlength\htab{3ex}
 \setlength\vgap{1.5ex}
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
+\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}
+\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight + 0.2cm\relax}
 
 \RequirePackage{times}
 \RequirePackage[scaled=0.8]{FiraMono}
@@ -105,43 +109,6 @@
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
 \captionsetup{labelformat=empty,textfont=blue}
 
-\def\titleboxheight{\dimexpr\paperheight - 4em\relax}
-\def\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}
-
-\defbeamertemplate*{title page}{OUTitlePage}[1][]
-{%
-  \nointerlineskip%
-  \vspace{\titletopmargin}
-  \begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle%
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\raggedright
-  \usebeamercolor[fg]{author}
-  \usebeamerfont{author}\insertauthor\par%
-  \usebeamerfont{institute}\insertinstitute\par%
-  \usebeamerfont{date}\insertdate%
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
-  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
-\end{minipage}%
-}
-
-\defbeamertemplate*{frametitle}{OUTitlePage}[1][left]
-{%
-\vspace{0.1cm}
-\nointerlineskip%
-\begin{columns}
-  \column{\dimexpr\paperwidth - 0.7cm\relax}%
-  \begin{beamercolorbox}[#1,dp=0.3cm,ht=0.7cm]{frametitle}
-    \usebeamerfont{frametitle}%
-    \insertframetitle\par%
-  \end{beamercolorbox}%
-\end{columns}
-}
-
 \setbeamercolor{palette primary}{fg=white,bg=Core}
 \setbeamercolor{palette secondary}{fg=white,bg=Core}
 \setbeamercolor{palette tertiary}{fg=white,bg=Core}
@@ -153,7 +120,7 @@
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
 \setbeamercolor{page number in head/foot}{fg=Core}
-\setbeamercolor{titlelike}{fg=Core}
+\setbeamercolor{frametitle}{fg=white,bg=Core}
 \setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=black}
@@ -172,7 +139,7 @@
 \setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
-\setbeamerfont{frametitle}{series=\bfseries,size=\Large}
+\setbeamerfont{frametitle}{size=\Large}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
@@ -183,9 +150,32 @@
 \setbeamertemplate{itemize items}[default]
 \setbeamertemplate{enumerate item}[default]
 \setbeamertemplate{enumerate subitem}{\alph{enumii})}
-\setbeamertemplate{footline}[page number]
-\setbeamertemplate{title page}[OUTitlePage]
-\setbeamertemplate{frametitle}[OUFrameTitle]
+\setbeamertemplate{footline}[frame number]
+
+\setbeamertemplate{title page}{\nointerlineskip%
+\vspace{\titletopmargin}
+\begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
+  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
+\end{minipage}
+\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
+  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle%
+\end{minipage}
+\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\raggedright
+  \usebeamercolor[fg]{author}%
+  \usebeamerfont{author}\insertauthor\par%
+  \usebeamerfont{institute}\insertinstitute\par%
+  \usebeamerfont{date}\insertdate%
+\end{minipage}
+\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
+  \vspace{-0.2cm}%
+\end{minipage}}
+
+\setbeamertemplate{frametitle}{\nointerlineskip%
+\begin{beamercolorbox}[wd=\paperwidth,dp=0.25cm,ht=0.6cm]{frametitle}
+  \hspace*{0.3cm}\insertframetitle\hspace*{0.3cm}
+\end{beamercolorbox}}
+
 
 \setbeamersize{text margin left=\hmargin,text margin right=\hmargin}
 
