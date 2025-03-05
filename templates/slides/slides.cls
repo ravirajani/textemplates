@@ -137,7 +137,7 @@
 \setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{13pt}}
 \setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
-\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{frametitle}{series=\bfseries,size=\normalsize}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
@@ -182,7 +182,7 @@
 \end{minipage}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,dp=1ex,ht=2.3ex]{frametitle}
+\begin{beamercolorbox}[wd=\paperwidth,dp=1.1ex,ht=2.4ex]{frametitle}
   \hspace*{1.2ex}\insertframetitle\hspace*{1.2ex}
 \end{beamercolorbox}}
 
