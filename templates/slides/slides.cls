@@ -182,7 +182,7 @@
 \end{minipage}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,dp=1ex,ht=2.4ex]{frametitle}
+\begin{beamercolorbox}[wd=\paperwidth,dp=1.2ex,ht=2.5ex]{frametitle}
   \hspace*{1.2ex}\insertframetitle\hspace*{1.2ex}
 \end{beamercolorbox}}
 
