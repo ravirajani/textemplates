@@ -10,6 +10,7 @@
 \newlength{\vgap}
 \newlength{\vgapsm}
 \newlength{\titleboxheight}
+\newlength{\titleboxoffset}
 \newlength{\titletopmargin}
 \setlength\hmargin{2em}
 \setlength\htab{3ex}
@@ -150,10 +151,15 @@
 \setbeamertemplate{enumerate subitem}{\alph{enumii})}
 \setbeamertemplate{footline}[frame number]
 
+\newcommand{\adjusttitlepadding}{%
+  \setlength\titleboxoffset{4em}%
+  \setlength\titleboxheight{\dimexpr\paperheight - \titleboxoffset\relax}%
+  \setlength\titletopmargin{\dimexpr .5\titleboxoffset + .5\textheight - .5\paperheight\relax}%
+  \vspace{\titletopmargin}
+}
+
 \setbeamertemplate{title page}{\nointerlineskip%
-\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}%
-\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}%
-\vspace{\titletopmargin}
+\adjusttitlepadding%
 \begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
@@ -162,8 +168,8 @@
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\raggedright
   \usebeamercolor[fg]{author}%
-  \usebeamerfont{author}\insertauthor\par%
-  \usebeamerfont{institute}\insertinstitute\par%
+  \usebeamerfont{author}\insertauthor\vskip.2ex%
+  \usebeamerfont{institute}\insertinstitute\vskip.2ex%
   \usebeamerfont{date}\insertdate%
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
@@ -171,9 +177,7 @@
 \end{minipage}}
 
 \setbeamertemplate{end page}{\nointerlineskip%
-\setlength\titleboxheight{\dimexpr\paperheight - 4em\relax}%
-\setlength\titletopmargin{\dimexpr 2em + .5\textheight - .5\paperheight\relax}%
-\vspace{\titletopmargin}
+\adjusttitlepadding%
 \begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
 \end{minipage}
