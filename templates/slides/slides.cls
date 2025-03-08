@@ -2,7 +2,7 @@
 \ProvidesClass{slides}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions\relax
-\LoadClass[10pt]{beamer}
+\LoadClass{beamer}
 \usefonttheme{professionalfonts}
 
 \newlength{\hmargin}
@@ -134,9 +134,9 @@
 
 \setbeamerfont{title}{series=\bfseries,size=\huge}
 \setbeamerfont{subtitle}{series=\mdseries,size=\Large}
-\setbeamerfont{author}{series=\bfseries,size=\fontsize{10pt}{13pt}}
-\setbeamerfont{institute}{series=\mdseries,size=\fontsize{10pt}{13pt}}
-\setbeamerfont{date}{series=\mdseries,size=\fontsize{10pt}{13pt}}
+\setbeamerfont{author}{series=\bfseries,size=\normalsize}
+\setbeamerfont{institute}{series=\mdseries,size=\normalsize}
+\setbeamerfont{date}{series=\mdseries,size=\normalsize}
 \setbeamerfont{frametitle}{size=\normalsize}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title}{size=\normalsize}
