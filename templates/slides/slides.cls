@@ -98,7 +98,7 @@
 \definecolor{Core}{RGB}{27, 27, 25}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
-\definecolor{OULightBlue}{RGB}{189,212,231}
+\definecolor{OULightBlue}{RGB}{226, 234, 243}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OULightGreen}{RGB}{216,249,218}
 \definecolor{OURed}{RGB}{221,28,26}
