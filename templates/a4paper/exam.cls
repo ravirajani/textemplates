@@ -37,7 +37,7 @@
 \setlist*[parts,2]{label=\bfseries\roman*.,labelsep=.5em}
 
 \newtheoremstyle{question}% name
-{2ex}%      Space above, empty = `usual value'
+{2ex plus 1ex minus .5ex}%      Space above, empty = `usual value'
 {}%      Space below
 {}% Body font
 {}%         Indent amount (empty = no indent, \parindent = para indent)
