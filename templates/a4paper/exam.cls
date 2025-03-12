@@ -38,7 +38,7 @@
 
 \newtheoremstyle{question}% name
 {}%      Space above, empty = `usual value'
-{20pt}%      Space below
+{}%      Space below
 {}% Body font
 {}%         Indent amount (empty = no indent, \parindent = para indent)
 {\bfseries}% Thm head font
