@@ -37,7 +37,7 @@
 \setlist*[parts,2]{label=\bfseries\roman*.,labelsep=.5em}
 
 \newtheoremstyle{question}% name
-{}%      Space above, empty = `usual value'
+{2ex}%      Space above, empty = `usual value'
 {}%      Space below
 {}% Body font
 {}%         Indent amount (empty = no indent, \parindent = para indent)
@@ -55,6 +55,6 @@
 \renewcommand{\proofname}{Solution}
 \specialcomment{soltn}{\proof}{\endproof}
 \specialcomment{instructions}
-{\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1.5ex]\hrule}
+{\hrule\begin{itemize}[label=\textbullet,noitemsep,leftmargin=\parindent,topsep=1.5ex]}
 {\end{itemize}\hrule}
 \ifEXM@solutions\excludecomment{instructions}\else\excludecomment{soltn}\fi
