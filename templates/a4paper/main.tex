@@ -4,7 +4,9 @@
 \begin{document}
 \maketitle
 \totalpts[100]
-\renewcommand{\displaypoints}[1]{[#1 pts]}
+\renewcommand{\pointsname}{pts}
+\renewcommand{\pointname}{pt}
+\renewcommand{\pointsformat}[2]{[#1 #2]}
 \begin{instructions}
     \item You are \textbf{not allowed} to use a calculator.
 
@@ -20,7 +22,7 @@
     Description.
     \begin{subparts}
         \subpart[4] First part.
-        \subpart[3] Second part.
+        \subpart[1] Second part.
     \end{subparts}
 \end{question}
 \begin{soltn}

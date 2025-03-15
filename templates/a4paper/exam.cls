@@ -34,7 +34,13 @@
 \newcommand{\totalpts}[1][]{%
 \ifstrempty{#1}{\thetpoints}{\setcounter{tpoints}{#1}}}
 
-\newcommand{\displaypoints}[1]{(#1~points)}
+\newcommand{\pointsname}{points}
+\newcommand{\pointname}{point}
+\newcommand{\pointsformat}[2]{(#1 #2)}
+\newcommand{\displaypoints}[1]{%
+\ifnumequal{#1}{1}%
+{\pointsformat{#1}{\pointname}}%
+{\pointsformat{#1}{\pointsname}}}
 
 \newcommand{\pointserror}{}
 \newcommand{\addtopointserror}[3]{%
