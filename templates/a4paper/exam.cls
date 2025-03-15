@@ -31,7 +31,10 @@
 \newcounter{nptsdefault}
 \newcounter{nptscomputed}
 \newcounter{tpoints}
-\newcommand{\totalpts}[1]{\setcounter{tpoints}{#1}#1}
+\newcommand{\totalpts}[1][]{%
+\ifstrempty{#1}{\thetpoints}{\setcounter{tpoints}{#1}}}
+
+\newcommand{\displaypoints}[1]{(#1~points)}
 
 \newcommand{\pointserror}{}
 \newcommand{\addtopointserror}[3]{%
@@ -67,7 +70,7 @@
 \ifstrempty{#1}%
 {\setcounter{nptscomputed}{\value{nptsdefault}}}{\setcounter{nptscomputed}{#1}}%
 \addtocounter{subpts}{\value{nptscomputed}}%
-\item\textbf{(\thenptscomputed~points)}\enspace}
+\item\textbf{\displaypoints{\thenptscomputed}}\enspace}
 
 \renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
 \begin{minipage}[t]{\wlogo}%
@@ -95,7 +98,7 @@
 \addtocounter{questionpts}{-\value{npoints}}%
 }{\setcounter{questionpts}{#3}}%
 \addtocounter{npoints}{\value{questionpts}}%
-\thmname{#1}\thmnumber{ #2}.\enspace (\thequestionpts~points)}% Thm head spec
+\thmname{#1}\thmnumber{ #2}.\enspace\displaypoints{\thequestionpts}}% Thm head spec
 
 \theoremstyle{question}
 \newtheorem{question}{Question}
