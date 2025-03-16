@@ -87,6 +87,8 @@
 \setlist[subparts,1]{label=\bfseries\alph*.,labelsep=.5em}
 \setlist*[subparts,2]{label=\bfseries\roman*.,labelsep=.5em}
 
+\newcommand{\nodescription}{\leavevmode\vspace{\dimexpr-\topsep-\itemsep\relax}}
+
 \newtheoremstyle{question}% name
 {2ex plus 1ex minus .5ex}%      Space above, empty = `usual value'
 {}%      Space below
