@@ -91,7 +91,7 @@
 
 \newtheoremstyle{question}% name
 {2ex plus 1ex minus .5ex}%      Space above, empty = `usual value'
-{}%      Space below
+{2ex plus .5ex minus .5ex}%     Space below
 {}% Body font
 {}%         Indent amount (empty = no indent, \parindent = para indent)
 {\bfseries}% Thm head font
