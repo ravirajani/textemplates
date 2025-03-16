@@ -33,6 +33,9 @@
 \RequirePackage{caption}
 \RequirePackage{xpatch}
 
+\useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
+\tcbset{fonttitle=\upshape,fontupper=\upshape}
+
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
@@ -212,14 +215,15 @@
     \usebeamertemplate{proof begin}#2}
   {\popQED\usebeamertemplate{proof end}}
 
-  \newenvironment<>{plainblock}[1]{%
-    \begin{actionenv}#2%
-      \def\insertblocktitle{#1}%
-      \par%
-      \only<presentation>{\setbeamerfont{block title}{size=\large}%
-        \setbeamercolor{block title}{fg=OUMidBlue,bg=}%
-        \setbeamercolor{block body}{fg=black,bg=}}
-      \usebeamertemplate{block begin}}
-    {\par%
-      \usebeamertemplate{block end}%
-    \end{actionenv}}
+\newenvironment<>{plainblock}[1]{%
+  \begin{actionenv}#2%
+    \def\insertblocktitle{#1}%
+    \par%
+    \only<presentation>{\setbeamerfont{block title}{size=\large}%
+      \setbeamercolor{block title}{fg=OUMidBlue,bg=}%
+      \setbeamercolor{block body}{fg=black,bg=}}%
+    \setbeamertemplate{blocks}[default]%
+    \usebeamertemplate{block begin}}
+  {\par%
+    \usebeamertemplate{block end}%
+  \end{actionenv}}
