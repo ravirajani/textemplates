@@ -6,6 +6,12 @@ from tex2html import tohtml
 
 filename = len(sys.argv) > 1 and sys.argv[1] or exit('No filename provided')
 
+def startswith(line, token, type='start'):
+    if type == 'start':
+        return line.startswith(r'\begin{'+token)
+    else:
+        return line.startswith(r'\end{'+token)
+
 with open(filename, encoding='utf-8') as f:
     while True:
         instring = input('Question number (or q to quit): ').strip() or 0
@@ -17,11 +23,6 @@ with open(filename, encoding='utf-8') as f:
         token = 'question' if question > 0 else 'instructions'
         found = False
         nodescription = False
-        def startswith(line, token, type='start'):
-            if type == 'start':
-                return line.startswith(r'\begin{'+token)
-            else:
-                return line.startswith(r'\end{'+token)
         output = '<p>'
         for line in f:
             line = re.sub(r'(^[ \t]*)', '', line)
