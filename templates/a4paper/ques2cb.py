@@ -49,7 +49,7 @@ with open(filename, encoding='utf-8') as f:
                     output = '<p>'
                     line = re.sub(r'\\subpart(\[.*?\])?','', line)
                 if line.startswith('\n'):
-                    output + output.strip() + '</p>\n<p>'
+                    output = output.strip() + '</p>\n<p>'
                 else:
                     line = tohtml(line[:-1])
                     output += line + ' '
