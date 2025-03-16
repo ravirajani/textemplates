@@ -28,7 +28,6 @@
 \setlength\wlogo{6cm}
 
 \newcounter{npoints}
-\setcounter{npoints}{0}
 \newcounter{questionpts}
 \newcounter{nptsdefault}
 \newcounter{nptscomputed}
