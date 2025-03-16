@@ -16,11 +16,13 @@
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{etoolbox}
-\RequirePackage[a4paper]{geometry}
+\RequirePackage[a4paper,margin={3cm,2cm}]{geometry}
 \RequirePackage{comment}
 \RequirePackage{enumitem}
 
-\geometry{margin={3cm,2cm}}
+\newcommand{\pointsname}{pts}
+\newcommand{\pointname}{pt}
+\newcommand{\pointsformat}[2]{[#1 #2]}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
@@ -34,9 +36,6 @@
 \newcommand{\totalpts}[1][]{%
 \ifstrempty{#1}{\thetpoints}{\setcounter{tpoints}{#1}}}
 
-\newcommand{\pointsname}{points}
-\newcommand{\pointname}{point}
-\newcommand{\pointsformat}[2]{(#1 #2)}
 \newcommand{\displaypoints}[1]{%
 \ifnumequal{#1}{1}%
 {\pointsformat{#1}{\pointname}}%
@@ -44,14 +43,14 @@
 
 \newcommand{\pointserror}{}
 \newcommand{\addtopointserror}[3]{%
-  \protected@edef\@tempa{\textbf{Q#1}: & #2 & #3 \noexpand\\}
+  \protected@edef\@tempa{\textbf{Q#1}: & #2\; & #3\; \noexpand\\}
   \expandafter\gappto\expandafter\pointserror\expandafter{\@tempa}}
 
 \AtEndEnvironment{question}{%
     \ifnumgreater{\value{subpts}}{0}{% IF TRUE
         \ifnumequal{\value{subpts}}{\value{questionpts}}{}{% IF FALSE
             \ifdefempty{\pointserror}{% IF TRUE
-                \gappto{\pointserror}{\vskip1.5ex\hrule\vskip1ex\begin{tabular}{rcc}
+                \gappto{\pointserror}{\vskip1.5ex\hrule\vskip1ex\begin{tabular}{rrr}
                     & \textbf{Expected Points} & \textbf{Actual Points} \\[.2ex]}
             }{}%
             \addtopointserror{\thequestion}{\thequestionpts}{\thesubpts}
@@ -63,7 +62,7 @@
 \ifdefempty{\pointserror}{}{% IF FALSE
     \gappto{\pointserror}{%
         \ifnumequal{\value{tpoints}}{\value{npoints}}{}{% IF FALSE
-            \textbf{Total}: & \thetpoints & \thenpoints
+            \textbf{Total}: & \thetpoints\; & \thenpoints\; \\
         }
         \end{tabular}}
     \pointserror
