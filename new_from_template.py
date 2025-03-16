@@ -50,6 +50,7 @@ elif template[0] == 'a4paper':
         { 'src': 'exam.cls' },
         { 'src': 'solutions.tex', 'dst': args.filename + '-solutions.tex' },
         { 'src': 'main.tex' },
+        { 'src': 'ques2cb.py' },
         { 'src': 'pgf.mplstyle' }
     ])
 else:
@@ -61,7 +62,7 @@ else:
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
 shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
-for filename in ['.gitignore','version.txt','build.py']:
+for filename in ['.gitignore','version.txt','build.py','tex2html.py']:
     shutil.copy(filename, str(args.projectfolder / filename))
 for file in files:
     src = file['src']
