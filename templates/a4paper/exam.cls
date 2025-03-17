@@ -19,10 +19,11 @@
 \RequirePackage[a4paper,margin={3cm,2cm}]{geometry}
 \RequirePackage{comment}
 \RequirePackage{enumitem}
+\RequirePackage{marginnote}
 
-\newcommand{\pointsname}{pts}
-\newcommand{\pointname}{pt}
-\newcommand{\pointsformat}[2]{[#1 #2]}
+\newcommand{\pointsname}{ points}
+\newcommand{\pointname}{ point}
+\newcommand{\pointsformat}[2][]{[#2#1]}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
@@ -37,8 +38,8 @@
 
 \newcommand{\displaypoints}[1]{%
 \ifnumequal{#1}{1}%
-{\pointsformat{#1}{\pointname}}%
-{\pointsformat{#1}{\pointsname}}}
+{\pointsformat[\pointname]{#1}}%
+{\pointsformat[\pointsname]{#1}}}
 
 \newcommand{\pointserror}{}
 \newcommand{\addtopointserror}[3]{%
@@ -65,16 +66,16 @@
         }
         \end{tabular}}
     \pointserror
-}%
-}
+}}
 
+\reversemarginpar
 \newcommand{\subpart}[1][]{%
 \setcounter{nptsdefault}{\value{questionpts}}%
 \addtocounter{nptsdefault}{-\value{subpts}}%
 \ifstrempty{#1}%
 {\setcounter{nptscomputed}{\value{nptsdefault}}}{\setcounter{nptscomputed}{#1}}%
 \addtocounter{subpts}{\value{nptscomputed}}%
-\item\textbf{\displaypoints{\thenptscomputed}}\enspace}
+\item\marginnote{\small\pointsformat{\thenptscomputed}}\ignorespaces}
 
 \renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
 \begin{minipage}[t]{\wlogo}%
