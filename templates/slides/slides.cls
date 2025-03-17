@@ -141,7 +141,7 @@
 \setbeamerfont{author}{series=\bfseries,size=\normalsize}
 \setbeamerfont{institute}{series=\mdseries,size=\normalsize}
 \setbeamerfont{date}{series=\mdseries,size=\normalsize}
-\setbeamerfont{frametitle}{size=\normalsize}
+\setbeamerfont{frametitle}{size=\large}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
