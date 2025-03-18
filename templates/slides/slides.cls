@@ -3,7 +3,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions\relax
 \LoadClass{beamer}
-\usefonttheme{professionalfonts}
+\usefonttheme[onlymath]{serif}
 
 \newlength{\hmargin}
 \newlength{\htab}
@@ -18,9 +18,9 @@
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
 
-\RequirePackage{times}
+\RequirePackage{mathptmx}
 \RequirePackage[scaled=0.8]{FiraMono}
-\RequirePackage{sfmath}
+\RequirePackage{helvet}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
 \RequirePackage[utf8]{inputenc}
