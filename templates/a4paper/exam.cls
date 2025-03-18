@@ -58,6 +58,10 @@
     }{}%
 }
 
+\AtBeginEnvironment{subparts}{%
+\let\oldlabel\label%
+\renewcommand{\label}[1]{\oldlabel{#1}\ignorespaces}}
+
 \AtEndDocument{%
 \ifdefempty{\pointserror}{}{% IF FALSE
     \gappto{\pointserror}{%
