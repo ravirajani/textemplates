@@ -23,7 +23,8 @@
 
 \newcommand{\pointsname}{ points}
 \newcommand{\pointname}{ point}
-\newcommand{\pointsformat}[2][]{[#2#1]}
+\newcommand{\pointsformat}[2][]{(#2#1)}
+\newcommand{\marginpoints}[1]{\footnotesize#1p}
 
 \newlength{\wlogo}
 \setlength\wlogo{6cm}
@@ -79,7 +80,7 @@
 \ifstrempty{#1}%
 {\setcounter{nptscomputed}{\value{nptsdefault}}}{\setcounter{nptscomputed}{#1}}%
 \addtocounter{subpts}{\value{nptscomputed}}%
-\item\marginnote{\small\pointsformat{\thenptscomputed}}\ignorespaces}
+\item\marginnote{\marginpoints{\thenptscomputed}}\ignorespaces}
 
 \renewcommand{\maketitle}{{\setlength\parindent{0pt}\vspace*{-1.5cm}%
 \begin{minipage}[t]{\wlogo}%
