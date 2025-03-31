@@ -122,7 +122,7 @@
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
 \setbeamercolor{page number in head/foot}{fg=Core}
-\setbeamercolor{frametitle}{fg=white,bg=Core}
+\setbeamercolor{frametitle}{fg=black}
 \setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=black}
@@ -141,7 +141,7 @@
 \setbeamerfont{author}{series=\bfseries,size=\normalsize}
 \setbeamerfont{institute}{series=\mdseries,size=\normalsize}
 \setbeamerfont{date}{series=\mdseries,size=\normalsize}
-\setbeamerfont{frametitle}{size=\large}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
 \setbeamerfont{caption}{size=\normalsize}
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block title example}{size=\normalsize}
@@ -189,8 +189,8 @@
 \end{minipage}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,dp=1.2ex,ht=2.5ex]{frametitle}
-  \hspace*{1.2ex}\insertframetitle\hspace*{1.2ex}
+\begin{beamercolorbox}[wd=\paperwidth,sep=.5\hmargin]{frametitle}
+  \insertframetitle
 \end{beamercolorbox}}
 
 
