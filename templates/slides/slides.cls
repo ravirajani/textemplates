@@ -192,7 +192,7 @@
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[center,wd=\paperwidth,sep=1em]{frametitle}
+\begin{beamercolorbox}[center,wd=\paperwidth,ht=2em,dp=.5ex]{frametitle}
   \insertframetitle
 \end{beamercolorbox}}
 
