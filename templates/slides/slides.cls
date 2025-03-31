@@ -34,7 +34,7 @@
 \RequirePackage{xpatch}
 
 \useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
-\tcbset{fonttitle=\upshape,fontupper=\upshape}
+\tcbset{fonttitle=\upshape,fontupper=\upshape,center title}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
@@ -163,33 +163,33 @@
 
 \setbeamertemplate{title page}{\nointerlineskip%
 \adjusttitlepadding%
-\begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\raggedright
+\begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\centering
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
 \end{minipage}
-\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
+\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\centering
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle%
 \end{minipage}
-\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\raggedright
+\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\centering
   \usebeamercolor[fg]{author}%
   \usebeamerfont{author}\insertauthor\vskip.2ex%
   \usebeamerfont{institute}\insertinstitute\vskip.2ex%
   \usebeamerfont{date}\insertdate%
 \end{minipage}
-\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}
+\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}\centering
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}}
 
 \setbeamertemplate{end page}{\nointerlineskip%
 \adjusttitlepadding%
-\begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\raggedright
+\begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\centering
   \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
 \end{minipage}
-\begin{minipage}[c][.8cm][b]{\textwidth}
+\begin{minipage}[c][.8cm][b]{\textwidth}\centering
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,sep=.5\hmargin]{frametitle}
+\begin{beamercolorbox}[center,wd=\paperwidth,sep=.5\hmargin]{frametitle}
   \insertframetitle
 \end{beamercolorbox}}
 
