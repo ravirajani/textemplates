@@ -122,7 +122,7 @@
 \setbeamercolor{title}{fg=white}
 \setbeamercolor{subsection in head/foot}{fg=OUYellow}
 \setbeamercolor{page number in head/foot}{fg=Core}
-\setbeamercolor{frametitle}{fg=black}
+\setbeamercolor{frametitle}{fg=OUMidBlue}
 \setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=black}
@@ -161,35 +161,38 @@
   \vspace{\titletopmargin}
 }
 
-\setbeamertemplate{title page}{\nointerlineskip%
-\adjusttitlepadding%
-\begin{minipage}[c][.28\titleboxheight][t]{\textwidth}\centering
-  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle%
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\centering
-  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle%
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}\centering
+\setbeamertemplate{title page}{\adjusttitlepadding\nointerlineskip%
+\begin{columns}
+\column{\dimexpr\paperwidth - 2\hmargin\relax}
+\begin{minipage}[c][.24\titleboxheight][t]{.5\textwidth}\raggedright
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
+\end{minipage}\begin{minipage}[c][.24\titleboxheight][t]{.5\textwidth}\raggedleft
   \usebeamercolor[fg]{author}%
   \usebeamerfont{author}\insertauthor\vskip.2ex%
-  \usebeamerfont{institute}\insertinstitute\vskip.2ex%
-  \usebeamerfont{date}\insertdate%
+  \usebeamerfont{institute}\insertinstitute
 \end{minipage}
-\begin{minipage}[c][.24\titleboxheight][b]{\textwidth}\centering
-  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
-\end{minipage}}
+\begin{minipage}[t][.52\titleboxheight][c]{\textwidth}\centering
+  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
+  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle\\[20pt]
+  \usebeamerfont{date}\insertdate
+\end{minipage}
+\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}
+\end{minipage}\end{columns}}
 
-\setbeamertemplate{end page}{\nointerlineskip%
-\adjusttitlepadding%
-\begin{minipage}[c][\dimexpr \titleboxheight - .8cm\relax][c]{\textwidth}\centering
+\setbeamertemplate{end page}{\adjusttitlepadding\nointerlineskip%
+\begin{columns}
+\column{\dimexpr\paperwidth - 2\hmargin\relax}
+\begin{minipage}[c][.24\titleboxheight][t]{\textwidth}\raggedright
+  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
+\end{minipage}
+\begin{minipage}[c][.52\titleboxheight][c]{\textwidth}\centering
   \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
 \end{minipage}
-\begin{minipage}[c][.8cm][b]{\textwidth}\centering
-  \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
-\end{minipage}}
+\begin{minipage}[c][.24\titleboxheight][c]{\textwidth}
+\end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[center,wd=\paperwidth,sep=.5\hmargin]{frametitle}
+\begin{beamercolorbox}[center,wd=\paperwidth,sep=\hmargin]{frametitle}
   \insertframetitle
 \end{beamercolorbox}}
 
