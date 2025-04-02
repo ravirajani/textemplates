@@ -65,21 +65,22 @@
 \fi
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0
-\setlength{\droptitle}{-30pt}
+\renewcommand{\maketitle}{\begin{center}
+    \textbf{\Large\@title}\\[1.5ex]
+    \normalsize\@author\\[1.5ex]
+    \small\@date\vskip20pt
+    \thispagestyle{plain}
+\end{center}}
 \else\ifnum\pdf@strcmp{\TBT@style}{report}=0
-\renewcommand{\maketitle}{
-    \nointerlineskip\vspace*{.19\textheight}%
-    \begin{minipage}[c][.62\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
-        \Huge\bfseries\@title\vfill\Large\normalfont\@author\vskip1.5ex\large\@date\par%
-    \end{minipage}\setcounter{page}{0}\thispagestyle{empty}
-}
-\fi\fi
-
-\ifnum\pdf@strcmp{\TBT@style}{exercises}=0
+\renewcommand{\maketitle}{\nointerlineskip\vspace*{.19\textheight}%
+\begin{minipage}[c][.62\textheight][c]{\dimexpr\textwidth - 2\parindent\relax}\centering
+    \Huge\bfseries\@title\vfill\Large\normalfont\@author\vskip1.5ex\large\@date\par%
+\end{minipage}\setcounter{page}{0}\thispagestyle{empty}}
+\else\ifnum\pdf@strcmp{\TBT@style}{exercises}=0
 \renewcommand{\maketitle}{\begin{center}
     \Large\@title\\[1ex]
-    \normalsize \@author\\[1.5ex]
+    \normalsize\@author\\[1.5ex]
     \textbf{\small Due \@date}  
     \thispagestyle{plain}
 \end{center}}
-\fi
+\fi\fi\fi
