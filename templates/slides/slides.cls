@@ -18,9 +18,9 @@
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
 
-\RequirePackage{mathptmx}
-\RequirePackage[scaled=0.8]{FiraMono}
-\RequirePackage{helvet}
+\RequirePackage{newtxmath}
+\RequirePackage[scaled=0.85]{FiraMono}
+\RequirePackage[scaled]{helvet}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
 \RequirePackage[utf8]{inputenc}
