@@ -19,7 +19,7 @@
 \setlength\belowcaptionskip{0pt}
 
 \RequirePackage{newtxmath}
-\RequirePackage[scaled=0.85]{FiraMono}
+\RequirePackage[scaled=0.8]{FiraMono}
 \RequirePackage[scaled]{helvet}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
@@ -173,7 +173,7 @@
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle\\[20pt]
   \usebeamercolor[fg]{author}%
-  \usebeamerfont{author}\insertauthor\\[.2ex]
+  \usebeamerfont{author}\insertauthor\\
   \usebeamerfont{institute}\insertinstitute
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][c]{\paperwidth - 2\hmargin}

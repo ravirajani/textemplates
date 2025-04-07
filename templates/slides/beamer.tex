@@ -31,11 +31,12 @@
 \subsection{Subsection}
 
 \begin{frame}{Colours}
+\begingroup\tcbset{before skip=.2ex}
 \begin{theorem}[Central Limit Theorem]
 \[
 \frac{S_n - n\mu_x}{\sqrt{n}\sigma_x}\stackrel{d}{\to} N(0,1)
 \]
-\end{theorem}
+\end{theorem}\endgroup
 \begin{proof}[Proof Sketch]
 Just use characteristic functions.
 \end{proof}
@@ -63,11 +64,11 @@ This is a plain block.
       \item Use the \texttt{fragile} frame option for \textcolor<2->{OUMidBlue}{verbatim} environments.
       \item Use \colorbox{OUYellow}{background templates} and \alert{texpos} as follows:
             \begin{verbatim}
-\setbeamertemplate{background}{\import{subfolder}{file.pdf}}
+\setbeamertemplate{background}{\import{folder}{file.pdf}}
 \begin{frame}
-  % The textblock* environment does absolute positioning
-  % First param is width of box, and second is
-  % coordinates of left corner in ROUND brackets!
+% The textblock* environment does absolute positioning
+% First param is width of box, and second is
+% coordinates of left corner in ROUND brackets!
   \begin{textblock*}{7cm}(7cm,1.5cm)
     ...
     
