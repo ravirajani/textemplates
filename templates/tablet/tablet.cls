@@ -66,8 +66,8 @@
 
 \ifnum\pdf@strcmp{\TBT@style}{article}=0
 \renewcommand{\maketitle}{\begin{center}
-    \textbf{\Large\@title}\\[1.5ex]
-    \normalsize\@author\\[1.5ex]
+    \Large\textbf{\@title}\vskip1.5ex
+    \normalsize\@author\vskip1.5ex
     \small\@date\vskip20pt
     \thispagestyle{plain}
 \end{center}}
@@ -78,9 +78,9 @@
 \end{minipage}\setcounter{page}{0}\thispagestyle{empty}}
 \else\ifnum\pdf@strcmp{\TBT@style}{exercises}=0
 \renewcommand{\maketitle}{\begin{center}
-    \Large\@title\\[1ex]
-    \normalsize\@author\\[1.5ex]
-    \textbf{\small Due \@date}  
+    \Large\@title\vskip1ex
+    \normalsize\@author\vskip1.5ex
+    \small\textbf{Due \@date}\par
     \thispagestyle{plain}
 \end{center}}
 \fi\fi\fi
