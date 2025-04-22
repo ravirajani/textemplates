@@ -3,11 +3,14 @@
 \RequirePackage{tcolorbox}
 \RequirePackage{comment}
 
+\newlength{\tcbparindent}
+\setlength\tcbparindent{\parindent}
 \tcbuselibrary{skins,breakable,theorems}
 \tcbset{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\bfseries,
 before skip=12pt plus 5pt minus 5pt, after skip=12pt plus 5pt minus 5pt,
 top=1mm, toptitle=1mm, bottomtitle=0pt, bottom=1mm, left=1mm, right=1mm, middle=2mm,
-coltitle=black, titlerule=0pt, colback=white, colbacktitle=white}
+coltitle=black, titlerule=0pt, colback=white, colbacktitle=white,
+before upper={\setlength\parindent{\tcbparindent}}}
 
 % Example:
 % \begin{soltn}
