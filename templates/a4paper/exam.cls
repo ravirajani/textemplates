@@ -21,6 +21,8 @@
 \RequirePackage{enumitem}
 \RequirePackage{marginnote}
 
+\mleftright
+
 \newcommand{\pointsname}{ points}
 \newcommand{\pointname}{ point}
 \newcommand{\pointsformat}[2][]{(#2#1)}
