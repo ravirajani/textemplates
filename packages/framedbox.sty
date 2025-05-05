@@ -9,7 +9,7 @@
 \tcbset{enhanced jigsaw, breakable, sharp corners=all, fonttitle=\bfseries,
 before skip=12pt plus 5pt minus 5pt, after skip=12pt plus 5pt minus 5pt,
 top=1mm, toptitle=1mm, bottomtitle=0pt, bottom=1mm, left=1mm, right=1mm, middle=2mm,
-coltitle=black, titlerule=0pt, colback=white, colbacktitle=white,
+coltitle=black, titlerule=0pt, colback=white, colbacktitle=white, center title,
 before upper={\setlength\parindent{\tcbparindent}}}
 
 % Example:
@@ -49,3 +49,8 @@ before upper={\setlength\parindent{\tcbparindent}}}
 % description font=\normalfont,separator sign=\hspace{1ex},
 % segmentation style={black,solid,opacity=0.2,line width=1pt},
 % colback=black!5!white, colbacktitle=black!5!white}{alg}
+
+\tcbuselibrary{skins, breakable}
+\newtcolorbox{stepsbox*}[1][]{colback=black!5!white, colbacktitle=black!5!white, colframe=black!5!white, #1}
+\newtcolorbox[auto counter, number within=section]{stepsbox}[1][title=Algorithm \thetcbcounter]{
+colback=black!5!white, colbacktitle=black!5!white, colframe=black!5!white, top=0pt, #1}
