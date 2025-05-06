@@ -41,12 +41,12 @@
     before=\setcounter{pcodeiv}{\value{pcodeiii}},after=\setcounter{pcodeiii}{\value{pcodeiv}}}
 
 \newlist{pcode0}{description}{1}
-\setlist[pcode0,1]{leftmargin=\ALGSTP@indent,labelsep=0pt,style=nextline,font=\small\bfseries,
+\setlist[pcode0,1]{leftmargin=\ALGSTP@indent,labelsep=0pt,font=\mdseries\itshape,
     itemsep=0pt,topsep=0pt,partopsep=\ALGSTP@partopsep,parsep=\ALGSTP@linespacing}
 
 \newcommand{\tabcomment}[2][.5\textwidth]{{\fontfamily{\sfdefault}\selectfont\tabto{#1}// #2}}
 \newcommand{\algname}[1]{\textsc{#1}}
-
+\newcommand{\kword}[1]{\textbf{#1}}
 \newlength{\smallindent}
 \setlength\smallindent{12pt}
 
