@@ -59,7 +59,7 @@ else:
         { 'src': 'tablet.cls' },
         { 'src': 'pgf.mplstyle' },
         { 'src': 'buildht' },
-        { 'src', 'buildpdf' },
+        { 'src': 'buildpdf' },
         { 'src': 't4ht.cfg' },
         { 'src': 't4ht.css' }
     ])
