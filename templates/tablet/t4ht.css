@@ -1,0 +1,26 @@
+body { font-size: large; }
+h3, h4 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
+h3 + h4 { margin-top: 1em; }
+h4 { font-style: italic; margin-bottom: 1.33ex; }
+img { width: 60%; height: auto; }
+.enumerate { padding: 0; margin: 1ex; }
+.enumerate li { list-style-type: none; margin: 1ex; }
+.enumerate li li { margin: 1ex 0; }
+.enumerate li li:last-child { margin-bottom: 0; }
+.enumerate li li .enumitem-mark { width: 3ex; }
+.enumerate .enumitem { display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: first baseline; align-content: stretch; }
+.enumerate li div { margin: 0; padding: 0 !important; }
+.tcolorbox .enumerate { margin: 0; }
+.enumerate li p { margin-bottom: 0 !important; }
+.enumerate li p + p { margin-top: 1ex; }
+.enumerate .enumitem-mark { width: 2ex; text-align: right; }
+.enumerate .enumitem-content { margin-left: 1ex; }
+.figure { display: flex; flex-flow: column nowrap; align-items: center;  margin: 2em 0; width: 100%; }
+.figure .subfloatrow { display: flex; flex-flow: row wrap; justify-content: space-evenly; max-width: 100%; width: 100%; margin-right: 0; }
+.figure .caption { order: 1; }
+.figure .caption .content { margin-left: 1ex; }
+.figure .caption:has(span:empty) { display: none; }
+.figure .subfig img { width: 100%; }
+.figure .subfig { width: 45%; }
+.figure .caption { font-size: 90%; margin-top: 1ex; }
+.figure .caption * { font-size: inherit !important; }

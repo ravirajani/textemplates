@@ -5,21 +5,13 @@
 \RequirePackage{newtxmath}
 \RequirePackage{mleftright} % \mleft \mright has no extra space around it
 \mleftright
+\RequirePackage{mathtools}
 \RequirePackage{bm} % bold math
-\RequirePackage{nicematrix}
+%\RequirePackage{nicematrix}
 \RequirePackage{xfrac} % small fraction \sfrac defined here
 \RequirePackage{xpatch}
 \RequirePackage{enumitem}
 \RequirePackage{kvoptions}
-\RequirePackage[DIF =
-{
-op-symbol = d,
-op-order-nudge = 1 mu,
-outer-Ldelim = \left . ,
-outer-Rdelim = \right |,
-sub-nudge = 0 mu
-}
-]{diffcoeff}
 
 \SetupKeyvalOptions{
     family=RM,
@@ -41,7 +33,7 @@ sub-nudge = 0 mu
 
 \newcommand\dotp{\mathbin{\bm{\cdot}}} % dot product
 
-\NiceMatrixOptions{renew-dots,renew-matrix,nullify-dots}
+%\NiceMatrixOptions{renew-dots,renew-matrix,nullify-dots}
 
 \xpatchcmd{\proof}{\@addpunct{.}}{}{}{}
 \xpatchcmd{\proof}{\trivlist}{\setlength{\labelsep}{\RM@customheadsep}\trivlist}{}{}

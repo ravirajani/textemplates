@@ -57,7 +57,11 @@ else:
     files.extend([
         { 'src': 'tablet_154x205.svg' },
         { 'src': 'tablet.cls' },
-        { 'src': 'pgf.mplstyle' }
+        { 'src': 'pgf.mplstyle' },
+        { 'src': 'buildht' },
+        { 'src', 'buildpdf' },
+        { 'src': 't4ht.cfg' },
+        { 'src': 't4ht.css' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)

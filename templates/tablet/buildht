@@ -1,0 +1,59 @@
+ #!/bin/bash
+
+# DEFAULT OPTIONS
+outdir='html'
+create_xbb='false'
+
+# CONSTANTS
+CONFIG_FILE='t4ht.cfg'
+
+OPTIND=1
+SCRIPTDIR=$(cd `dirname $0` && pwd)
+
+DESC="Converts tex to html with make4ht using config $CONFIG_FILE"
+
+USAGE=$(cat <<-END
+Usage: $0 [options] filename.tex
+Options:
+  -h                Print help message and exit.
+  -o OUTDIR         Output directory (default: $outdir).
+  -x                Create xbb files for pdfs.
+END
+)
+
+while getopts "hxo:" option; do
+    case "$option" in
+        h)  echo "$DESC"
+            echo
+            echo "$USAGE"
+            echo
+            exit 0
+            ;;
+        o)  outdir="$SCRIPTDIR/$OPTARG"
+            ;;
+        x)  create_xbb='true'
+            ;;
+        \?) echo "$USAGE"
+            echo
+            exit 0
+            ;;
+    esac
+done
+
+shift "$((OPTIND-1))"
+[[ "$1" = "--" ]] && shift
+
+filename="$1"
+if [ -z "$filename" ]; then
+    echo "Missing positional argument: filename"
+    echo "$USAGE"
+    exit 1
+fi
+
+if $create_xbb; then
+    echo "Generating xbb files..."
+    ebb -x *.pdf
+fi
+make4ht -c $CONFIG_FILE -d "$outdir" "$filename"
+echo "Cleaning up..."
+make4ht -m clean "$filename"

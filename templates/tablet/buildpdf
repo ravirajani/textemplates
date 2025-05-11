@@ -1,0 +1,62 @@
+#!/bin/bash
+
+outfile=""
+
+OPTIND=1
+SCRIPTDIR=$(cd `dirname $0` && pwd)
+
+DESC="Converts pdf_tex fragment to pdf file"
+
+USAGE=$(cat <<-END
+Usage: $0 [options] filename.pdf_tex
+Options:
+  -h                Print help message and exit.
+  -o OUTFILE        Output file name (default: filename-sa.pdf).
+END
+)
+
+while getopts "ho:" option; do
+    case "$option" in
+        h)  echo "$DESC"
+            echo
+            echo "$USAGE"
+            echo
+            exit 0
+            ;;
+        o)  outfile="$SCRIPTDIR/$OPTARG"
+            ;;
+        \?) echo "$USAGE"
+            echo
+            exit 0
+            ;;
+    esac
+done
+
+shift "$((OPTIND-1))"
+[[ "$1" = "--" ]] && shift
+
+filename="$1"
+if [ -z "$filename" ]; then
+    echo "Missing positional argument: filename"
+    echo "$USAGE"
+    exit 1
+fi
+
+if [ -z "$outfile" ]; then
+    outfile="${1%.pdf_tex}-sa"
+fi
+
+tex=$(cat <<-END
+\documentclass{standalone}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\begin{document}
+\footnotesize\input{$1}
+\end{document}
+END
+)
+
+echo $tex | pdflatex -jobname="$outfile"
