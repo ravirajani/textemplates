@@ -17,8 +17,10 @@ before upper={\setlength\parindent{\tcbparindent}}}
 %   Write solution here.
 % \end{soltn}
 % Hide the solution with \excludecomment{soltn}
-\newtcolorbox{soltnbox}[1][]{title=Solution, fonttitle=\bfseries\itshape, before skip=5pt, top=0pt, #1}
-\specialcomment{soltn}{\begin{soltnbox}}{\end{soltnbox}}
+\newtcolorbox{soltnbox}[1][]{before skip=5pt, #1}
+\specialcomment{soltn}{\begin{soltnbox}
+    \noindent\textbf{\textit{Solution}}\hspace{1.5ex plus 1.5ex minus .3ex}}
+    {\end{soltnbox}}
 
 % Example:
 % \begin{ruledbox}
