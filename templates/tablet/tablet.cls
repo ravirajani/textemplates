@@ -86,7 +86,7 @@
 \renewcommand{\maketitle}{\begin{center}
     \titlewithsubtitle\vskip1ex
     \ifcsempty{@author}{}{\normalsize\@author\vskip1ex}
-    \ifcsempty{@date}{}{\small\textbf{Due \@date}}\par
+    \ifcsempty{@date}{}{\small\textbf{Due \@date}\vskip15pt}
     \thispagestyle{plain}
 \end{center}}
 }{}}}
