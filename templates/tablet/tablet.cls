@@ -27,11 +27,15 @@
     \RequirePackage{newtxtext} % Times font
 \fi
 
-\RequirePackage[en-GB]{datetime2}
+\RequirePackage[scaled=0.85]{FiraMono}
+\RequirePackage[UKenglish]{babel}
+\RequirePackage[UKenglish]{isodate}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 \RequirePackage{geometry}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{subfiles}
-\RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=black,bookmarks=true]{hyperref}
+\RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=blue,bookmarks=true]{hyperref}
 
 \newcommand{\subtitle}[1]{%
 \appto{\titlewithsubtitle}{\ifdefstring{\TBT@style}{report}{%
