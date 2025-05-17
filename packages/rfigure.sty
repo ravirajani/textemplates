@@ -1,10 +1,11 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{rfigure}
+\RequirePackage{newfloat}
+\RequirePackage{float}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
-\RequirePackage{floatrow}
+\RequirePackage{etoolbox}
 \RequirePackage{kvoptions}
-
 
 \SetupKeyvalOptions{
     family=RF,
@@ -12,6 +13,7 @@
 }
 
 \DeclareStringOption[1.5ex plus 1.5ex minus .3ex]{labelsep}
+\DeclareStringOption[section]{numberwithin}
 
 \ProcessKeyvalOptions*
 
@@ -20,23 +22,40 @@
 
 \DeclareCaptionLabelSeparator{capspace}{\hspace{\RF@customheadsep}}
 \DeclareCaptionLabelSeparator{subcapspace}{\enspace}
-\floatsetup[figure]{capposition=bottom}
-\captionsetup[figure]{font=small,labelfont=bf,labelsep=capspace}
-\DeclareCaptionSubType[alph]{figure}
-\captionsetup[subfigure]{labelformat=parens,labelfont=normalfont,labelsep=subcapspace}
-\numberwithin{figure}{section}
 
-\DeclareNewFloatType{algorithm}{name=Algorithm}
-\DeclareFloatVCode{algprecode}{\par\hrule height .8pt\vskip2pt\par}
-\DeclareFloatVCode{algmidcode}{\vskip2pt\hrule\vskip5pt}
-\floatsetup[algorithm]{capposition=top,precode=algprecode,postcode=lowrule,midcode=algmidcode,heightadjust=all}
-\captionsetup[algorithm]{labelfont=bf,labelsep=capspace,justification=raggedright,singlelinecheck=false}
-\numberwithin{algorithm}{section}
+\captionsetup{labelfont=bf,labelsep=capspace}
+\captionsetup[ruled]{labelsep=capspace}
+\subcaptionsetup{labelformat=parens,labelfont=normalfont,labelsep=subcapspace,justification=raggedright}
 
-\floatsetup[table]{capposition=top}
-\captionsetup[table]{labelfont=bf,labelsep=capspace}
-\DeclareCaptionSubType[alph]{table}
-\captionsetup[subtable]{labelformat=parens,font=small,labelfont=normalfont,labelsep=subcapspace}
-\numberwithin{table}{section}
+\DeclareFloatingEnvironment[
+    fileext=lof,
+    listname={List of Figures},
+    name=Figure,
+    placement=htbp,
+    within=\RF@numberwithin,
+]{rfigure}
+\DeclareCaptionSubType[alph]{rfigure}
 
-\newenvironment{subfig}{}{}
+\DeclareFloatingEnvironment[
+    fileext=lot,
+    listname={List of Tables},
+    name=Table,
+    placement=htbp,
+    within=\RF@numberwithin,
+]{rtable}
+\captionsetup[rtable]{font=normalsize,justification=raggedright,singlelinecheck=false,skip=2pt}
+\DeclareCaptionSubType[alph]{rtable}
+
+\DeclareFloatingEnvironment[
+    fileext=lot,
+    listname={List of Algorithms},
+    name=Algorithm,
+    placement=htbp,
+    within=\RF@numberwithin,
+]{ralgorithm}
+\floatstyle{ruled}
+\restylefloat{ralgorithm}
+
+\newenvironment{algorithm}[1][htbp]{\begin{ralgorithm}[#1]}{\end{ralgorithm}}
+\renewenvironment{figure}[1][htbp]{\begin{rfigure}[#1]}{\end{rfigure}}
+\renewenvironment{table}[1][htbp]{\begin{rtable}[#1]}{\end{rtable}}
