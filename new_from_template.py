@@ -61,7 +61,8 @@ else:
         { 'src': 'buildht' },
         { 'src': 'buildpdf' },
         { 'src': 't4ht.cfg' },
-        { 'src': 't4ht.css' }
+        { 'src': 't4ht.css' },
+        { 'src': 'macros.tex' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
