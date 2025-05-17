@@ -15,11 +15,15 @@ img { width: 60%; height: auto; }
 .enumerate li p + p { margin-top: 1ex; }
 .enumerate .enumitem-mark { width: 2ex; text-align: right; }
 .enumerate .enumitem-content { margin-left: 1ex; }
-.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 2em 0; width: 100%; }
+figure.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 2em 0; width: 100%; position: relative; }
 .float:has(.subfig) { display: flex; flex-flow: row wrap; justify-content: space-between; max-width: 100%; width: 100%; margin-right: 0; align-items: flex-start; }
 .float .caption .content { margin-left: 1ex; }
 .float .subfig img { width: 100%; }
 .float .subfig { width: 49%; }
 .float > span { width: 100%; }
-.float > .caption { width: 100%; }
-.subfig + .caption { margin-top: 5px; }
+div.minipage { width: auto; }
+figcaption.caption { width: 100%; text-indent: 0pt; }
+img + figcaption { margin-top: 1ex; }
+.subfig .caption { margin-bottom: 5px; }
+.algorithm .caption { text-align: left; margin-left: 0; margin-right: 0; }
+.table .caption { text-align: left; margin-left: 0; margin-right: 0; }
