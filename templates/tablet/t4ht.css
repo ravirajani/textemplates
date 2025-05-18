@@ -1,11 +1,16 @@
 body { font-size: large; }
-h3, h4 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
-h3 + h4 { margin-top: 1em; }
-h4 { font-style: italic; margin-bottom: 1.33ex; }
+h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
+h4.subsectionHead, h5.subsubsectionHead { font-size: 1em; }
+h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
+h3 + h4, h4 + h5 { margin-top: 1em; }
+h4, h5 { font-style: italic; margin-bottom: 1.33ex; }
+h5 { font-weight: normal; }
+p { text-align: justify; }
+p.indent { text-indent: 1.5em; }
+p + p.indent { margin-top: 0; }
 img { width: 60%; height: auto; }
 .enumerate { padding: 0; margin: 1ex; }
 .enumerate li { list-style-type: none; margin: 1ex 0; }
-.enumerate li li { margin: 1ex 0; }
 .enumerate li li:last-child { margin-bottom: 0; }
 .enumerate li li .enumitem-mark { width: 3ex; }
 .enumerate .enumitem { display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: first baseline; align-content: stretch; }
@@ -29,7 +34,7 @@ img { width: 60%; height: auto; }
 .enumerate.pcode li ol li ol li ol .enumitem-content { margin-left: 81pt; }
 .enumerate.pcode-0 li p:not(:first-child) { margin-left: 24pt; }
 
-figure.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 2em 0; width: 100%; position: relative; }
+figure.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 1.5em 0; width: 100%; position: relative; }
 .float:has(.subfig) { display: flex; flex-flow: row wrap; justify-content: space-between; max-width: 100%; width: 100%; margin-right: 0; align-items: flex-start; }
 .float .caption .content { margin-left: 1ex; }
 .float .subfig img { width: 100%; }
@@ -39,5 +44,6 @@ div.minipage { width: auto; }
 figcaption.caption { width: 100%; text-indent: 0pt; margin: 0; }
 img + figcaption.caption { margin-top: 1ex; }
 .subfig .caption { margin-bottom: 5px; }
+.subfig .caption span.id { font-weight: normal; }
 .algorithm .caption { text-align: left; margin-left: 0; margin-right: 0; }
 .table .caption { text-align: left; margin-left: 0; margin-right: 0; }
