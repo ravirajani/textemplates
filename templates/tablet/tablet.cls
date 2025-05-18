@@ -37,9 +37,11 @@
 \RequirePackage{subfiles}
 \RequirePackage[bookmarksnumbered,colorlinks=true,allcolors=blue,bookmarks=true]{hyperref}
 
+\newenvironment{subtitleblock}{}{}
+
 \newcommand{\subtitle}[1]{%
-\appto{\titlewithsubtitle}{\ifdefstring{\TBT@style}{report}{%
-\LARGE#1}{\ifdefstring{\TBT@style}{article}{\large}{\normalsize}#1\vskip1ex}}%
+\appto{\titlewithsubtitle}{\begin{subtitleblock}\ifdefstring{\TBT@style}{report}{%
+\LARGE#1}{\ifdefstring{\TBT@style}{article}{\large}{\normalsize}#1\vskip1ex}\end{subtitleblock}}%
 }
 
 \geometry{

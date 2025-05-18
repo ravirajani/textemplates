@@ -33,8 +33,8 @@ for file in args.files:
     build_cmd = [
         'latexmk',
         '-shell-escape',
-        '-synctex=1',
-        '-interaction=nonstopmode',
+        '-emulate-aux-dir',
+        '-aux-directory=aux',
         '-file-line-error',
         '-pdf',
         '-outdir=build',

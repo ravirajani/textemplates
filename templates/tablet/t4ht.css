@@ -1,5 +1,9 @@
 body { font-size: large; max-width: 65ch; }
-h2.titleHead { font-size: 1.5em; margin-bottom: 0.68em; }
+h2.titleHead { font-size: 1.5em; margin: 0; }
+.subtitle { margin-top: 0.33em; }
+.author { margin-top: 0.5em; }
+.date { margin-top: 0.5ex; font-size: 90%; }
+
 h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
 h4.subsectionHead, h5.subsubsectionHead { font-size: 1em; }
 h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
@@ -10,8 +14,6 @@ p { text-align: justify; }
 p.indent { text-indent: 1.5em; }
 p + p.indent { margin-top: 0; }
 img { width: 60%; height: auto; }
-
-.date { margin-top: 0.5ex; font-size: 90%; }
 
 .enumerate { padding: 0; margin: 1ex; }
 .enumerate li { list-style-type: none; margin: 1ex 0; }
