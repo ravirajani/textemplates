@@ -66,7 +66,7 @@
 {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}% Thm head spec
 
 \theoremstyle{boldthm}
-\newtheorem{btheorem}[\RM@counter]{Theorem}
+\newtheorem{btheorem}[theorem]{Theorem}
 
 \newtheoremstyle{customex}% name
 {}%      Space above, empty = `usual value'
@@ -80,7 +80,7 @@
 {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}% Thm head spec
 
 \theoremstyle{customex}
-\newtheorem{examplex}[\RM@counter]{Example}
+\newtheorem{examplex}[theorem]{Example}
 \newenvironment{example}%
     {\pushQED{\qed}\renewcommand{\qedsymbol}{$\blacktriangle$}\examplex}%
     {\popQED\endexamplex}
