@@ -1,5 +1,6 @@
 body { font-size: large; }
-h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
+h2.titleHead { font-size: 2em; }
+h3.sectionHead, h3.likesectionHead, .author, .date { font-size: 1.15em; }
 h4.subsectionHead, h5.subsubsectionHead { font-size: 1em; }
 h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
 h3 + h4, h4 + h5 { margin-top: 1em; }
@@ -9,17 +10,19 @@ p { text-align: justify; }
 p.indent { text-indent: 1.5em; }
 p + p.indent { margin-top: 0; }
 img { width: 60%; height: auto; }
+
+.date { margin-top: 0.5ex; }
+
 .enumerate { padding: 0; margin: 1ex; }
 .enumerate li { list-style-type: none; margin: 1ex 0; }
 .enumerate li li:last-child { margin-bottom: 0; }
-.enumerate li li .enumitem-mark { width: 3ex; }
-.enumerate .enumitem { display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: first baseline; align-content: stretch; }
+.enumerate .enumitem { display: flex; flex-flow: row nowrap; justify-content: flex-start; align-items: first baseline; }
 .enumerate li div { margin: 0; padding: 0 !important; }
 .tcolorbox .enumerate { margin: 0; }
-.enumerate li p { margin-bottom: 0 !important; }
+.enumerate li p { margin-bottom: 0 !important; text-align: left; }
 .enumerate li p + p { margin-top: 1ex; }
 .enumerate.pcode li p + p { margin-top: .5ex; }
-.enumerate .enumitem-mark { width: 2ex; text-align: right; }
+.enumerate .enumitem-mark { width: 3ex; text-align: right; }
 .enumerate .enumitem-content { margin-left: 1ex; flex: 1; }
 
 .enumerate.pcode { margin: 0; }
