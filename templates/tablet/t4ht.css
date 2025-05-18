@@ -4,7 +4,7 @@ h3 + h4 { margin-top: 1em; }
 h4 { font-style: italic; margin-bottom: 1.33ex; }
 img { width: 60%; height: auto; }
 .enumerate { padding: 0; margin: 1ex; }
-.enumerate li { list-style-type: none; margin: 1ex; }
+.enumerate li { list-style-type: none; margin: 1ex 0; }
 .enumerate li li { margin: 1ex 0; }
 .enumerate li li:last-child { margin-bottom: 0; }
 .enumerate li li .enumitem-mark { width: 3ex; }
@@ -13,8 +13,22 @@ img { width: 60%; height: auto; }
 .tcolorbox .enumerate { margin: 0; }
 .enumerate li p { margin-bottom: 0 !important; }
 .enumerate li p + p { margin-top: 1ex; }
+.enumerate.pcode li p + p { margin-top: .5ex; }
 .enumerate .enumitem-mark { width: 2ex; text-align: right; }
-.enumerate .enumitem-content { margin-left: 1ex; }
+.enumerate .enumitem-content { margin-left: 1ex; flex: 1; }
+
+.enumerate.pcode { margin: 0; }
+.enumerate.pcode li { margin: .5ex 0; }
+.enumerate.pcode .enumitem-mark { width: 15pt; }
+.enumerate.pcode .enumitem-content { margin-left: 9pt; }
+.enumerate.pcode li ol { margin-left: -24pt; }
+.enumerate.pcode li ol .enumitem-content { margin-left: 33pt; }
+.enumerate.pcode li ol li ol { margin-left: -48pt; }
+.enumerate.pcode li ol li ol .enumitem-content { margin-left: 57pt; }
+.enumerate.pcode li ol li ol li ol { margin-left: -72pt; }
+.enumerate.pcode li ol li ol li ol .enumitem-content { margin-left: 81pt; }
+.enumerate.pcode-0 li p:not(:first-child) { margin-left: 24pt; }
+
 figure.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 2em 0; width: 100%; position: relative; }
 .float:has(.subfig) { display: flex; flex-flow: row wrap; justify-content: space-between; max-width: 100%; width: 100%; margin-right: 0; align-items: flex-start; }
 .float .caption .content { margin-left: 1ex; }
@@ -22,8 +36,8 @@ figure.float { display: flex; flex-flow: column nowrap; align-items: center;  ma
 .float .subfig { width: 49%; }
 .float > span { width: 100%; }
 div.minipage { width: auto; }
-figcaption.caption { width: 100%; text-indent: 0pt; }
-img + figcaption { margin-top: 1ex; }
+figcaption.caption { width: 100%; text-indent: 0pt; margin: 0; }
+img + figcaption.caption { margin-top: 1ex; }
 .subfig .caption { margin-bottom: 5px; }
 .algorithm .caption { text-align: left; margin-left: 0; margin-right: 0; }
 .table .caption { text-align: left; margin-left: 0; margin-right: 0; }

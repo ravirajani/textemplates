@@ -62,3 +62,8 @@
 \def\@currentlabel{\algname{#2}}{\label{alg:#3}}% refer to this algorithm as alg:label
 \@esphack
 \vskip\ALGSTP@partopsep\raggedright\noindent\algname{{\large#2}}#1{\large:}\vskip\ALGSTP@partopsep}{\vspace{\ALGSTP@partopsep}}
+
+\newenvironment{algorithm}[1][htbp]{\begin{ralgorithm}[#1]\centering
+    \vspace{\ALGSTP@linespacing}
+    \begin{minipage}{\textwidth}}
+    {\end{minipage}\vspace{\ALGSTP@linespacing}\end{ralgorithm}}

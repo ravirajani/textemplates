@@ -24,13 +24,16 @@
 
 \captionsetup{labelfont=bf,labelsep=capspace}
 \captionsetup[ruled]{labelsep=capspace}
-\subcaptionsetup{labelformat=parens,labelfont=normalfont,labelsep=subcapspace,justification=raggedright}
+\subcaptionsetup{
+    labelformat=parens,
+    labelfont=normalfont,
+    labelsep=subcapspace,
+    justification=raggedright}
 
 \DeclareFloatingEnvironment[
     fileext=lof,
     listname={List of Figures},
     name=Figure,
-    placement=htbp,
     within=\RF@numberwithin,
 ]{rfigure}
 \DeclareCaptionSubType[alph]{rfigure}
@@ -39,22 +42,25 @@
     fileext=lot,
     listname={List of Tables},
     name=Table,
-    placement=htbp,
     within=\RF@numberwithin,
 ]{rtable}
-\captionsetup[rtable]{font=normalsize,justification=raggedright,singlelinecheck=false,skip=2pt}
+\captionsetup[rtable]{
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=2pt}
 \DeclareCaptionSubType[alph]{rtable}
 
 \DeclareFloatingEnvironment[
     fileext=lot,
     listname={List of Algorithms},
     name=Algorithm,
-    placement=htbp,
     within=\RF@numberwithin,
 ]{ralgorithm}
-\floatstyle{ruled}
-\restylefloat{ralgorithm}
+\captionsetup[ralgorithm]{
+    justification=raggedright,
+    singlelinecheck=false,
+    skip=0pt
+}
 
-\newenvironment{algorithm}[1][htbp]{\begin{ralgorithm}[#1]}{\end{ralgorithm}}
 \renewenvironment{figure}[1][htbp]{\begin{rfigure}[#1]}{\end{rfigure}}
 \renewenvironment{table}[1][htbp]{\begin{rtable}[#1]}{\end{rtable}}
