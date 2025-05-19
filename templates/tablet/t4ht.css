@@ -27,13 +27,14 @@ header.header-bar { width: 100%; padding: 5px .62em; display: flex; flex-flow: r
 main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
 
 body > nav { padding: .62em; max-width: 33%; }
+body:has(.bookTOC) .header-bar { display: none; }
+
 @media (max-width: 800px ) {
     body > nav:not(.bookTOC) { width: 100%; max-width: 100%; display: none; position: fixed; top: 23px; left: 0; right: 0; background-color: black; }
     body > nav:not(.bookTOC) a { color: white; }
-    body:has(.bookTOC) .header-bar { display: none; }
     body:not(:has(.bookTOC)) .header-bar .hamburger { display: inline-block; }
 }
-div.maketitle { width: 100%; }
+div.maketitle { width: 100%; margin: 2em; }
 nav.bookTOC + .main-content { display: none; }
 nav.crosslinks-bottom { margin-top: 1em; }
 
