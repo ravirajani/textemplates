@@ -1,7 +1,7 @@
 body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: center; }
 .subtitle { margin-top: 0.33em; }
-.author { margin-top: 0.5em; }
-.date { margin-top: 0.5ex; font-size: 90%; }
+.author { margin-top: 1em; }
+.date { margin-top: 1ex; font-size: 100%; }
 
 h2.titleHead { font-size: 1.5em; margin: 0; }
 h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
