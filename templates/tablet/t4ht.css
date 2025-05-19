@@ -28,12 +28,12 @@ main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 
 
 body > nav { padding: .62em; max-width: 33%; }
 @media (max-width: 800px ) {
-    body > nav { width: 100%; max-width: 100%; display: none; position: fixed; top: 23px; left: 0; right: 0; background-color: black; }
-    body > nav a { color: white; }
-    .header-bar .hamburger { display: inline-block; }
+    body > nav:not(.bookTOC) { width: 100%; max-width: 100%; display: none; position: fixed; top: 23px; left: 0; right: 0; background-color: black; }
+    body > nav:not(.bookTOC) a { color: white; }
+    body:has(.bookTOC) .header-bar { display: none; }
+    body:not(:has(.bookTOC)) .header-bar .hamburger { display: inline-block; }
 }
 div.maketitle { width: 100%; }
-nav.bookTOC { max-width: 65ch; }
 nav.bookTOC + .main-content { display: none; }
 nav.crosslinks-bottom { margin-top: 1em; }
 
