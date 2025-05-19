@@ -1,4 +1,4 @@
-body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: center; }
+body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: left; }
 .subtitle { margin-top: 0.5em; }
 .author { margin-top: 1em; }
 .date { margin-top: 1ex; font-size: 100%; }
@@ -30,6 +30,7 @@ body > nav { padding: .62em; max-width: 33%; }
 body:has(.bookTOC) .header-bar { display: none; }
 
 @media (max-width: 800px ) {
+    body { justify-content: center; }
     body > nav:not(.bookTOC) { width: 100%; max-width: 100%; display: none; position: fixed; top: 23px; left: 0; right: 0; background-color: black; }
     body > nav:not(.bookTOC) a { color: white; }
     header.header-bar { position: fixed; top:0; left: 0; right: 0; }
