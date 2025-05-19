@@ -1,4 +1,4 @@
-body { font-size: large; max-width: 65ch; }
+body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: center; }
 h2.titleHead { font-size: 1.5em; margin: 0; }
 .subtitle { margin-top: 0.33em; }
 .author { margin-top: 0.5em; }
@@ -6,14 +6,30 @@ h2.titleHead { font-size: 1.5em; margin: 0; }
 
 h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
 h4.subsectionHead, h5.subsubsectionHead { font-size: 1em; }
-h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1em; text-align: center; }
-h3 + h4, h4 + h5 { margin-top: 1em; }
-h4, h5 { font-style: italic; margin-bottom: 1.33ex; }
+h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1.33ex; text-align: center; }
+h2 + h3, h3 + h4, h4 + h5 { margin-top: 1em; }
+h4, h5 { font-style: italic; }
 h5 { font-weight: normal; }
-p { text-align: justify; }
-p.indent { text-indent: 1.5em; }
+p { text-align: justify; display: none; }
+p.noindent span.next { display: none; }
+p.noindent { display: block; }
+p.indent { text-indent: 1.5em; display: block; }
 p + p.indent { margin-top: 0; }
 img { width: 60%; height: auto; }
+ul { margin: 1ex 0; }
+
+header.header-bar { display: none; }
+
+main.main-content { margin: 1em 0;  padding: 0 .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
+
+@media (max-width: 800px ) {
+    body > nav { width: 100%; }
+}
+body > nav { padding: .62em; }
+div.maketitle { width: 100%; }
+nav.bookTOC { max-width: 65ch; }
+nav.bookTOC + .main-content { display: none; }
+nav.crosslinks-bottom { margin-top: 1em; }
 
 .enumerate { padding: 0; margin: 1ex; }
 .enumerate li { list-style-type: none; margin: 1ex 0; }
