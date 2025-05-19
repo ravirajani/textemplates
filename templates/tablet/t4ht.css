@@ -1,5 +1,5 @@
 body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: center; }
-.subtitle { margin-top: 0.33em; }
+.subtitle { margin-top: 0.5em; }
 .author { margin-top: 1em; }
 .date { margin-top: 1ex; font-size: 100%; }
 
@@ -21,8 +21,8 @@ img { width: 60%; height: auto; }
 ul { margin: 1ex 0; }
 
 header.header-bar { width: 100%; padding: 5px .62em; display: flex; flex-flow: row nowrap; justify-content: space-between; background-color: black; height: 18px; align-items: center; z-index: 1; }
-.header-bar h1 { margin: 0; color: white; font-size: 18px; line-height: 1; }
-.header-bar .hamburger { display: none; font-size: 12px; }
+.header-bar h1 { margin: 0; color: white; font-size: 18px; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 90%; }
+.header-bar .hamburger { display: none; font-size: 12px; margin: 0 23px; }
 
 main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
 
@@ -32,6 +32,8 @@ body:has(.bookTOC) .header-bar { display: none; }
 @media (max-width: 800px ) {
     body > nav:not(.bookTOC) { width: 100%; max-width: 100%; display: none; position: fixed; top: 23px; left: 0; right: 0; background-color: black; }
     body > nav:not(.bookTOC) a { color: white; }
+    header.header-bar { position: fixed; top:0; left: 0; right: 0; }
+    main.main-content { margin-top: 23px; }
     body:not(:has(.bookTOC)) .header-bar .hamburger { display: inline-block; }
 }
 div.maketitle { width: 100%; margin: 2em; }
