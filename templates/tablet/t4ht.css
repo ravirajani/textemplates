@@ -1,15 +1,17 @@
 body { font-size: large;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: center; }
-h2.titleHead { font-size: 1.5em; margin: 0; }
 .subtitle { margin-top: 0.33em; }
 .author { margin-top: 0.5em; }
 .date { margin-top: 0.5ex; font-size: 90%; }
 
+h2.titleHead { font-size: 1.5em; margin: 0; }
 h3.sectionHead, h3.likesectionHead { font-size: 1.15em; }
 h4.subsectionHead, h5.subsubsectionHead { font-size: 1em; }
 h3, h4, h5 { margin-top: 1.33em; margin-bottom: 1.33ex; text-align: center; }
 h2 + h3, h3 + h4, h4 + h5 { margin-top: 1em; }
 h4, h5 { font-style: italic; }
 h5 { font-weight: normal; }
+.titlemark { display: inline-block; padding-right: 0.5ex; }
+
 p { text-align: justify; display: none; }
 p.noindent span.next { display: none; }
 p.noindent { display: block; }
@@ -22,10 +24,10 @@ header.header-bar { display: none; }
 
 main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
 
+body > nav { padding: .62em; max-width: 33%; }
 @media (max-width: 800px ) {
-    body > nav { width: 100%; }
+    body > nav { width: 100%; max-width: 100%; }
 }
-body > nav { padding: .62em; }
 div.maketitle { width: 100%; }
 nav.bookTOC { max-width: 65ch; }
 nav.bookTOC + .main-content { display: none; }
