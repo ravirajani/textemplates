@@ -20,7 +20,7 @@ ul { margin: 1ex 0; }
 
 header.header-bar { display: none; }
 
-main.main-content { margin: 0;  padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
+main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; justify-content: center; }
 
 @media (max-width: 800px ) {
     body > nav { width: 100%; }
