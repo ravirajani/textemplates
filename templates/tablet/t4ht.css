@@ -30,12 +30,12 @@ footer.footer { font-size: 18px; padding: 5px .62em; margin-top: 1em; border-top
 body > nav { padding: .62em; max-width: 30%; }
 body:has(.bookTOC) { flex-flow: column nowrap; align-items: center; }
 body:has(.bookTOC) .header-bar { display: none; }
-body:has(.bookTOC) .footer { max-width: 65ch; }
-body:has(.bookTOC) > nav { max-width: 65ch; }
+body:has(.bookTOC) .footer { display: none; }
+body:has(.bookTOC) > nav { max-width: 65ch; width: auto; }
 
 @media (max-width: 800px ) {
     body { justify-content: center; }
-    body > nav { width: 100%; max-width: 100%; border-bottom: 1px solid black;}
+    body > nav:not(.bookTOC) { width: 100%; max-width: 100%; border-bottom: 1px solid black; }
 }
 div.maketitle { max-width: 65ch; margin: 2em; }
 nav.bookTOC + .main-content { display: none; }
