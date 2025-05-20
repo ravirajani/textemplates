@@ -3,6 +3,7 @@
 # DEFAULT OPTIONS
 outdir='html'
 create_xbb='false'
+clean_aux='false'
 
 # CONSTANTS
 CONFIG_FILE='t4ht.cfg'
@@ -16,12 +17,13 @@ USAGE=$(cat <<-END
 Usage: $0 [options] filename.tex
 Options:
   -h                Print help message and exit.
+  -c                Clean up aux files.
   -o OUTDIR         Output directory (default: $outdir).
   -x                Create xbb files for pdfs.
 END
 )
 
-while getopts "hxo:" option; do
+while getopts "hcxo:" option; do
     case "$option" in
         h)  echo "$DESC"
             echo
@@ -32,6 +34,8 @@ while getopts "hxo:" option; do
         o)  outdir="$SCRIPTDIR/$OPTARG"
             ;;
         x)  create_xbb='true'
+            ;;
+        c)  clean_aux='true'
             ;;
         \?) echo "$USAGE"
             echo
@@ -54,6 +58,9 @@ if $create_xbb; then
     echo "Generating xbb files..."
     ebb -x *.pdf
 fi
-make4ht -c $CONFIG_FILE -d "$outdir" "$filename"
-echo "Cleaning up..."
-make4ht -m clean "$filename"
+if $clean_aux; then
+    echo "Cleaning up..."
+    make4ht -m clean "$filename"
+else
+    make4ht -c $CONFIG_FILE -e buildht.lua -d "$outdir" "$filename"
+fi
