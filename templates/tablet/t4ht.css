@@ -1,4 +1,4 @@
-body { font-size: 18px; max-width: 100%; margin: 0; padding: 0; display: flex; flex-flow: row wrap; justify-content: left; line-height: 1.2; font-family: 'rmfamily', 'Times New Roman', serif; }
+body { font-size: 18px; max-width: 100%; margin: 0; padding: 0; display: flex; flex-flow: row wrap; justify-content: left; line-height: 1.2; font-family: 'Times New Roman', Times, serif; }
 .subtitle { margin-top: 0.5em; }
 .author { margin-top: 1em; }
 .date { margin-top: 1ex; font-size: 100%; }
