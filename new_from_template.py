@@ -62,7 +62,11 @@ else:
         { 'src': 'buildpdf' },
         { 'src': 't4ht.cfg' },
         { 'src': 't4ht.css' },
-        { 'src': 'macros.tex' }
+        { 'src': 'macros.tex' },
+        { 'src': 'texgyretermes-regular.otf' },
+        { 'src': 'texgyretermes-italic.otf' },
+        { 'src': 'texgyretermes-bold.otf' },
+        { 'src': 'texgyretermes-bolditalic.otf' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
