@@ -1,4 +1,4 @@
-body { font-size: 18px;  margin: 0; padding: 0; max-width: 100%; display: flex; flex-flow: row wrap; justify-content: left; font-family: 'Times New Roman', Times, serif; line-height: 1.2; }
+body { font-size: 18px; max-width: 100%; margin: 0; padding: 0; display: flex; flex-flow: row wrap; justify-content: left; font-family: 'Times New Roman', Times, serif; line-height: 1.2; }
 .subtitle { margin-top: 0.5em; }
 .author { margin-top: 1em; }
 .date { margin-top: 1ex; font-size: 100%; }
@@ -24,15 +24,18 @@ header.header-bar { width: 100%; padding: 5px .62em; background-color: black; he
 .header-bar h1 { margin: 0; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; color: white; font-size: 18px; line-height: 1; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; max-width: 90%; font-weight: normal; }
 .header-bar .hamburger { display: none; font-size: 18px; line-height: inherit; margin: 0; font-weight: 600; background: none; color: white; box-shadow: none; border: none; outline: inherit; }
 
-main.main-content { margin: 0; padding: .62em; max-width: 65ch; order: 2; flex: 1; min-width: 30ch; }
+main.main-content { margin: 0; padding: .62em; max-width: 65ch; flex: 1; min-width: 30ch; }
+footer.footer { font-size: 18px; padding: 5px .62em; margin-top: 1em; border-top: 1px solid black; width: 100%; }
 
 body > nav { padding: .62em; max-width: 30%; }
 body:has(.bookTOC) { flex-flow: column nowrap; align-items: center; }
 body:has(.bookTOC) .header-bar { display: none; }
+body:has(.bookTOC) .footer { max-width: 65ch; }
+body:has(.bookTOC) > nav { max-width: 65ch; }
 
 @media (max-width: 800px ) {
     body { justify-content: center; }
-    body > nav { width: 100%; max-width: 100%; }
+    body > nav { width: 100%; max-width: 100%; border-bottom: 1px solid black;}
 }
 div.maketitle { max-width: 65ch; margin: 2em; }
 nav.bookTOC + .main-content { display: none; }
@@ -65,7 +68,7 @@ nav.crosslinks-bottom { margin-top: 1em; }
 figure.float { display: flex; flex-flow: column nowrap; align-items: center;  margin: 1.5em 0; width: 100%; position: relative; }
 .float:has(.subfig) { display: flex; flex-flow: row wrap; justify-content: space-between; max-width: 100%; width: 100%; margin-right: 0; align-items: flex-start; }
 .float .subfig img { width: 100%; }
-.float .subfig { width: 49%; }
+.float .subfig { width: 49%; min-width: 300px; }
 .float > span { width: 100%; }
 div.minipage { width: auto; }
 figcaption.caption { width: 100%; text-indent: 0pt; margin: 0; }
