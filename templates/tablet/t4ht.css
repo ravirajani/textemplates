@@ -30,15 +30,16 @@ footer.footer { font-size: inherit; padding: 5px .62em; margin: 0; border-top: 1
 .footer .content { font-size: 90%; }
 
 nav.TOC { padding: .62em; margin: 0; box-sizing: border-box; max-width: 30%; min-width: 150px; overflow: hidden; }
+.TOC.bookTOC { max-width: 70ch; }
 body:has(.bookTOC) .container { flex-flow: column nowrap; align-items: center; }
 body:has(.bookTOC) .header-bar { display: none; }
 body:has(.bookTOC) .footer { display: none; }
 
 @media (max-width: 950px) {
     .header-bar .hamburger { display: inline-block; }
-    .TOC:not(.active) { display: none; }
+    .TOC:not(.bookTOC):not(.active) { display: none; }
     .container { max-width: 70ch; margin: 0 auto; }
-    .container > nav:not(.bookTOC) { max-width: 70ch; }
+    .container > .TOC { max-width: 70ch; }
 }
 div.maketitle { max-width: 70ch; margin: 2em; }
 nav.bookTOC + .main-content { display: none; }
