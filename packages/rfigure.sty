@@ -1,7 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{rfigure}
 \RequirePackage{newfloat}
-\RequirePackage{float}
 \RequirePackage{caption}
 \RequirePackage{subcaption}
 \RequirePackage{kvoptions}
@@ -22,7 +21,7 @@
 \DeclareCaptionLabelSeparator{capspace}{\hspace{\RF@customheadsep}}
 \DeclareCaptionLabelSeparator{subcapspace}{\enspace}
 
-\captionsetup{labelfont=bf,labelsep=capspace}
+\captionsetup{labelfont=bf,font=small,labelsep=capspace}
 \captionsetup[ruled]{labelsep=capspace}
 \subcaptionsetup{
     labelformat=parens,
@@ -62,5 +61,5 @@
     skip=0pt
 }
 
-\renewenvironment{figure}[1][htbp]{\begin{rfigure}[#1]}{\end{rfigure}}
-\renewenvironment{table}[1][htbp]{\begin{rtable}[#1]}{\end{rtable}}
+\renewenvironment{figure}[1][htbp]{\begin{rfigure}[#1]\small}{\end{rfigure}}
+\renewenvironment{table}[1][htbp]{\begin{rtable}[#1]\small}{\end{rtable}}

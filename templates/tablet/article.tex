@@ -1,30 +1,17 @@
 \documentclass[style=article]{tablet}
-\usepackage{forloop}
-\usepackage{fmtcount}
-\usepackage{lipsum}
-\pdfstringdefDisableCommands{%
-  \def\Ordinalstringnum{ }%
-}
-\newcounter{level1}
-\newcounter{level2}
-\newcounter{level3}
-\title{Title}
-\author{My Name}
-\date{\today}
+
+%\usepackage[round]{natbib} % UNCOMMENT for natbib
+
+\title{Article Title}%
+\subtitle{Subtitle of Article}
+\author{Ravi Rajani}
+
+%\def\subbib{\bibliographystyle{abbrvnat}\bibliography{../file.bib}} % UNCOMMENT for natbib
+% In subfiles, write \subbib before \end{document}
 \begin{document}
+\def\subbib{}
 \maketitle
-\forloop{level1}{1}{\value{level1} < 5}{
-    \def\listr{\Ordinalstring{level1} Section}
-    \section{\listr}
-    \lipsum[1]
-    \forloop{level2}{1}{\value{level2} < 4}{
-        \def\liistr{\Ordinalstring{level2} Subsection of \listr}
-        \subsection{\liistr}
-        \lipsum[\arabic{level2}]
-        \forloop{level3}{1}{\value{level3} < 3}{
-            \subsubsection{\Ordinalstring{level3} Subsubsection of \liistr}
-            \lipsum[\arabic{level3}]
-        }
-    }
-}
+%\pagestyle{article}
+%\subfile{subfile.tex}
+%\bibliographystyle{abbrvnat}\bibliography{file.bib} % UNCOMMENT for natbib
 \end{document}

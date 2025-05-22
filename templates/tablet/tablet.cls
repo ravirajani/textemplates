@@ -27,7 +27,7 @@
     \RequirePackage{newtxtext} % Times font
 \fi
 
-\ifdefempty{\HCode}{\RequirePackage[scaled=0.85]{FiraMono}}{}
+\RequirePackage[scaled=0.85]{FiraMono}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
 \RequirePackage[utf8]{inputenc}

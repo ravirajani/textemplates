@@ -58,12 +58,7 @@ else:
         { 'src': 'tablet_154x205.svg' },
         { 'src': 'tablet.cls' },
         { 'src': 'pgf.mplstyle' },
-        { 'src': 'buildht' },
         { 'src': 'buildpdf' },
-        { 'src': 'buildht.lua' },
-        { 'src': 't4ht.cfg' },
-        { 'src': 't4ht.css' },
-        { 'src': 't4ht.js' },
         { 'src': 'macros.tex' }
     ])
 
