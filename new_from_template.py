@@ -58,13 +58,12 @@ else:
         { 'src': 'tablet_154x205.svg' },
         { 'src': 'tablet.cls' },
         { 'src': 'pgf.mplstyle' },
-        { 'src': 'buildpdf' },
         { 'src': 'macros.tex' }
     ])
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
 shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
-for filename in ['.gitignore','version.txt','build.py','tex2html.py']:
+for filename in ['.gitignore','version.txt','build.py','tex2html.py','buildpdf']:
     shutil.copy(filename, str(args.projectfolder / filename))
 for file in files:
     src = file['src']
