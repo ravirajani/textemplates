@@ -20,12 +20,12 @@
 
 \LoadClass[12pt]{\docstyle}
 
-\ifTBT@sansfont
-    \RequirePackage{newtxsf} % Sans font
-    \renewcommand{\familydefault}{\sfdefault}
-\else
-    \RequirePackage{newtxtext} % Times font
-\fi
+\ifbool{TBT@sansfont}{
+\RequirePackage{newtxsf} % Sans font
+\renewcommand{\familydefault}{\sfdefault}
+}{
+\RequirePackage{newtxtext} % Times font
+}
 
 \RequirePackage[scaled=0.85]{FiraMono}
 \RequirePackage[UKenglish]{babel}
