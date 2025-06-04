@@ -21,6 +21,7 @@
 \RequirePackage{newtxmath}
 \RequirePackage[scaled=0.78]{FiraMono}
 \RequirePackage[scaled]{helvet}
+\RequirePackage{anyfontsize}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
 \RequirePackage[utf8]{inputenc}
