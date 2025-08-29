@@ -103,6 +103,7 @@
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{219,227,250}
+\definecolor{OUPaleBlue}{RGB}{237,241,253}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OULightGreen}{RGB}{216,249,218}
 \definecolor{OURed}{RGB}{221,28,26}
