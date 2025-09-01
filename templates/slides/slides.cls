@@ -35,7 +35,7 @@
 \RequirePackage{xpatch}
 
 \useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
-\tcbset{fonttitle=\upshape,fontupper=\upshape,center title}
+\tcbset{fonttitle=\upshape,fontupper=\upshape}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
@@ -169,16 +169,17 @@
 \begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth}\raggedright
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}\begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth - 2\hmargin\relax}\raggedleft
-  \usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate
+  % upper RH corner text
 \end{minipage}
-\begin{minipage}[t][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\centering
+\begin{minipage}[c][.38\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
-  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle\\[20pt]
+  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle
+\end{minipage}
+\begin{minipage}[c][.38\titleboxheight][c]{\paperwidth - 2\hmargin}
   \usebeamercolor[fg]{author}%
   \usebeamerfont{author}\insertauthor\\
-  \usebeamerfont{institute}\insertinstitute
-\end{minipage}
-\begin{minipage}[c][.24\titleboxheight][c]{\paperwidth - 2\hmargin}
+  \usebeamerfont{institute}\insertinstitute\\
+  \usebeamerfont{date}\insertdate
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{end page}{\adjusttitlepadding\nointerlineskip%
@@ -187,15 +188,15 @@
 \begin{minipage}[c][.24\titleboxheight][t]{\paperwidth - 2\hmargin}\raggedright
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
 \end{minipage}
-\begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\centering
+\begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][c]{\paperwidth - 2\hmargin}
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[center,wd=\paperwidth,ht=2em,dp=.5ex]{frametitle}
-  \insertframetitle
+\begin{beamercolorbox}[wd=\paperwidth,ht=2em,dp=.5ex]{frametitle}
+  \hspace{\hmargin}\insertframetitle\hspace{\hmargin}
 \end{beamercolorbox}}
 
 
