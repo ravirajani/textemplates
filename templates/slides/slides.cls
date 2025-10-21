@@ -171,11 +171,11 @@
 \end{minipage}\begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth - 2\hmargin\relax}\raggedleft
   % upper RH corner text
 \end{minipage}
-\begin{minipage}[c][.38\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
+\begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
   \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle
 \end{minipage}
-\begin{minipage}[c][.38\titleboxheight][c]{\paperwidth - 2\hmargin}
+\begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
   \usebeamercolor[fg]{author}%
   \usebeamerfont{author}\insertauthor\\
   \usebeamerfont{institute}\insertinstitute\\
