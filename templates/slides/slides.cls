@@ -100,6 +100,7 @@
  }{}
 
 \definecolor{Core}{RGB}{27, 27, 25}
+\definecolor{OULightGrey}{RGB}{211,211,211}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{219,227,250}
