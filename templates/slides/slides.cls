@@ -36,6 +36,9 @@
 
 \useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
 \tcbset{fonttitle=\upshape,fontupper=\upshape}
+\newtcolorbox{framedbox}[1][]{top=1mm,toptitle=1mm,bottomtitle=0pt,
+bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.4pt,
+coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
