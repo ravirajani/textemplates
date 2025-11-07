@@ -150,6 +150,7 @@
 \setbeamerfont{block title example}{size=\normalsize}
 \setbeamerfont{block title alerted}{size=\normalsize}
 \setbeamerfont{proof title}{size=\normalsize,shape=\itshape}
+\setbeamerfont{section in toc}{size=\large}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
