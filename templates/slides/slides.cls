@@ -104,6 +104,7 @@ coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1
 
 \definecolor{Core}{RGB}{27, 27, 25}
 \definecolor{OULightGrey}{RGB}{211,211,211}
+\definecolor{OUGrey}{RGB}{112,112,112}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{219,227,250}
