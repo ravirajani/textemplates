@@ -19,7 +19,7 @@
 \setlength\belowcaptionskip{0pt}
 
 \RequirePackage{newtxmath}
-\RequirePackage[scaled=0.78]{FiraMono}
+\RequirePackage[scaled=0.8]{FiraMono}
 \RequirePackage[scaled]{helvet}
 \RequirePackage{anyfontsize}
 \RequirePackage[UKenglish]{babel}
