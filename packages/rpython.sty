@@ -16,13 +16,24 @@
 \fi
 
 \RequirePackage{minted}
+\RequirePackage{tikz}
+\usetikzlibrary{tikzmark}
 
 \setminted{%
-  xleftmargin=\dimexpr \labelsep + 1ex \relax,
+  xleftmargin=\dimexpr\labelsep + 1em\relax,
   linenos,
   fontfamily=tt,
-  numbersep=1ex,
-  escapeinside=``
+  numbersep=1em,
+  escapeinside=``,
+  beameroverlays
 }
 \newminted[python]{python}{}
 \newmintinline[py]{python}{escapeinside=``}
+
+\newcommand\rectstart{\tikzmark{start}}
+\newcommand\rectstop{\tikzmark{stop}}
+\newcommand\drawrect[1][]{
+\begin{tikzpicture}[remember picture,overlay]
+  \draw#1[red,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
+\end{tikzpicture}
+}
