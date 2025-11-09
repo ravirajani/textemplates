@@ -19,7 +19,7 @@
 \setlength\belowcaptionskip{0pt}
 
 \RequirePackage{newtxmath}
-\RequirePackage[scaled=0.8]{FiraMono}
+\RequirePackage[scaled=0.85]{FiraMono}
 \RequirePackage[scaled]{helvet}
 \RequirePackage{anyfontsize}
 \RequirePackage[UKenglish]{babel}
@@ -116,7 +116,7 @@ coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1
 \definecolor{OUYellow}{RGB}{255,253,152}
 
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
-\captionsetup{labelformat=empty,textfont=blue,aboveskip=0pt}
+\captionsetup{labelformat=empty,textfont=blue,aboveskip=0pt,belowskip=0pt}
 
 \setbeamercolor{palette primary}{fg=white,bg=Core}
 \setbeamercolor{palette secondary}{fg=white,bg=Core}
