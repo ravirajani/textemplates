@@ -63,7 +63,7 @@ else:
 
 args.projectfolder.mkdir(parents=True, exist_ok=True)
 shutil.copy('mpl.py', str(args.projectfolder / (args.filename + '.py')))
-for filename in ['.gitignore','version.txt','build.py','tex2html.py','buildpdf']:
+for filename in ['.gitignore','version.txt','build.py','tex2html.py','buildpdf','latexindent.yaml']:
     shutil.copy(filename, str(args.projectfolder / filename))
 for file in files:
     src = file['src']
