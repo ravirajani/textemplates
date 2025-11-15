@@ -33,12 +33,22 @@
 \RequirePackage{import}
 \RequirePackage{caption}
 \RequirePackage{xpatch}
+\RequirePackage{tikz}
+\usetikzlibrary{tikzmark}
 
 \useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
 \tcbset{fonttitle=\upshape,fontupper=\upshape}
 \newtcolorbox{framedbox}[1][]{top=1mm,toptitle=1mm,bottomtitle=0pt,
 bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.4pt,
 coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1}
+
+\newcommand\rectstart{\tikzmark{start}}
+\newcommand\rectstop{\tikzmark{stop}}
+\newcommand<>{\drawrect}{
+\begin{tikzpicture}[remember picture,overlay]
+  \draw#1[red,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
+\end{tikzpicture}
+}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
