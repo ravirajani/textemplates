@@ -165,6 +165,8 @@ coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1
 \setbeamerfont{block title alerted}{size=\normalsize}
 \setbeamerfont{proof title}{size=\normalsize,shape=\itshape}
 \setbeamerfont{section in toc}{size=\large}
+\setbeamerfont{subsection in toc}{size=\normalsize}
+\setbeamerfont{subsubsection in toc}{size=\normalsize}
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
