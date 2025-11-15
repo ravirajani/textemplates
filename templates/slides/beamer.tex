@@ -31,39 +31,46 @@
 \subsection{Subsection}
 
 \begin{frame}{Colours}
-\begingroup\tcbset{before skip=.2ex}
-\begin{theorem}[Central Limit Theorem]
-\[
-\frac{S_n - n\mu_x}{\sqrt{n}\sigma_x}\stackrel{d}{\to} N(0,1)
-\]
-\end{theorem}\endgroup
-\begin{proof}[Proof Sketch]
-Just use characteristic functions.
-\end{proof}
-\begin{example}
-Example environment
-\end{example}\nointerlineskip%
-\begin{minipage}{.5\textwidth}
-  \begin{exampleblock}{Custom Example}
-    Example body.
+  \begin{theorem}[Central Limit Theorem]
+    Simply stated:
+    \[
+      \frac{S_n - n\mu_x}{\sqrt{n}\sigma_x}\stackrel{d}{\to} N(0,1)
+    \]
+  \end{theorem}
+  \begin{proof}[Proof Sketch]
+    Just use characteristic functions.
+  \end{proof}
+  \begin{example}
+    Example environment
+  \end{example}
+\end{frame}
+
+\begin{frame}{More Colours}
+  \begin{minipage}{.5\textwidth}
+    \begin{exampleblock}{Custom Example}
+      Example body.
     \end{exampleblock}
-\end{minipage}
-\begin{alertblock}{Careful}
-  body text.
-\end{alertblock}
-\begin{plainblock}{Plain Title}
-This is a plain block.
-\end{plainblock}
+  \end{minipage}
+  \medskip
+  \begin{alertblock}{Careful}
+    body text.
+  \end{alertblock}
+  \begin{plainblock}{Plain Title}
+    This is a plain block.
+  \end{plainblock}
+  \begin{framedbox}[title=Framed Content]
+    Some framed content.
+  \end{framedbox}
 \end{frame}
 
 \section{Second Section}
 
 \begin{frame}[fragile]{Fragile Option and Text Positioning}
-    Remember:
-    \begin{itemize}[<+->]
-      \item Use the \texttt{fragile} frame option for \textcolor<2->{OUMidBlue}{verbatim} environments.
-      \item Use \colorbox{OUYellow}{background templates} and \alert{texpos} as follows:
-            \begin{verbatim}
+  Remember:
+  \begin{itemize}[<+->]
+    \item Use the \texttt{fragile} frame option for \textcolor<2->{OUMidBlue}{verbatim} environments.
+    \item Use \colorbox{OUYellow}{background templates} and \alert{texpos} as follows:
+          \begin{verbatim}
 \setbeamertemplate{background}{\input{file.pdf}}
 \begin{frame}
 % The textblock* environment does absolute positioning
@@ -76,7 +83,7 @@ This is a plain block.
 \end{frame}% Reset the background template after:
 \setbeamertemplate{background}{}
 \end{verbatim}
-    \end{itemize}
+  \end{itemize}
 \end{frame}
 
 \setbeamercolor{background canvas}{bg=Core}

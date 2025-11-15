@@ -33,14 +33,14 @@
 \RequirePackage{import}
 \RequirePackage{caption}
 \RequirePackage{xpatch}
+\RequirePackage{tcolorbox}
+\tcbuselibrary{skins}
 \RequirePackage{tikz}
 \usetikzlibrary{tikzmark}
 
-\useinnertheme[rounded,shadow=false,shaded=false]{tcolorbox}
-\tcbset{fonttitle=\upshape,fontupper=\upshape}
-\newtcolorbox{framedbox}[1][]{top=1mm,toptitle=1mm,bottomtitle=0pt,
+\newtcolorbox{framedbox}[1][]{enhanced,top=1mm,toptitle=1mm,bottomtitle=0pt,
 bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.4pt,
-coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1}
+titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,#1}
 
 \newcommand\rectstart{\tikzmark{start}}
 \newcommand\rectstop{\tikzmark{stop}}
@@ -227,7 +227,7 @@ coltitle=black,titlerule=0pt,colback=black!2!white,colbacktitle=black!2!white,#1
 
 \beamertemplatenavigationsymbolsempty
 
-\setbeamertemplate{proof begin}{\vspace{0.5ex}%
+\setbeamertemplate{proof begin}{%
 {\usebeamercolor[fg]{proof title}\usebeamerfont*{proof title}%
 \insertproofname}%
 }
