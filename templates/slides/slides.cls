@@ -89,9 +89,6 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
  {}
 
 \newenvironment{pseudocode}[1][0pt]{%
-\setbeamertemplate{itemize/enumerate body begin}{\normalsize}%
-\setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}%
-\setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}%
 \xpatchcmd{\itemize}
   {\def\makelabel}
   {\ifnum\@itemdepth=1\relax
@@ -175,6 +172,9 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 \setbeamertemplate{enumerate item}[default]
 \setbeamertemplate{enumerate subitem}{\alph{enumii})}
 \setbeamertemplate{footline}[frame number]
+\setbeamertemplate{itemize/enumerate body begin}{\normalsize}
+\setbeamertemplate{itemize/enumerate subbody begin}{\normalsize}
+\setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}
 
 \newcommand{\adjusttitlepadding}{%
   \setlength\titleboxoffset{4em}%
