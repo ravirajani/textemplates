@@ -42,6 +42,8 @@
 bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.4pt,
 titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,#1}
 
+\renewcommand<>{\colorbox}[2]{\alt#3{\beameroriginal\colorbox{#1}{#2}}{#2}}
+
 \newcommand\rectstart{\tikzmark{start}}
 \newcommand\rectstop{\tikzmark{stop}}
 \newcommand<>{\drawrect}{
