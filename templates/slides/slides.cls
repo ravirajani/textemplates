@@ -44,6 +44,7 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 
 \renewcommand<>{\colorbox}[2]{\alt#3{\beameroriginal\colorbox{#1}{#2}}{#2}}
 \newcommand<>{\hlight}[1]{\colorbox#2{OUYellow}{#1}}
+\newcommand<>{\midblue}[1]{\textcolor#2{OUMidBlue}{#1}}
 
 \newcommand\rectstart{\tikzmark{start}}
 \newcommand\rectstop{\tikzmark{stop}}
