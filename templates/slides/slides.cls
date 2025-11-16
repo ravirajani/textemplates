@@ -59,12 +59,13 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
      \setlength\topsep{\vgap}
    \else
      \ifnum\@itemdepth=2\relax
-       \setlength\itemsep{\vgap}% separation for second level
-       \setlength\topsep{\vgap}
+       \setlength\itemsep{1ex}% separation for second level
+       \setlength\topsep{1ex}
      \else
        \ifnum\@itemdepth=3\relax
-         \setlength\itemsep{1ex}% separation for third level
-         \setlength\topsep{1ex}
+         \setlength\itemsep{0pt}% separation for third level
+         \setlength\topsep{0pt}
+         \setlength\leftmargin{2ex}
    \fi\fi\fi\def\makelabel
   }
  {}
@@ -77,12 +78,12 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
      \setlength\topsep{\vgap}
    \else
      \ifnum\@itemdepth=2\relax
-       \setlength\itemsep{\vgap}% separation for second level
-       \setlength\topsep{\vgap}
+       \setlength\itemsep{1ex}% separation for second level
+       \setlength\topsep{1ex}
      \else
        \ifnum\@itemdepth=3\relax
-         \setlength\itemsep{1ex}% separation for third level
-         \setlength\topsep{1ex}
+         \setlength\itemsep{0pt}% separation for third level
+         \setlength\topsep{0pt}
    \fi\fi\fi\def\makelabel
   }
  {}
@@ -169,6 +170,8 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 
 \setbeamertemplate{sections/subsections in toc}[sections numbered]
 \setbeamertemplate{itemize items}[default]
+\setbeamertemplate{itemize subitem}[circle]
+\setbeamertemplate{itemize subsubitem}{-}
 \setbeamertemplate{enumerate item}[default]
 \setbeamertemplate{enumerate subitem}{\alph{enumii})}
 \setbeamertemplate{footline}[frame number]
