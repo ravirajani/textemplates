@@ -239,10 +239,10 @@
     \usebeamertemplate{proof begin}#2}
   {\popQED\usebeamertemplate{proof end}}
 
-\tcbset{enhanced jigsaw,top=0pt,toptitle=1mm,bottomtitle=0pt,boxsep=1pt,
-bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.6pt,titlerule=0pt,
+\tcbset{enhanced jigsaw,top=5pt,toptitle=5pt,bottomtitle=0pt,boxsep=0pt,
+bottom=5pt,left=5pt,right=5pt,middle=10pt,boxrule=0.6pt,titlerule=0pt,
 colframe=OUGrey,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,
-before title=\strut,after upper=\strut,after skip=12pt}
+before title=\strut,after upper=\strut,after skip=10pt}
 \newtcolorbox{framedbox}[1][]{#1}
 \newtcolorbox{alertbox}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,#1}
