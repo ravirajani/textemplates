@@ -248,7 +248,7 @@ after skip=12pt}
 \newtcolorbox{framedblock}[1][]{#1}
 \newtcbox{\alertbox}[1][]{detach title,colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,before title=\;,before upper={\textcolor{OUDarkRed}{\faWarning}\tcbtitle\hspace{\titlesep}},
-fonttitle=\bfseries,title=#1}
+fonttitle=\bfseries,title=#1,before skip=0pt}
 \newtcolorbox{warningblock}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,fonttitle=\bfseries,
 environment upper args={list}{{\textcolor{OUDarkRed}{\faWarning}}
@@ -256,7 +256,7 @@ environment upper args={list}{{\textcolor{OUDarkRed}{\faWarning}}
 #1}
 \newtcbox{\infobox}[1][]{detach title,colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
 coltitle=OUDarkBlue,before title=\;,before upper={\textcolor{OUDarkBlue}{\faInfoCircle}\tcbtitle\hspace{\titlesep}},
-fonttitle=\bfseries,title=#1}
+fonttitle=\bfseries,title=#1,before skip=0pt}
 \newtcolorbox{infoblock}[1][]{colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
 coltitle=OUDarkBlue,fonttitle=\bfseries,
 environment upper args={list}{{\textcolor{OUDarkBlue}{\faInfoCircle}}
