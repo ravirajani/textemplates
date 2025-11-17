@@ -9,6 +9,7 @@
 \newlength{\htab}
 \newlength{\vgap}
 \newlength{\vgapsm}
+\newlength{\titlesep}
 \newlength{\titleboxheight}
 \newlength{\titleboxoffset}
 \newlength{\titletopmargin}
@@ -17,7 +18,7 @@
 \setlength\vgap{1.5ex}
 \setlength\vgapsm{.5ex}
 \setlength\belowcaptionskip{0pt}
-
+\setlength\titlesep{1.25ex}
 \RequirePackage{newtxmath}
 \RequirePackage[scaled=0.85]{FiraMono}
 \RequirePackage[scaled]{helvet}
@@ -37,6 +38,7 @@
 \tcbuselibrary{skins}
 \RequirePackage{tikz}
 \usetikzlibrary{tikzmark}
+\RequirePackage{fontawesome}
 
 \renewcommand<>{\colorbox}[2]{%
 \alt#3{\beameroriginal\colorbox{#1}{#2}}{\beameroriginal\colorbox{white}{#2}}}
@@ -47,7 +49,7 @@
 \newcommand\rectstop{\tikzmark{stop}}
 \newcommand<>{\drawrect}{
 \begin{tikzpicture}[remember picture,overlay]
-  \draw#1[red,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
+  \draw#1[OURed,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
 \end{tikzpicture}
 }
 
@@ -242,9 +244,11 @@
 \tcbset{enhanced jigsaw,top=5pt,toptitle=5pt,bottomtitle=0pt,boxsep=0pt,
 bottom=5pt,left=5pt,right=5pt,middle=10pt,boxrule=0.6pt,titlerule=0pt,
 colframe=OUGrey,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,
-before title=\strut,after skip=10pt}
+after skip=10pt}
 \newtcolorbox{framedbox}[1][]{#1}
-\newtcolorbox{alertbox}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
-coltitle=OUDarkRed,#1}
-\newtcolorbox{examplebox}[1][]{colframe=OUDarkGreen,colback=OULightGreen,colbacktitle=OULightGreen,
-coltitle=OUDarkGreen,#1}
+\newtcolorbox{alertbox}[1][]{detach title,colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
+coltitle=OUDarkRed,before title=\;,before upper={\textcolor{OUDarkRed}{\faWarning}\tcbtitle\hspace{\titlesep}},
+fonttitle=\bfseries,#1}
+\newtcolorbox{infobox}[1][]{detach title,colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
+coltitle=OUDarkBlue,before title=\;,before upper={\textcolor{OUDarkBlue}{\faInfoCircle}\tcbtitle\hspace{\titlesep}},
+fonttitle=\bfseries,#1}
