@@ -242,7 +242,7 @@
 \tcbset{enhanced jigsaw,top=5pt,toptitle=5pt,bottomtitle=0pt,boxsep=0pt,
 bottom=5pt,left=5pt,right=5pt,middle=10pt,boxrule=0.6pt,titlerule=0pt,
 colframe=OUGrey,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,
-before title=\strut,after upper=\strut,after skip=10pt}
+before title=\strut,after skip=10pt}
 \newtcolorbox{framedbox}[1][]{#1}
 \newtcolorbox{alertbox}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,#1}
