@@ -43,9 +43,9 @@
   \begin{exampleblock}{Custom Example Title}
     Example environment
   \end{exampleblock}
-  \begin{alertblock}{Careful}
-    body text.
-  \end{alertblock}
+  \begin{infoblock}
+    \item body text.
+  \end{infoblock}
 \end{frame}
 
 \begin{frame}{More Colours}
@@ -54,18 +54,15 @@
       Example body.
     \end{exampleblock}
   \end{minipage}
-  \begin{framedbox}[title=Framed Content]
+  \begin{framedblock}[title=Framed Content]
     Some framed content.\strut
-  \end{framedbox}
-  \begin{alertbox}[title=Warning]
-    Some warning.
-  \end{alertbox}
-  \begin{alertbox}
-  Without title.
-  \end{alertbox}
-  \begin{infobox}[title=Info]
-    Info body.
-  \end{infobox}
+  \end{framedblock}
+  \begin{warningblock}[title=Warning]
+  \item Some warning.
+  \item Other warning.
+  \end{warningblock}
+  \alertbox{Without title.}
+  \infobox[Info]{Info body.}
 \end{frame}
 
 \section{Second Section}
