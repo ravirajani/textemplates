@@ -38,10 +38,6 @@
 \RequirePackage{tikz}
 \usetikzlibrary{tikzmark}
 
-\newtcolorbox{framedbox}[1][]{enhanced,top=1mm,toptitle=1mm,bottomtitle=0pt,
-bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.4pt,
-titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,#1}
-
 \renewcommand<>{\colorbox}[2]{%
 \alt#3{\beameroriginal\colorbox{#1}{#2}}{\beameroriginal\colorbox{white}{#2}}}
 \newcommand<>{\hlight}[1]{\colorbox#2{OUYellow}{#1}}
@@ -122,8 +118,10 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
 \definecolor{OULightBlue}{RGB}{219,227,250}
 \definecolor{OUPaleBlue}{RGB}{237,241,253}
+\definecolor{OUDarkGreen}{RGB}{0,82,0}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OULightGreen}{RGB}{216,249,218}
+\definecolor{OUDarkRed}{RGB}{201,27,24}
 \definecolor{OURed}{RGB}{221,28,26}
 \definecolor{OULightRed}{RGB}{255,229,218}
 \definecolor{OUYellow}{RGB}{255,253,152}
@@ -146,13 +144,9 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 \setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=black}
-\setbeamercolor{block title example}{fg=white,bg=OUGreen}
-\setbeamercolor{block body example}{fg=black,bg=OULightGreen}
-\setbeamercolor{block title alerted}{fg=white,bg=OURed}
-\setbeamercolor{block body alerted}{fg=black,bg=OULightRed}
+\setbeamercolor{block title alerted}{fg=OURed}
 \setbeamercolor{alerted text}{fg=OURed}
-\setbeamercolor{block title}{fg=white,bg=OUMidBlue}
-\setbeamercolor{block body}{fg=black,bg=OULightBlue}
+\setbeamercolor{block title}{fg=OUMidBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
 \setbeamercolor{proof title}{fg=OUMidBlue}
 
@@ -163,9 +157,7 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
 \setbeamerfont{date}{series=\mdseries,size=\normalsize}
 \setbeamerfont{frametitle}{series=\bfseries,size=\large}
 \setbeamerfont{caption}{size=\normalsize}
-\setbeamerfont{block title}{size=\normalsize}
-\setbeamerfont{block title example}{size=\normalsize}
-\setbeamerfont{block title alerted}{size=\normalsize}
+\setbeamerfont{block title}{size=\large}
 \setbeamerfont{proof title}{size=\normalsize,shape=\itshape}
 \setbeamerfont{section in toc}{size=\large}
 \setbeamerfont{subsection in toc}{size=\normalsize}
@@ -247,15 +239,12 @@ titlerule=0mm,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!whit
     \usebeamertemplate{proof begin}#2}
   {\popQED\usebeamertemplate{proof end}}
 
-\newenvironment<>{plainblock}[1]{%
-  \begin{actionenv}#2%
-    \def\insertblocktitle{#1}%
-    \par%
-    \only<presentation>{\setbeamerfont{block title}{size=\large}%
-      \setbeamercolor{block title}{fg=OUMidBlue,bg=}%
-      \setbeamercolor{block body}{fg=black,bg=}}%
-    \setbeamertemplate{blocks}[default]%
-    \usebeamertemplate{block begin}}
-  {\par%
-    \usebeamertemplate{block end}%
-  \end{actionenv}}
+\tcbset{enhanced jigsaw,top=0pt,toptitle=1mm,bottomtitle=0pt,boxsep=1pt,
+bottom=1mm,left=1mm,right=1mm,middle=2mm,boxrule=0.6pt,titlerule=0pt,
+colframe=OUGrey,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,
+before title=\strut,after upper=\strut,after skip=12pt}
+\newtcolorbox{framedbox}[1][]{#1}
+\newtcolorbox{alertbox}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
+coltitle=OUDarkRed,#1}
+\newtcolorbox{examplebox}[1][]{colframe=OUDarkGreen,colback=OULightGreen,colbacktitle=OULightGreen,
+coltitle=OUDarkGreen,#1}
