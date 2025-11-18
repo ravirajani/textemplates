@@ -118,6 +118,7 @@
 \definecolor{OUGrey}{RGB}{112,112,112}
 \definecolor{OUMidBlue}{RGB}{28,70,192}
 \definecolor{OUDarkBlue}{RGB}{68,62,137}
+\definecolor{OUPurple}{RGB}{128,0,128}
 \definecolor{OULightBlue}{RGB}{219,227,250}
 \definecolor{OUPaleBlue}{RGB}{237,241,253}
 \definecolor{OUDarkGreen}{RGB}{0,82,0}
@@ -146,7 +147,7 @@
 \setbeamercolor{structure}{fg=black}
 \setbeamercolor{subsection in toc}{fg=OUMidBlue}
 \setbeamercolor{section in toc}{fg=black}
-\setbeamercolor{block title alerted}{fg=OURed}
+\setbeamercolor{block title example}{fg=OUPurple}
 \setbeamercolor{alerted text}{fg=OURed}
 \setbeamercolor{block title}{fg=OUMidBlue}
 \setbeamercolor{description item}{fg=OUMidBlue}
@@ -262,3 +263,7 @@ coltitle=OUDarkBlue,fonttitle=\bfseries,
 environment upper args={list}{{\textcolor{OUDarkBlue}{\faInfoCircle}}
 {\setlength\itemsep{0pt}\setlength\parsep{0pt}}},leftupper=7pt,
 #1}
+
+\renewenvironment<>{alertblock}
+{\begin{actionenv}#1\begin{warningblock}}
+{\end{warningblock}\end{actionenv}}
