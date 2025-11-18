@@ -253,7 +253,7 @@ fonttitle=\bfseries,title=#1,before skip=0pt}
 \newtcolorbox{warningblock}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,fonttitle=\bfseries,
 environment upper args={list}{{\textcolor{OUDarkRed}{\faWarning}}
-{\setlength\itemsep{0pt}\setlength\parsep{0pt}}},leftupper=7pt,
+{\setlength\itemsep{0pt}\setlength\parsep{0pt}}},leftupper=8pt,
 #1}
 \newtcbox{\infobox}[1][]{detach title,colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
 coltitle=OUDarkBlue,after title=\hspace{\titlesep},before upper={\textcolor{OUDarkBlue}{\faInfoCircle}\enspace\tcbtitle},
