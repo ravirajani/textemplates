@@ -245,10 +245,10 @@
 \tcbset{enhanced jigsaw,top=5pt,toptitle=5pt,bottomtitle=0pt,boxsep=0pt,
 bottom=5pt,left=5pt,right=5pt,middle=10pt,boxrule=0.6pt,titlerule=0pt,
 colframe=OUGrey,coltitle=OUMidBlue,colback=black!2!white,colbacktitle=black!2!white,
-after skip=12pt}
+after skip=12pt,before skip=12pt}
 \newtcolorbox{framedblock}[1][]{#1}
 \newtcbox{\alertbox}[1][]{detach title,colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
-coltitle=OUDarkRed,before title=\;,before upper={\textcolor{OUDarkRed}{\faWarning}\tcbtitle\hspace{\titlesep}},
+coltitle=OUDarkRed,after title=\hspace{\titlesep},before upper={\textcolor{OUDarkRed}{\faWarning}\enspace\tcbtitle},
 fonttitle=\bfseries,title=#1,before skip=0pt}
 \newtcolorbox{warningblock}[1][]{colframe=OUDarkRed,colback=OULightRed,colbacktitle=OULightRed,
 coltitle=OUDarkRed,fonttitle=\bfseries,
@@ -256,7 +256,7 @@ environment upper args={list}{{\textcolor{OUDarkRed}{\faWarning}}
 {\setlength\itemsep{0pt}\setlength\parsep{0pt}}},leftupper=7pt,
 #1}
 \newtcbox{\infobox}[1][]{detach title,colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
-coltitle=OUDarkBlue,before title=\;,before upper={\textcolor{OUDarkBlue}{\faInfoCircle}\tcbtitle\hspace{\titlesep}},
+coltitle=OUDarkBlue,after title=\hspace{\titlesep},before upper={\textcolor{OUDarkBlue}{\faInfoCircle}\enspace\tcbtitle},
 fonttitle=\bfseries,title=#1,before skip=0pt}
 \newtcolorbox{infoblock}[1][]{colframe=OUDarkBlue,colback=OUPaleBlue,colbacktitle=OUPaleBlue,
 coltitle=OUDarkBlue,fonttitle=\bfseries,
