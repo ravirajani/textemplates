@@ -45,8 +45,8 @@
 \newcommand<>{\hlight}[1]{\colorbox#2{OUYellow}{#1}}
 \newcommand<>{\midblue}[1]{\textcolor#2{OUMidBlue}{#1}}
 
-\newcommand\rectstart{\tikzmark{start}}
-\newcommand\rectstop{\tikzmark{stop}}
+\newcommand<>{\rectstart}{\tikzmark#1{start}}
+\newcommand<>{\rectstop}{\tikzmark#1{stop}}
 \newcommand<>{\drawrect}{
 \begin{tikzpicture}[remember picture,overlay]
   \draw#1[OURed,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
