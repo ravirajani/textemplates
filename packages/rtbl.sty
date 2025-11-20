@@ -1,0 +1,28 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{rtbl}
+
+\RequirePackage{tabularray}
+\UseTblrLibrary{counter}
+
+\RequirePackage{etoolbox}
+
+\newcounter{slideincell}
+\newcounter{offsetcell}
+\newcounter{pausesoffset}
+
+\newenvironment{rtbl}[1]{
+    \defcounter{slideincell}{\value{beamerpauses} - #1}
+    \defcounter{pausesoffset}{#1 - 1}
+    \begin{tblr}
+}{
+    \addtocounter{beamerpauses}{\value{colcount} - \value{pausesoffset}}
+    \end{tblr}
+}
+
+\newcommand{\colonslide}{%
+\defcounter{offsetcell}{\value{slideincell} + \value{colnum}}%
+\onslide<\arabic{offsetcell}->}
+
+\newcommand{\rowonslide}{%
+\defcounter{offsetcell}{\value{slideincell} + \value{rownum}}%
+\onslide<\arabic{offsetcell}->}
