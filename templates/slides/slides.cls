@@ -47,9 +47,9 @@
 
 \newcommand<>{\rectstart}{\tikzmark#1{start}}
 \newcommand<>{\rectstop}{\tikzmark#1{stop}}
-\newcommand<>{\drawrect}{
+\newcommand<>{\drawrect}[1][2em]{
 \begin{tikzpicture}[remember picture,overlay]
-  \draw#1[OURed,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-2em]pic cs:start) rectangle ([yshift=-4pt,xshift=2em]pic cs:stop);
+  \draw#2[OURed,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
 \end{tikzpicture}
 }
 
