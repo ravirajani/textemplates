@@ -47,11 +47,10 @@
 
 \newcommand<>{\rectstart}{\tikzmark#1{start}}
 \newcommand<>{\rectstop}{\tikzmark#1{stop}}
-\newcommand<>{\drawrect}[1][2em]{
+\newcommand<>{\drawrect}[1][2em]{%
 \begin{tikzpicture}[remember picture,overlay]
   \draw#2[OUMidBlue,thick,rounded corners,fill=OUCream] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
-\end{tikzpicture}
-}
+\end{tikzpicture}\vskip-1.3em}
 \newcommand<>{\note}[1]{\only#2{\midblue{\normalfont #1}}}
 
 \xpatchcmd{\itemize}
