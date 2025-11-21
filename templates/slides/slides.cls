@@ -49,9 +49,10 @@
 \newcommand<>{\rectstop}{\tikzmark#1{stop}}
 \newcommand<>{\drawrect}[1][2em]{
 \begin{tikzpicture}[remember picture,overlay]
-  \draw#2[OURed,thick,rounded corners] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
+  \draw#2[OUMidBlue,thick,rounded corners,fill=OUCream] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
 \end{tikzpicture}
 }
+\newcommand<>{\note}[1]{\only#2{\midblue{\normalfont #1}}}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
@@ -128,6 +129,7 @@
 \definecolor{OURed}{RGB}{221,28,26}
 \definecolor{OULightRed}{RGB}{255,229,218}
 \definecolor{OUYellow}{RGB}{255,253,152}
+\definecolor{OUCream}{RGB}{255,255,235}
 
 \DeclareCaptionFont{blue}{\color{OUMidBlue}}
 \captionsetup{labelformat=empty,textfont=blue,aboveskip=0pt,belowskip=0pt}
