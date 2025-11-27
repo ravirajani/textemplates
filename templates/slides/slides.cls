@@ -20,8 +20,8 @@
 \setlength\belowcaptionskip{0pt}
 \setlength\titlesep{1.25ex}
 \RequirePackage{newtxmath}
-\RequirePackage[scaled=0.85]{FiraMono}
-\RequirePackage[scaled]{helvet}
+\RequirePackage[scaled=0.82]{FiraMono}
+\RequirePackage[scaled=0.9]{helvet}
 \RequirePackage{anyfontsize}
 \RequirePackage[UKenglish]{babel}
 \RequirePackage[UKenglish]{isodate}
