@@ -51,8 +51,12 @@
 \begin{tikzpicture}[remember picture,overlay]
   \draw#2[OUMidBlue,thick,rounded corners,fill=OUCream] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
 \end{tikzpicture}\vspace{-\baselineskip}}
-\newcommand<>{\note}[1]{\only#2{\midblue{\normalfont #1}}}
-\newcommand<>{\uncovernote}[1]{\uncover#2{\midblue{\normalfont #1}}}
+\newcommand<>{\warnrect}[1][2em]{%
+\begin{tikzpicture}[remember picture,overlay]
+  \draw#2[OURed,thick,rounded corners,fill=OULightRed] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
+\end{tikzpicture}\vspace{-\baselineskip}}
+\newcommand<>{\note}[2][OUMidBlue]{\only#3{\textcolor{#1}{\normalfont #2}}}
+\newcommand<>{\uncovernote}[2][OUMidBlue]{\uncover#3{\textcolor{#1}{\normalfont #2}}}
 
 \xpatchcmd{\itemize}
   {\def\makelabel}
