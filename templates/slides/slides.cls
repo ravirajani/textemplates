@@ -222,7 +222,7 @@
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,ht=20pt,dp=.5ex]{frametitle}
+\begin{beamercolorbox}[wd=\paperwidth,ht=2em,dp=.5ex]{frametitle}
   \hspace{\hmargin}\insertframetitle\hspace{\hmargin}
 \end{beamercolorbox}}
 
