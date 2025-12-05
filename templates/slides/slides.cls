@@ -13,7 +13,7 @@
 \newlength{\titleboxheight}
 \newlength{\titleboxoffset}
 \newlength{\titletopmargin}
-\setlength\hmargin{2em}
+\setlength\hmargin{20pt}
 \setlength\htab{3ex}
 \setlength\vgap{1.5ex}
 \setlength\vgapsm{.5ex}
@@ -47,11 +47,11 @@
 
 \newcommand<>{\rectstart}{\tikzmark#1{start}}
 \newcommand<>{\rectstop}{\tikzmark#1{stop}}
-\newcommand<>{\drawrect}[1][2em]{%
+\newcommand<>{\drawrect}[1][18pt]{%
 \begin{tikzpicture}[remember picture,overlay]
   \draw#2[OUMidBlue,thick,rounded corners,fill=OUCream] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
 \end{tikzpicture}\vspace{-\baselineskip}}
-\newcommand<>{\warnrect}[1][2em]{%
+\newcommand<>{\warnrect}[1][18pt]{%
 \begin{tikzpicture}[remember picture,overlay]
   \draw#2[OURed,thick,rounded corners,fill=OULightRed] ([yshift=-4pt+\baselineskip,xshift=-#1]pic cs:start) rectangle ([yshift=-4pt,xshift=#1]pic cs:stop);
 \end{tikzpicture}\vspace{-\baselineskip}}
@@ -184,7 +184,7 @@
 \setbeamertemplate{itemize/enumerate subsubbody begin}{\normalsize}
 
 \newcommand{\adjusttitlepadding}{%
-  \setlength\titleboxoffset{4em}%
+  \setlength\titleboxoffset{40pt}%
   \setlength\titleboxheight{\dimexpr\paperheight - \titleboxoffset\relax}%
   \setlength\titletopmargin{\dimexpr .5\titleboxoffset + .5\textheight - .5\paperheight\relax}%
   \vspace{\titletopmargin}
@@ -222,7 +222,7 @@
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
-\begin{beamercolorbox}[wd=\paperwidth,ht=2em,dp=.5ex]{frametitle}
+\begin{beamercolorbox}[wd=\paperwidth,ht=20pt,dp=.5ex]{frametitle}
   \hspace{\hmargin}\insertframetitle\hspace{\hmargin}
 \end{beamercolorbox}}
 
