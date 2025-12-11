@@ -126,7 +126,7 @@
 \definecolor{OUPurple}{RGB}{128,0,128}
 \definecolor{OULightBlue}{RGB}{219,227,250}
 \definecolor{OUPaleBlue}{RGB}{237,241,253}
-\definecolor{OUDarkGreen}{RGB}{0,128,0}
+\definecolor{OUDarkGreen}{RGB}{0,102,0}
 \definecolor{OUGreen}{RGB}{8,160,69}
 \definecolor{OULightGreen}{RGB}{216,249,218}
 \definecolor{OUDarkRed}{RGB}{201,27,24}
