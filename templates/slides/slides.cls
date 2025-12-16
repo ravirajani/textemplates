@@ -28,6 +28,8 @@
 \RequirePackage[utf8]{inputenc}
 \RequirePackage[T1]{fontenc}
 \RequirePackage{array}
+\RequirePackage{mleftright}
+\mleftright
 \RequirePackage{mathtools}
 \RequirePackage[absolute,overlay]{textpos}
 \RequirePackage[export]{adjustbox}
