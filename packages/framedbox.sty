@@ -36,23 +36,9 @@ before upper={\setlength\parindent{\tcbparindent}}}
 % \end{framedbox}
 \newtcolorbox{framedbox}[1][]{#1}
 
-% Example:
-% \begin{algorithm}{Title}{label}
-%     Write boxed text here. Refer to it in the text with \ref{alg:label}
-%     \tcblower
-%     This is the lower part of the box.
-% \end{algorithm}
-%
-% To use this counter with rmath: \usepackage[counter=\tcbcounter]{rmath}
-
-% \newtcbtheorem[number within=section]{algorithm}{Algorithm}%
-% {boxrule=0mm, toprule=1pt, bottomrule=1pt,
-% theorem hanging indent=0pt,
-% description font=\normalfont,separator sign=\hspace{1ex},
-% segmentation style={black,solid,opacity=0.2,line width=1pt},
-% colback=black!5!white, colbacktitle=black!5!white}{alg}
-
-\tcbuselibrary{skins, breakable}
-\newtcolorbox{stepsbox*}[1][]{colback=black!5!white, colbacktitle=black!5!white, colframe=black!5!white, #1}
-\newtcolorbox[auto counter, number within=section]{stepsbox}[1][title=Algorithm \thetcbcounter]{
-colback=black!5!white, colbacktitle=black!5!white, colframe=black!5!white, top=0pt, #1}
+\newtcbox{\code}{
+    nobeforeafter,box align=base,
+    boxrule=0pt,
+    fontupper=\ttfamily,
+    top=0pt,bottom=0pt,left=2pt,right=2pt,
+    colback=black!5!white}
