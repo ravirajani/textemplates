@@ -52,7 +52,7 @@
 \ifbool{TBT@nohead}{
 \geometry{
     total={13.4cm,19.2cm},
-    marginratio={1:1,7:2}
+    marginratio={1:1,3:1}
 }}{
 \geometry{
     total={13.4cm,19.9cm},
@@ -91,7 +91,6 @@
 }{\ifdefstring{\TBT@style}{exercises}{
 \renewcommand{\maketitle}{\begin{center}
     \titlewithsubtitle\vskip1ex
-    \ifcsempty{@author}{}{\normalsize\@author\vskip1ex}
     \ifcsempty{@date}{}{\small\textbf{Due \@date}\vskip15pt}
     \thispagestyle{plain}
 \end{center}}

@@ -1,6 +1,17 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{rtitlesec}
 \RequirePackage[pagestyles,nobottomtitles]{titlesec}
+\RequirePackage{etoolbox}
+\RequirePackage{kvoptions}
+
+\SetupKeyvalOptions{
+    family=RTS,
+    prefix=RTS@
+}
+
+\DeclareStringOption[article]{style}
+
+\ProcessKeyvalOptions*
 
 \newcommand{\hdrfont}{\fontsize{9}{11}\selectfont}
 \newlength{\parlabelsep}
@@ -28,7 +39,9 @@
 
 \renewpagestyle{plain}{
     \sethead{}{}{}
-    \setfoot{}{\hdrfont\thepage}{}
+    \ifdefstring{\RTS@style}{exercises}{
+        \setfoot{\hdrfont\copyright\ \the\year\ \@author}{}{}
+    }{\setfoot{}{\hdrfont\thepage}{}}
 }
 \newpagestyle{report}{%
     \sethead{}{\hdrfont\thechapter\enspace\MakeUppercase{\chaptertitle}}{}
@@ -48,7 +61,7 @@
 }
 \newpagestyle{exercises}{%
     \sethead{}{\hdrfont\MakeUppercase{\@title}}{}
-    \setfoot{}{\hdrfont\thepage}{}
+    \setfoot{\hdrfont\copyright\ \the\year\ \@author}{}{\hdrfont\thepage}
 }
 \assignpagestyle{\chapter}{plain}
 
