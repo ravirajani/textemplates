@@ -201,7 +201,7 @@
   % upper RH corner text
 \end{minipage}
 \begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
+  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\ifdefempty{\insertsubtitle}{}{\\[20pt]}
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
