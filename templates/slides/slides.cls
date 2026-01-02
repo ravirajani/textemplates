@@ -211,16 +211,23 @@
   \usebeamerfont{date}\insertdate
 \end{minipage}\end{columns}}
 
-\setbeamertemplate{end page}{\adjusttitlepadding\nointerlineskip%
+\defbeamertemplate{end page}{core}[1][]{\adjusttitlepadding\nointerlineskip%
 \begin{columns}
 \column{\dimexpr\paperwidth - 2\hmargin\relax}
-\begin{minipage}[c][.24\titleboxheight][t]{\paperwidth - 2\hmargin}\raggedright
+\begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth}\raggedright
   \usebeamercolor[fg]{titlegraphic}\inserttitlegraphic%
+\end{minipage}\begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth - 2\hmargin\relax}\raggedleft
+  % upper RH corner text
 \end{minipage}
 \begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you%
+  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you\ifstrempty{#1}{}{\\[20pt]}
+  \usebeamercolor[fg]{title}\usebeamerfont{subtitle}#1
 \end{minipage}
-\begin{minipage}[c][.24\titleboxheight][c]{\paperwidth - 2\hmargin}
+\begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
+  \usebeamercolor[fg]{author}%
+  \usebeamerfont{author}\insertauthor\\
+  \usebeamerfont{institute}\insertinstitute\\
+  \usebeamerfont{date}\insertdate
 \end{minipage}\end{columns}}
 
 \setbeamertemplate{frametitle}{\nointerlineskip%
