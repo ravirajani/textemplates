@@ -201,7 +201,7 @@
   % upper RH corner text
 \end{minipage}
 \begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\ifdefempty{\insertsubtitle}{}{\\[20pt]}
+  \usebeamercolor[fg]{title}\usebeamerfont{title}\inserttitle\\[20pt]
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}\insertsubtitle
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
@@ -220,7 +220,7 @@
   % upper RH corner text
 \end{minipage}
 \begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you\ifstrempty{#1}{}{\\[20pt]}
+  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you\\[20pt]
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}#1
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
@@ -251,11 +251,12 @@
 }
 \setbeamertemplate{proof end}{\vskip.5ex}
 \renewenvironment<>{proof}[1][\proofname]{%
+  \begin{actionenv}#2%
     \par
     \def\insertproofname{#1\enspace}%
     \pushQED{\qed}
-    \usebeamertemplate{proof begin}#2}
-  {\popQED\usebeamertemplate{proof end}}
+    \usebeamertemplate{proof begin}}
+  {\popQED\usebeamertemplate{proof end}\end{actionenv}}
 
 \tcbset{enhanced jigsaw,top=5pt,toptitle=5pt,bottomtitle=0pt,boxsep=0pt,
 bottom=5pt,left=5pt,right=5pt,middle=10pt,boxrule=0.6pt,titlerule=0pt,
