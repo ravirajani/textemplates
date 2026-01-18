@@ -9,13 +9,17 @@
 \newcounter{slideincell}
 \newcounter{offsetcell}
 \newcounter{pausesoffset}
+\newcommand{\roworcol}{col}
 
-\newenvironment{rtbl}[1]{
-    \defcounter{slideincell}{\value{beamerpauses} - #1}
-    \defcounter{pausesoffset}{#1 - 1}
+\newenvironment{rtbl}[2]{
+    \defcounter{slideincell}{\value{beamerpauses} - #2}
+    \defcounter{pausesoffset}{#2 - 1}
+    \ifstrequal{#1}{row}{\renewcommand{\roworcol}{row}}{\renewcommand{\roworcol}{col}}
     \begin{tblr}
 }{
+    \ifdefstring{\roworcol}{col}{
     \addtocounter{beamerpauses}{\value{colcount} - \value{pausesoffset}}
+    }{\addtocounter{beamerpauses}{\value{rowcount} - \value{pausesoffset}}}
     \end{tblr}
 }
 
