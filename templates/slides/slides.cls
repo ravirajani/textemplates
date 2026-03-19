@@ -211,7 +211,7 @@
   \usebeamerfont{date}\insertdate
 \end{minipage}\end{columns}}
 
-\defbeamertemplate{end page}{core}[1][]{\adjusttitlepadding\nointerlineskip%
+\defbeamertemplate{end page}{core}[2][]{\adjusttitlepadding\nointerlineskip%
 \begin{columns}
 \column{\dimexpr\paperwidth - 2\hmargin\relax}
 \begin{minipage}[c][.24\titleboxheight][t]{.5\paperwidth}\raggedright
@@ -220,7 +220,7 @@
   % upper RH corner text
 \end{minipage}
 \begin{minipage}[c][.52\titleboxheight][c]{\paperwidth - 2\hmargin}\raggedright
-  \usebeamercolor[fg]{title}\usebeamerfont{title}Thank you\\[20pt]
+  \usebeamercolor[fg]{title}\usebeamerfont{title}#2\\[20pt]
   \usebeamercolor[fg]{title}\usebeamerfont{subtitle}#1
 \end{minipage}
 \begin{minipage}[c][.24\titleboxheight][b]{\paperwidth - 2\hmargin}
