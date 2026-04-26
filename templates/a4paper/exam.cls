@@ -48,13 +48,21 @@
 \newcommand{\addtopointserror}[3]{%
   \protected@edef\@tempa{\textbf{Q#1}: & #2\; & #3\; \noexpand\\}
   \expandafter\gappto\expandafter\pointserror\expandafter{\@tempa}}
+\newcommand{\ptstableheader}{
+    \vskip1.5ex\hrule\vskip1ex\begin{tabular}{rrr}
+    & \textbf{Expected Points} & \textbf{Actual Points} \\[.2ex]
+}
+\newcommand{\totalerror}{
+    \ifnumequal{\value{tpoints}}{\value{npoints}}{}{% IF FALSE
+        \textbf{Total}: & \thetpoints\; & \thenpoints\; \\
+    }
+}
 
 \AtEndEnvironment{question}{%
     \ifnumgreater{\value{subpts}}{0}{% IF TRUE
         \ifnumequal{\value{subpts}}{\value{questionpts}}{}{% IF FALSE
             \ifdefempty{\pointserror}{% IF TRUE
-                \gappto{\pointserror}{\vskip1.5ex\hrule\vskip1ex\begin{tabular}{rrr}
-                    & \textbf{Expected Points} & \textbf{Actual Points} \\[.2ex]}
+                \gappto{\pointserror}{\ptstableheader}
             }{}%
             \addtopointserror{\thequestion}{\thequestionpts}{\thesubpts}
         }%
@@ -66,11 +74,14 @@
 \renewcommand{\label}[1]{\oldlabel{#1}\ignorespaces}}
 
 \AtEndDocument{%
-\ifdefempty{\pointserror}{}{% IF FALSE
+\ifdefempty{\pointserror}{% IF TRUE
+    \ifnumequal{\value{tpoints}}{\value{npoints}}{}{% IF FALSE
+        \ptstableheader
+            \totalerror
+        \end{tabular}}
+}{% IF FALSE
     \gappto{\pointserror}{%
-        \ifnumequal{\value{tpoints}}{\value{npoints}}{}{% IF FALSE
-            \textbf{Total}: & \thetpoints\; & \thenpoints\; \\
-        }
+        \totalerror
         \end{tabular}}
     \pointserror
 }}
