@@ -7,16 +7,16 @@
 }
 \DeclareBoolOption{solutions}
 \ProcessKeyvalOptions*
-\LoadClass[11pt]{article}
-\RequirePackage{newtxtext} % Times font
+\LoadClass[12pt]{article}
+\RequirePackage{newpxtext} % Times font
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
-\RequirePackage{newtxmath}
+\RequirePackage{newpxmath}
 \RequirePackage{mleftright}
 \RequirePackage[en-GB]{datetime2}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{etoolbox}
-\RequirePackage[a4paper,margin={3cm,2cm}]{geometry}
+\RequirePackage[a4paper,margin={2.5cm,2cm}]{geometry}
 \RequirePackage{comment}
 \RequirePackage{enumitem}
 \RequirePackage{marginnote}
@@ -48,7 +48,7 @@
 \newcommand{\addtopointserror}[3]{%
   \protected@edef\@tempa{\textbf{Q#1}: & #2\; & #3\; \noexpand\\}
   \expandafter\gappto\expandafter\pointserror\expandafter{\@tempa}}
-\newcommand{\ptstableheader}{
+\newcommand{\ptstableheader}{\small
     \vskip1.5ex\hrule\vskip1ex\begin{tabular}{rrr}
     & \textbf{Expected Points} & \textbf{Actual Points} \\[.2ex]
 }
