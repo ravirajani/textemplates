@@ -7,7 +7,7 @@
 }
 \DeclareBoolOption{solutions}
 \ProcessKeyvalOptions*
-\LoadClass[12pt]{article}
+\LoadClass[11pt]{article}
 \RequirePackage[looser]{newpxtext} % Times font
 \RequirePackage{amsmath}
 \RequirePackage{amsthm}
